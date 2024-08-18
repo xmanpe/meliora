@@ -1,0 +1,115 @@
+@import '../../index.scss';
+
+.navbar {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    background-color: $white-color;
+    display: flex;
+    width: fit-content;
+    margin: auto;
+    padding: 16px;
+    box-shadow: 0px 4px 19.9px 0px rgba(0, 0, 0, 0.07);
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(14px);
+
+    .each-tab {
+        padding-left: 16px;
+        padding-right: 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        border-left: 1px solid rgba(0, 0, 0, 0.08);
+        color: $unactive-color;
+
+        &:first-child {
+            border-left: none;
+            padding-left: 0;
+        }
+
+        &:last-child {
+            padding-right: 0;
+        }
+
+        p {
+            font-size: $font-size-small;
+            cursor: pointer;
+        }
+
+        img {
+            width: 24px;
+            height: 24px;
+            display: none;
+        }
+
+        &.active {
+            p {
+                color: $meliora-color;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 810px) {
+    .navbar {
+        position: absolute;
+        bottom: 20px;
+        left: 0;
+        right: 0;
+        background-color: $white-color;
+        display: flex;
+        width: fit-content;
+        margin: auto;
+        padding: 20px;
+        box-shadow: 0px 4px 19.9px 0px rgba(0, 0, 0, 0.07);
+        border-radius: 4px;
+        border: 1px solid rgba(0, 0, 0, 0.08);
+        backdrop-filter: blur(14px);
+    
+        .each-tab {
+            padding-left: 20px;
+            padding-right: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            border-left: 1px solid rgba(0, 0, 0, 0.08);
+            color: $unactive-color;
+    
+            &:first-child {
+                border-left: none;
+                padding-left: 0;
+            }
+    
+            &:last-child {
+                padding-right: 0;
+            }
+    
+            p {
+                display: none;
+                font-size: $font-size-small;
+                cursor: pointer;
+            }
+    
+            img {
+                width: 28px;
+                height: 28px;
+                opacity: 0.3;
+                display: initial;
+            }
+    
+            &.active {
+                img {
+                    opacity: 1;
+                }
+
+                p {
+                    color: $meliora-color;
+                }
+            }
+        }
+    }
+}

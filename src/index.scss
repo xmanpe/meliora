@@ -1,0 +1,79 @@
+@keyframes fadeInFromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+        filter: blur(16px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
+  
+@keyframes fadeOutFromTop {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(50px);
+        filter: blur(16px);
+    }
+}
+
+// colors variables
+$meliora-color: #F4AC56;
+$white-color: #FFFFFF;
+$paragraph-color: rgba(0, 0, 0, 0.6);
+
+$unactive-color: rgba(0, 0, 0, 0.4);
+
+$balwana-color: #EB1D33;
+$gandara-color: #0B46AA;
+$sakha-color: #F475A8;
+$caksana-color: #A4A4A4;
+$lavanya-color: #05D8D3;
+$nayanika-color: #FFD50C;
+$baskara-color: #FF8212;
+$bimasena-color: #000000;
+$gajendra-color: #541D85;
+$sarkara-color: #E1AB82;
+$saraya-color: #48510D;
+
+// fonts variables
+$font-size-xxsmall: 0.75rem;
+$font-size-small: 1rem;
+$font-size-medium: 1.25rem;
+$font-size-xmedium: 1.5rem;
+$font-size-large: 1.75rem;
+$font-size-xlarge: 2rem;
+$font-size-xxlarge: 3rem;
+
+body {
+    font-family: "DM Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    img, div {
+        -webkit-user-drag: none;
+        -khtml-user-drag: none;
+        -moz-user-drag: none;
+        -o-user-drag: none;
+        user-drag: none;
+        
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    h1, h2, h3, h4, h5, h6, p, a {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+}
