@@ -15,14 +15,14 @@ const tabsConfig = [
         text: 'Hari Pelaksanaan'
     },
     {
-        path: '/di-balik-kepanitiaan',
-        icon: diBalikKepanitiaan,
-        text: 'Di Balik Kepanitiaan'
-    },
-    {
         path: '/foto-divisi',
         icon: fotoDivisi,
         text: 'Foto Divisi'
+    },
+    {
+        path: '/di-balik-kepanitiaan',
+        icon: diBalikKepanitiaan,
+        text: 'Di Balik Kepanitiaan'
     },
     {
         path: '/sayembara-visual',

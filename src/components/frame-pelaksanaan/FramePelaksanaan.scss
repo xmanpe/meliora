@@ -1,0 +1,52 @@
+@import '../../index.scss';
+
+.frame-pelaksanaan {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    box-sizing: border-box;
+
+    .each-frame {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        .border {
+            height: 400px;
+            overflow: hidden;
+            box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+            transition: all 0.3s ease-in-out;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            &:hover {
+                box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
+                transform: translateY(-5px);
+            }
+        }
+
+        .text {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+
+            h1 {
+                font-size: $font-size-xmedium;
+                font-weight: 600;
+            }
+
+            p {
+                font-size: $font-size-small;
+                color: $paragraph-color;
+            }
+        }
+
+    }
+}

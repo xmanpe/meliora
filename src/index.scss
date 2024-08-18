@@ -27,9 +27,10 @@
 // colors variables
 $meliora-color: #F4AC56;
 $white-color: #FFFFFF;
+$black-color: #000000;
 $paragraph-color: rgba(0, 0, 0, 0.6);
 
-$unactive-color: rgba(0, 0, 0, 0.4);
+$unactive-color: rgba(0, 0, 0, 0.3);
 
 $balwana-color: #EB1D33;
 $gandara-color: #0B46AA;
@@ -57,7 +58,6 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
     img, div {
         -webkit-user-drag: none;
         -khtml-user-drag: none;
