@@ -1,0 +1,33 @@
+@import '../../index.scss';
+
+.foto-section{
+    padding: 100px 160px 100px 160px;
+    .swiper{
+        width: 100%;
+        height: 100%;
+        .swiper-wrapper{
+            .swiper-slide {
+                text-align: center;
+                font-size: 18px;
+                background: #fff;
+              
+                /* Center slide text vertically */
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+              }       
+        }
+        .swiper-pagination{
+
+        }
+        .swiper-button-prev{
+
+        }
+        .swiper-button-next{
+
+        }
+
+    }
+
+}

@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 // import pages
 import HariPelaksanaan from "./pages/HariPelaksanaan/HariPelaksanaan";
+import FotoDivisi from "./pages/FotoDivisi";
 import Error from "./pages/error/Error";
 
 // import components
@@ -14,6 +15,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<HariPelaksanaan />} />
+          <Route path="/foto-divisi" element={<FotoDivisi />} />
           <Route path="*" element={<Error />} />
         </Routes>
         <NavigationBar />
