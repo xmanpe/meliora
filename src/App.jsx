@@ -8,6 +8,7 @@ import Galeri from "./pages/galeri-meliora/galeri"
 
 // import components
 import NavigationBar from "./components/navbar/NavigationBar";
+import SayembaraVisual from "./pages/SayembaraVisual";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/" element={<HariPelaksanaan />} />
           <Route path="*" element={<Error />} />
           <Route path="/galeri" element={<Galeri />} />
+          <Route path="/sayembara-visual" element={<SayembaraVisual />} />
         </Routes>
         <NavigationBar />
       </Router>
