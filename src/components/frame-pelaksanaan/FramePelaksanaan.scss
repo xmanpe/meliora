@@ -1,4 +1,4 @@
-@import '../../index.scss';
+@import "../../index.scss";
 
 .frame-pelaksanaan {
     display: flex;
@@ -8,45 +8,188 @@
     gap: 20px;
     box-sizing: border-box;
 
-    .each-frame {
-        width: 100%;
+    .Title {
         display: flex;
-        flex-direction: column;
-        gap: 12px;
+        width: 60vw;
+        justify-content: center;
+        padding: 60px;
 
-        .border {
-            height: 400px;
-            overflow: hidden;
-            box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
-            transition: all 0.3s ease-in-out;
-
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
-
-            &:hover {
-                box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
-                transform: translateY(-5px);
-            }
+        h1 {
+            color: #344c29;
+            font-family: "DM Serif Text";
+            font-size: 48px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            margin: 0;
         }
-
-        .text {
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-
-            h1 {
-                font-size: $font-size-xmedium;
-                font-weight: 600;
-            }
-
-            p {
-                font-size: $font-size-small;
-                color: $paragraph-color;
-            }
-        }
-
     }
+
+    .container-HariPelaksanaan {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        padding: 60px 60px;
+        height: fit-content;
+        gap: 60px;
+
+        .image {
+            position: absolute;
+            z-index: 1;
+        }
+
+        .LeftDiv {
+            width: fit-content;
+            height: 100%;
+            // background-color: rgb(80, 0, 0);
+
+            .SIO {
+                // background-color: rgb(100, 100, 255);
+                position: relative;
+                width: 300px;
+                height: 400px;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                transition: 0.2s ease-in;
+                align-items: center;
+            }
+        }
+
+        .MidDiv {
+            width: fit-content;
+            height: fit-content;
+            display: flex;
+            gap: 60px;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+            // background-color: rgb(100, 0, 0);
+
+            .TopDiv {
+                // background-color: red;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                align-content: center;
+                flex-wrap: wrap;
+                gap: 60px;
+
+                .HariPemupukan {
+                    width: 400px;
+                    height: 300px;
+                    transition: 0.2s ease-in;
+                    // background-color: rgb(43, 43, 255);
+                }
+            }
+
+            .BottomDiv {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                // background-color: aqua;
+                justify-content: center;
+                gap: 60px;
+                .PerkembanganHari1,
+                .PerkembanganHari2 {
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: wrap;
+                    width: 300px;
+                    height: 400px;
+                    transition: 0.2s ease-in;
+                    align-items: center;
+                    // background-color: rgb(6, 6, 132);
+                }
+            }
+        }
+
+        .RightDiv {
+            width: fit-content;
+            // background-color: rgb(200, 0, 0);
+            .STS {
+                position: relative;
+                display: flex;
+                width: 300px;
+                height: 400px;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                transition: 0.2s ease-in;
+                // justify-content: center;
+                // background-color: blue;
+            }
+        }
+
+        p {
+            color: var(--Black, #000);
+            text-align: center;
+            font-family: "DM Sans";
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            margin: 0;
+            position: relative;
+            z-index: 3;
+            margin-top: auto;
+            padding-top: auto;
+            margin-bottom: 0px;
+        }
+
+        img {
+            height: 90%;
+            object-fit: cover;
+            display: block;
+            overflow: clip;
+            border: 1px solid black;
+            border-radius: 10px;
+        }
+    }
+
+    // .each-frame {
+    //     width: 100%;
+    //     display: flex;
+    //     flex-direction: column;
+    //     gap: 12px;
+
+    //     .border {
+    //         height: 400px;
+    //         overflow: hidden;
+    //         box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    //         transition: all 0.3s ease-in-out;
+
+    //         img {
+    //             width: 100%;
+    //             height: 100%;
+    //             object-fit: cover;
+    //         }
+
+    //         &:hover {
+    //             box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
+    //             transform: translateY(-5px);
+    //         }
+    //     }
+
+    //     .text {
+    //         display: flex;
+    //         flex-direction: column;
+    //         gap: 4px;
+
+    //         h1 {
+    //             font-size: $font-size-xmedium;
+    //             font-weight: 600;
+    //         }
+
+    //         p {
+    //             font-size: $font-size-small;
+    //             color: $paragraph-color;
+    //         }
+    //     }
+
+    // }
 }
