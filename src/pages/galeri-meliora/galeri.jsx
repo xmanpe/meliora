@@ -1,6 +1,7 @@
 import React from "react";
 import "./galeri.scss";
 import Galeri from "./masonryGaleri";
+import Dokum from '../../components/dokumentasi-divisi/dokumDivisi'
 
 import DriveIcon from "../../images/meliora/icon/download-drive-icon.png";
 
