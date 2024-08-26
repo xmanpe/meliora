@@ -1,13 +1,46 @@
 @import '../../index.scss';
 
+@keyframes slideIn {
+  from {
+      transform: scale(0);
+      opacity: 0;
+  }
+  to {
+      transform: scale(1);
+      opacity: 1;
+  }
+}
+
+@keyframes slideOut {
+  from {
+      transform: scale(1);
+      opacity: 1;
+  }
+  to {
+      transform: scale(0);
+      opacity: 0;
+  }
+}
+
 .divisi-swiper{
+    // position: -webkit-sticky;
+    // position: sticky;
     padding: 100px 160px 100px 160px;
+    top: 0;
+    z-index: 5;
     .swiper {
       width: 100%;
       height: 100%;
     }
     
-    .swiper-slide {
+    .swiper-slide-active{
+      transform: scale(1);
+      transition: transform 0.5s ease;
+    }
+
+    .swiper-slide-visible {
+      scale: 1;
+      transition: all 200ms ease-in-out;
       position: relative;
       text-align: center;
       font-size: 18px;
@@ -19,81 +52,265 @@
       align-items: center;
       flex-direction: column;
     }
-    
+
     .swiper {
       margin-left: auto;
       margin-right: auto;
     }
-  
-    .swiper-pagination {
-      .swiper-pagination-bullet {
-          background: #000000;
-          opacity: 0.3;
-          width: 8px;
-          height: 8px;
-          border-radius: 50%;
-      }
-  
-      .swiper-pagination-bullet-active {
-          background: #000000;
-          opacity: 0.8;
-          width: 32px;
-          height: 8px;
-          border-radius: 100px;
-      }
-  }
+    
   .swiper-content{
-    .image-wrapper {
+    .image-wrapper-{
       position: relative;
-      width: 300px;
+      width: 400px;
       height: 300px;
       margin-bottom: 20px;
-      .left,
-      .middle,
-      .right {
+      .left-frame-container,
+      .middle-frame-container,
+      .right-frame-container{
+        transition: transform 0.3s ease;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 40%;
         display: flex;
         align-items: center;
-        justify-content: center;
-        position: absolute;
-        width: 50%;
-        height: auto;
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        justify-content: center;      
+        .left,
+        .middle,
+        .right {
+          position: absolute;
+          width: 96%;
+          object-fit: cover;
+          aspect-ratio: 1/1;
+        }
+        .left-frame,
+        .middle-frame,
+        .right-frame {
+          position: absolute;
+          left: 0;
+          width: 100%;
+          object-fit: cover;
+          aspect-ratio: 1/1;
+        }  
+        .left-frame,.left{
+          z-index: 1;
+          top: 120px;
+          left: 10px;
+          transform: rotate(-4deg);
+        }
+  
+        .middle-frame,.middle {
+          z-index: 2;
+          top: 60px;
+          left: 100px;
+          transform: rotate(0deg);
+          width:120%;
+        }
+  
+        .right-frame,.right {
+          z-index: -1;
+          top: 120px;
+          left: 220px;
+          transform: rotate(3deg);
+        }
       }
 
-      .left {
-        z-index: 1;
-        top: 20px;
-        left: -20px;
-        transform: rotate(-4deg);
-      }
 
-      .middle {
-        z-index: 2;
-        top: 10px;
-        left: 0;
-        transform: rotate(0deg);
-      }
-
-      .right {
-        z-index: -1;
-        top: 0px;
-        left: 20px;
-        transform: rotate(3deg);
-      }
+    }
+    .image-wrapper-mini{
+      // display: none;
     }
     .keterangan-divisi{
+      position: relative;
       display: flex;
       flex-direction: row;
       align-items: center;
       justify-content: center;
+      gap: 16px;
+      left: -20px;
       .logo-divisi{
-        width: 160px;
+        width: 100px;
       }
       .text-divisi{
         font-family: "DM Serif Display", serif;
-        color: $balwana-color;
+        text-align: center;
+        .text-divisi-merah{
+          color:$balwana-color;
+        }
+        .text-divisi-biru{
+          color:$gandara-color;
+        }
+        .text-divisi-pink{
+          color:$sakha-color;
+        }
+        .text-divisi-abu{
+          color:$caksana-color;
+        }
+        .text-divisi-toska{
+          color:$lavanya-color;
+        }
+        .text-divisi-kuning{
+          color:$nayanika-color;
+        }
+        .text-divisi-oranye{
+          color:$baskara-color;
+        }
+        .text-divisi-hitam{
+          color:$bimasena-color;
+        }
+        .text-divisi-ungu{
+          color:$gajendra-color;
+        }
+        .text-divisi-cokelat{
+          color:$sarkara-color;
+        }
+        .text-divisi-hijau{
+          color:$saraya-color;
+        }
+        .text-nama{
+         font-size: $font-size-large;
+        }
+        .text-divisi{
+          font-size: $font-size-xxsmall;
+        }
       }
     }
-
   }
+  .swiper-slide-next{
+    // animation-name: slideIn;
+    // animation-duration: 300ms;
+
+    transition: all 200ms ease-in-out;
+    scale: 0.6;
+    filter: blur(2px);
+    .image-wrapper-{
+      position: relative;
+      width: 400px;
+      height: 300px;
+      margin-bottom: 20px;
+      .left-frame-container,
+      .middle-frame-container,
+      .right-frame-container{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 40%;
+        display: flex;
+        align-items: center;
+        justify-content: center;      
+        .left,
+        .middle,
+        .right {
+          position: absolute;
+          width: 96%;
+          object-fit: cover;
+          aspect-ratio: 1/1;
+        }
+        .left-frame,
+        .middle-frame,
+        .right-frame {
+          position: absolute;
+          left: 0;
+          width: 100%;
+          object-fit: cover;
+          aspect-ratio: 1/1;
+        }  
+        .left-frame,.left{
+          z-index: 1;
+          top: 140px;
+          left: 80px;
+          transform: rotate(-2deg);
+        }
+  
+        .middle-frame,.middle {
+          z-index: 2;
+          top: 80px;
+          left: 100px;
+          transform: rotate(2deg);
+          width:120%;
+        }
+  
+        .right-frame,.right {
+          z-index: -1;
+          top: 120px;
+          left: 150px;
+          transform: rotate(1deg);
+        }
+      }
+    }
+  }
+  .swiper-slide-prev{
+    transition: all 200ms ease-in-out;
+    scale: 0.6;
+    filter: blur(2px);
+    .image-wrapper-{
+      position: relative;
+      width: 400px;
+      height: 300px;
+      margin-bottom: 20px;
+      .left-frame-container,
+      .middle-frame-container,
+      .right-frame-container{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 40%;
+        display: flex;
+        align-items: center;
+        justify-content: center;      
+        .left,
+        .middle,
+        .right {
+          position: absolute;
+          width: 96%;
+          object-fit: cover;
+          aspect-ratio: 1/1;
+        }
+        .left-frame,
+        .middle-frame,
+        .right-frame {
+          position: absolute;
+          left: 0;
+          width: 100%;
+          object-fit: cover;
+          aspect-ratio: 1/1;
+        }  
+        .left-frame,.left{
+          z-index: 1;
+          top: 140px;
+          left: 80px;
+          transform: rotate(-2deg);
+        }
+  
+        .middle-frame,.middle {
+          z-index: 2;
+          top: 80px;
+          left: 100px;
+          transform: rotate(2deg);
+          width:120%;
+        }
+  
+        .right-frame,.right {
+          z-index: -1;
+          top: 120px;
+          left: 150px;
+          transform: rotate(1deg);
+        }
+      }
+    }
+  }
+ .swiper-button-next,
+ .swiper-button-prev{
+  color: black;
+  padding: 10px;
+  width: 50px;
+  height: 50px;
+  transition: background-color 200ms ease-in-out;
+  border-radius: 100px;
+ }
+ .swiper-button-next:hover,
+ .swiper-button-prev:hover{
+  background-color: rgba($color: #999999, $alpha: 0.1);
+  transition: background-color 200ms ease-in-out;
+ }
 }

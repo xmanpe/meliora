@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
+import '../../index.scss';
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -11,27 +12,50 @@ import 'swiper/css/navigation';
 import './CarouselDivisi.scss';
 
 // import required modules
-import { Pagination, Navigation } from 'swiper/modules';
+import { Navigation, Keyboard } from 'swiper/modules';
 
 import carouselData from "./DataCarouselDivisi";
 import { DivisiContext } from '../../pages/FotoDivisi';
+import Frame1 from '../../images/frame/FRAME MELIORA 1;1.svg';
 
 const CarouselDivisi = () => {
     const {activeIndex, setActiveIndex} = useContext(DivisiContext);
-    // const [activeIndex, setActiveIndex] = useState(0);
+    const [hideImages, setHideImages] = useState(false);
+    const [scrollY, setScrollY] = useState(0);
+    // useEffect(() => {
+    //     const handleScroll = () => {
+    //         console.log(window.scrollY)
+    //         const yPosition = window.scrollY;
+    //         const hideImagesThreshold = 200;
+        
+    //         if (yPosition > hideImagesThreshold) {
+    //             setHideImages(true);
+    //         } else if (yPosition <= hideImagesThreshold) {
+    //             setHideImages(false);
+    //         }
+
+    //     };
+
+    //     window.addEventListener('scroll', handleScroll);
+    //     return () => {
+    //         window.removeEventListener('scroll', handleScroll);
+    //     };
+    // }, [window.scrollY]);
 
     return(
         <>
             <div className='divisi-swiper'>
                 <Swiper
-                    slidesPerView={1}
-                    spaceBetween={30}
+                    slidesPerView={3}  
+                    spaceBetween={10}  
+                    centeredSlides={true}
                     loop={true}
-                    pagination={{
-                    clickable: true,
+                    keyboard={{
+                        enabled: true,
                     }}
+                    allowTouchMove={false}
                     navigation={true}
-                    modules={[Pagination, Navigation]}
+                    modules={[Navigation, Keyboard]}
                     onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
                     onSwiper={(swiper) => setActiveIndex(swiper.realIndex)}
                     className="mySwiper"
@@ -40,20 +64,25 @@ const CarouselDivisi = () => {
                         carouselData["DIVISI"].map((carouselData, index)=>(
                             <SwiperSlide>
                                 <div className="swiper-content">
-                                    <div className="image-wrapper">
+                                    <div className={`image-wrapper-${hideImages ? 'mini' : ''}`}>
                                         {carouselData.foto.map((foto, imgIndex) => {
                                             const classNames = ['left', 'middle', 'right'];
                                             const className = classNames[imgIndex] || '';
                                             return (
-                                                <img key={imgIndex} src={foto} alt={`${carouselData.nama} ${imgIndex + 1}`} className={className} />
+                                                <div key={imgIndex} className={`${className}-frame-container`}>
+                                                    <img src={foto} alt={`${carouselData.nama} ${imgIndex + 1}`} className={className} />
+                                                    <img src={Frame1} className={`${className}-frame`} alt="frame"/>
+                                                </div>
                                             );
                                         })}
                                     </div>
                                     <div className="keterangan-divisi">
                                         <img className="logo-divisi" src={carouselData.logo}/>
                                         <div className="text-divisi">
-                                            <p>{carouselData.nama}</p>
-                                            <p>{carouselData.divisi}</p>
+                                            <div className={`text-divisi-${carouselData.warna}`}>
+                                                <p className="text-nama">{carouselData.nama}</p>
+                                                <p className="text-divisi">{carouselData.divisi}</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -61,7 +90,7 @@ const CarouselDivisi = () => {
                         ))
                     }
                 </Swiper>
-                <div>Active Index: {activeIndex}</div>
+                {/* <div>Active Index: {activeIndex}</div> */}
             </div>
         </>
     )

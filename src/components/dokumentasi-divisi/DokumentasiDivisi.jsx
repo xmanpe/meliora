@@ -21,7 +21,7 @@ const DokumentasiDivisi = () => {
   useEffect(()=>{
     setActiveTab(0);
     swiperRef.current.swiper.slideTo(0);
-  },[activeIndex])
+  },[activeIndex,activeTab])
 
   return (
     <div className='foto-section'>
