@@ -1,6 +1,7 @@
 import React from "react";
 import "./galeri.scss";
-import Galeri from "./masonryGaleri";
+import SIO from "./masonryGaleri";
+import Mupuk from "./pemupukanGaleri"
 import Dokum from '../../components/dokumentasi-divisi/dokumDivisi'
 
 import DriveIcon from "../../images/meliora/icon/download-drive-icon.png";
@@ -40,7 +41,9 @@ function galeri() {
             </div>
           </div>
         </div>
-        <Galeri />
+        <SIO />
+        <h1>MUPUK</h1>
+        <Mupuk />
       </div>
       <div className="white-space"></div>
     </div>
