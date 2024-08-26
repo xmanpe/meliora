@@ -13,7 +13,7 @@ function galeri() {
         <div className="container-utama-header">
           <div className="container-judul">
             <div className="judul">
-              <h1>Hari Pemupukan</h1>
+              <h1>SIO</h1>
             </div>
             <div className="deskripsi-judul">
               <p>
@@ -42,8 +42,6 @@ function galeri() {
           </div>
         </div>
         <SIO />
-        <h1>MUPUK</h1>
-        <Mupuk />
       </div>
       <div className="white-space"></div>
     </div>

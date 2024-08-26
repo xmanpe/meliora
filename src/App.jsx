@@ -5,6 +5,8 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import HariPelaksanaan from "./pages/HariPelaksanaan/HariPelaksanaan";
 import Error from "./pages/error/Error";
 import Galeri from "./pages/galeri-meliora/galeri"
+import Pemupukan from "./pages/galeri-meliora/Pemupukan";
+import Hari1 from "./pages/galeri-meliora/Hari1";
 
 // import components
 import NavigationBar from "./components/navbar/NavigationBar";
@@ -17,7 +19,9 @@ function App() {
         <Routes>
           <Route path="/" element={<HariPelaksanaan />} />
           <Route path="*" element={<Error />} />
-          <Route path="/galeri" element={<Galeri />} />
+          <Route path="/SIO" element={<Galeri />} />
+          <Route path="/Pemupukan" element={<Pemupukan />} />
+          <Route path="/Perkembangan-hari-1" element={<Hari1/>} />
           <Route path="/sayembara-visual" element={<SayembaraVisual />} />
         </Routes>
         <NavigationBar />

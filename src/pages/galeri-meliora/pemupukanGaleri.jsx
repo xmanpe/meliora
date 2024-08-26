@@ -30,7 +30,7 @@ import mupuk26 from "../../images/meliora/foto/pemupukan/Qhedyzya Ricardiane_Har
 
 import close from "../../images/meliora/icon/cross.png";
 
-function masonryGaleri() {
+function pemupukanGaleri() {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const [isOpen, setIsOpen] = useState(false);
   // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -194,4 +194,4 @@ function masonryGaleri() {
   );
 }
 
-export default masonryGaleri;
+export default pemupukanGaleri;
