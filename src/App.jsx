@@ -16,9 +16,9 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<HariPelaksanaan />} />
-          <Route path="*" element={<Error />} />
           <Route path="/galeri" element={<Galeri />} />
           <Route path="/sayembara-visual" element={<SayembaraVisual />} />
+          <Route path="*" element={<Error />} />
         </Routes>
         <NavigationBar />
       </Router>
