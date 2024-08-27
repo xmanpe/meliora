@@ -14,7 +14,7 @@ import SayembaraVisualNotActive from '../../images/icons/navigation/sayembara_vi
 import SayembaraVisualActive from '../../images/icons/navigation/sayembara_visual_active.svg';
 
 const tabsConfig = [
-    { path: '/', icon: HariPelaksaanNotActive, activeIcon: HariPelaksaanActive, text: 'Hari Pelaksanaan' },
+    { path: '/hari-pelaksanaan', icon: HariPelaksaanNotActive, activeIcon: HariPelaksaanActive, text: 'Hari Pelaksanaan' },
     { path: '/dibalik-kepanitiaan', icon: DibalikKepanitiaanNotActive, activeIcon: DibalikKepanitiaanActive, text: 'Di Balik Kepanitiaan' },
     { path: '/divisi', icon: FotoDivisiNotActive, activeIcon: FotoDivisiActive, text: 'Foto Divisi' },
     { path: '/sayembara-visual', icon: SayembaraVisualNotActive, activeIcon: SayembaraVisualActive, text: 'Sayembara Visual' },
@@ -43,7 +43,7 @@ const BottomNav = () => {
         '/hari-pelaksanaan/sidang-terbuka-senat'
     ];
 
-    const isNotMainPath = !['/', '/dibalik-kepanitiaan', '/divisi', '/sayembara-visual'].includes(location.pathname);
+    const isNotMainPath = !['/hari-pelaksanaan', '/dibalik-kepanitiaan', '/divisi', '/sayembara-visual'].includes(location.pathname);
     const isHariPelaksanaanPath = hariPelaksanaanPaths.includes(location.pathname) || location.pathname.startsWith('/hari-pelaksanaan');
 
     useEffect(() => {
@@ -53,7 +53,7 @@ const BottomNav = () => {
     useEffect(() => {
         // Set active tab based on current path
         if (isHariPelaksanaanPath) {
-            setActiveTab('/');
+            setActiveTab('/hari-pelaksanaan');
         } else {
             setActiveTab(location.pathname);
         }

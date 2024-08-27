@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from "react";
 
 // import images
 import MelioraYellow from '../../images/logo/meliora yellow.svg'

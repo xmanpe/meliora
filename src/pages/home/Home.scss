@@ -1,0 +1,69 @@
+.home {
+    max-width: 100vw;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+    .box-video {
+        position: fixed;
+        z-index: 2;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 100vh;
+        margin: 0px;
+        padding: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+        transition: 1s;
+
+        video {
+            object-fit: cover;
+            max-width: 300vw;
+            min-width: 100vw;
+            min-height: 100vh !important;
+            height: 100vh;
+        }
+
+        .box-button {
+            position: absolute;
+            width: 100vw;
+            height: 100vh;
+            z-index: 10;
+
+            .buttonMulai {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 100vw;
+                height: 100vh;
+                cursor: pointer;
+
+                div {
+                    width: 250px;
+                    text-align: center;
+                    z-index: 10;
+                    position: fixed;
+                    bottom: 15%;
+                    left: 50%;
+                    transform: translate(-50%);
+                    background: rgba(0, 0, 0, 0.5);
+                    padding: 0.5rem;
+                    color: white;
+                }
+            }
+        
+            .buttonMulai::before {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 10;
+            }
+        }
+    }
+}
