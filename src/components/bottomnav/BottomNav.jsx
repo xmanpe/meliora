@@ -123,7 +123,7 @@ const BottomNav = () => {
                 ))}
                 <div className='the-border'>
                     <div className='movie-button' onClick={afterMovieButton}>
-                        <p>After Movie</p>
+                        <p><i>After Movie</i></p>
                     </div>
                 </div>
             </nav>
