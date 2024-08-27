@@ -17,7 +17,7 @@ const HariPelaksanaan = () => {
                 bottom='Hari Pelaksanaan adalah hari dimana kegiatan akan dilaksanakan.'
             />
             <FramePelaksanaan />
-            <Dokum/>
+            {/* <Dokum/> */}
         </>
     );
 }
