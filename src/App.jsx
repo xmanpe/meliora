@@ -13,6 +13,7 @@ import Error from "./pages/error/Error";
 // import components
 import SayembaraVisual from "./pages/SayembaraVisual";
 import BottomNavbar from "./components/bottomnav/BottomNav";
+import STS from "./pages/galeri-meliora/STS";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/hari-pelaksanaan/hari-pemupukan" element={<Pemupukan />} />
           <Route path="/hari-pelaksanaan/perkembangan-hari-1" element={<Hari1 />} />
           <Route path="/hari-pelaksanaan/perkembangan-hari-2" element={<Hari2 />} />
+          <Route path="/hari-pelaksanaan/sidang-terbuka-senat" element={<STS />} />
           <Route path="/sayembara-visual" element={<SayembaraVisual />} />
           <Route path="*" element={<Error />} />
         </Routes>
