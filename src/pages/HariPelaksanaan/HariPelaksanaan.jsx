@@ -5,19 +5,21 @@ import MelioraYellow from '../../images/logo/meliora yellow.svg'
 
 // import components
 import Header from '../../components/header/Header';
-import FramePelaksanaan from '../../components/frame-pelaksanaan/FramePelaksanaan';
+import FramePelaksanaanRevisi from '../../components/frame-pelaksanaan/FramePelaksanaanRevisi';
 import TopInfo from '../../components/top-info/TopInfo';
+import FloatingParticle from "../../components/particles/FloatingParticle";
 
 const HariPelaksanaan = () => {
     return (
-        <div className='hari_pelaksanaan'>
+        <div className='margin_layout'>
+            <FloatingParticle />
             <TopInfo />
             <Header
                 image={MelioraYellow}
                 top='Hari Pelaksanaan'
                 bottom='Hari Pelaksanaan adalah hari dimana kegiatan akan dilaksanakan.'
             />
-            <FramePelaksanaan />
+            <FramePelaksanaanRevisi />
         </div>
     );
 }
