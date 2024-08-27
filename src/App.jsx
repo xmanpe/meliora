@@ -26,6 +26,7 @@ function App() {
           <Route path="/hari-pelaksanaan/perkembangan-hari-1" element={<Hari1 />} />
           <Route path="/hari-pelaksanaan/perkembangan-hari-2" element={<Hari2 />} />
           <Route path="/sayembara-visual" element={<SayembaraVisual />} />
+          <Route path="*" element={<Error />} />
         </Routes>
         {/* <NavigationBar /> */}
         <BottomNavbar />

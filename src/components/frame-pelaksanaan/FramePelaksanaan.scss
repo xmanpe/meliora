@@ -1,52 +1,547 @@
-@import '../../index.scss';
+@import "../../index.scss";
 
-.frame-pelaksanaan {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    box-sizing: border-box;
+.hari_pelaksanaan {
+    padding: 20px 50px ;
 
-    .each-frame {
-        width: 100%;
+    .frame-pelaksanaan {
         display: flex;
-        flex-direction: column;
-        gap: 12px;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 48px 0;
+        gap: 24px;
+        box-sizing: border-box;
+    
+        .LeftDiv {
+            width: fit-content;
+            // background-color: rgb(80, 0, 0);
 
-        .border {
-            height: 400px;
-            overflow: hidden;
-            box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
-            transition: all 0.3s ease-in-out;
-
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
-
-            &:hover {
-                box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
-                transform: translateY(-5px);
+            .SIO {
+                // background-color: rgb(100, 100, 255);
+                position: relative;
+                width: 250px;
+                height: 400px;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                transition: 0.2s ease-in;
+                align-items: center;
             }
         }
 
-        .text {
+        .MidDiv {
+            width: fit-content;
+            height: fit-content;
+            display: flex;
+            gap: 24px;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+            // background-color: rgb(100, 0, 0);
+
+            .TopDiv {
+                // background-color: red;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                align-content: center;
+                flex-wrap: wrap;
+                gap: 24px;
+
+                .HariPemupukan {
+                    width: 400px;
+                    height: 250px;
+                    transition: 0.2s ease-in;
+                    // background-color: rgb(43, 43, 255);
+
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .BottomDiv {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                // background-color: aqua;
+                justify-content: center;
+                gap: 24px;
+                .PerkembanganHari1,
+                .PerkembanganHari2 {
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: wrap;
+                    width: 250px;
+                    height: 400px;
+                    transition: 0.2s ease-in;
+                    align-items: center;
+                    // background-color: rgb(6, 6, 132);
+                }
+            }
+        }
+
+        .RightDiv {
+            width: fit-content;
+            // background-color: rgb(200, 0, 0);
+            .STS {
+                position: relative;
+                display: flex;
+                width: 250px;
+                height: 400px;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                transition: 0.2s ease-in;
+                // justify-content: center;
+                // background-color: blue;
+            }
+        }
+
+        p {
+            color: var(--Black, #000);
+            text-align: center;
+            font-family: "DM Sans";
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            margin: 0;
+            position: relative;
+            z-index: 3;
+            margin-top: auto;
+            padding-top: auto;
+            margin-bottom: 0px;
+        }
+
+        img {
+            height: 90%;
+            object-fit: cover;
+            display: block;
+            overflow: clip;
+            border: 1px solid black;
+            border-radius: 10px;
+        }
+    }
+}
+
+
+@media screen and (max-width: 1200px) {
+    .hari_pelaksanaan {
+        padding: 20px 50px ;
+    
+        .frame-pelaksanaan {
             display: flex;
             flex-direction: column;
-            gap: 4px;
+            justify-content: center;
+            align-items: center;
+            padding: 48px 0;
+            gap: 24px;
+            box-sizing: border-box;
+        
+            .LeftDiv {
+                width: fit-content;
+                // background-color: rgb(80, 0, 0);
+    
+                .SIO {
+                    // background-color: rgb(100, 100, 255);
+                    position: relative;
+                    width: 500px;
+                    height: 300px;
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: nowrap;
+                    transition: 0.2s ease-in;
+                    align-items: center;
 
-            h1 {
-                font-size: $font-size-xmedium;
-                font-weight: 600;
+                    .image {
+                        width: 100%;
+                    }
+                }
             }
+    
+            .MidDiv {
+                width: fit-content;
+                height: fit-content;
+                display: flex;
+                gap: 24px;
+                flex-direction: column;
+                flex-wrap: wrap;
+                align-content: center;
+                justify-content: center;
+                align-items: center;
+                // background-color: rgb(100, 0, 0);
+    
+                .TopDiv {
+                    // background-color: red;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    align-content: center;
+                    flex-wrap: wrap;
+                    gap: 24px;
+    
+                    .HariPemupukan {
+                        width: 500px;
+                        height: 300px;
+                        transition: 0.2s ease-in;
+                        // background-color: rgb(43, 43, 255);
+    
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+    
+                .BottomDiv {
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: wrap;
+                    // background-color: aqua;
+                    justify-content: center;
+                    gap: 24px;
+                    .PerkembanganHari1,
+                    .PerkembanganHari2 {
+                        position: relative;
+                        display: block;
+                        width: 500px;
+                        height: 300px;
+                        transition: 0.2s ease-in;
+                        // background-color: rgb(6, 6, 132);
 
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+    
+            .RightDiv {
+                width: fit-content;
+                // background-color: rgb(200, 0, 0);
+                .STS {
+                    position: relative;
+                    display: flex;
+                    width: 500px;
+                    height: 300px;
+                    flex-direction: column;
+                    flex-wrap: nowrap;
+                    transition: 0.2s ease-in;
+                    // justify-content: center;
+                    // background-color: blue;
+                
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+    
             p {
-                font-size: $font-size-small;
-                color: $paragraph-color;
+                color: var(--Black, #000);
+                text-align: center;
+                font-family: "DM Sans";
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                margin: 0;
+                position: relative;
+                z-index: 3;
+                margin-top: auto;
+                padding-top: auto;
+                margin-bottom: 0px;
+            }
+    
+            img {
+                height: 90%;
+                object-fit: cover;
+                display: block;
+                overflow: clip;
+                border: 1px solid black;
+                border-radius: 10px;
             }
         }
+    }
+}
 
+@media screen and (max-width: 810px) {
+    
+}
+
+@media screen and (max-width: 560px) {
+    .hari_pelaksanaan {
+        padding: 20px 50px ;
+    
+        .frame-pelaksanaan {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 48px 0;
+            gap: 24px;
+            box-sizing: border-box;
+        
+            .LeftDiv {
+                width: fit-content;
+                // background-color: rgb(80, 0, 0);
+    
+                .SIO {
+                    // background-color: rgb(100, 100, 255);
+                    position: relative;
+                    width: 400px;
+                    height: 200px;
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: nowrap;
+                    transition: 0.2s ease-in;
+                    align-items: center;
+
+                    .image {
+                        width: 100%;
+                    }
+                }
+            }
+    
+            .MidDiv {
+                width: fit-content;
+                height: fit-content;
+                display: flex;
+                gap: 24px;
+                flex-direction: column;
+                flex-wrap: wrap;
+                align-content: center;
+                justify-content: center;
+                align-items: center;
+                // background-color: rgb(100, 0, 0);
+    
+                .TopDiv {
+                    // background-color: red;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    align-content: center;
+                    flex-wrap: wrap;
+                    gap: 24px;
+    
+                    .HariPemupukan {
+                        width: 400px;
+                        height: 200px;
+                        transition: 0.2s ease-in;
+                        // background-color: rgb(43, 43, 255);
+    
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+    
+                .BottomDiv {
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: wrap;
+                    // background-color: aqua;
+                    justify-content: center;
+                    gap: 24px;
+                    .PerkembanganHari1,
+                    .PerkembanganHari2 {
+                        position: relative;
+                        display: block;
+                        width: 400px;
+                        height: 200px;
+                        transition: 0.2s ease-in;
+                        // background-color: rgb(6, 6, 132);
+
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+    
+            .RightDiv {
+                width: fit-content;
+                // background-color: rgb(200, 0, 0);
+                .STS {
+                    position: relative;
+                    display: flex;
+                    width: 400px;
+                    height: 200px;
+                    flex-direction: column;
+                    flex-wrap: nowrap;
+                    transition: 0.2s ease-in;
+                    // justify-content: center;
+                    // background-color: blue;
+                
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+    
+            p {
+                color: var(--Black, #000);
+                text-align: center;
+                font-family: "DM Sans";
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                margin: 0;
+                position: relative;
+                z-index: 3;
+                margin-top: auto;
+                padding-top: auto;
+                margin-bottom: 0px;
+            }
+    
+            img {
+                height: 90%;
+                object-fit: cover;
+                display: block;
+                overflow: clip;
+                border: 1px solid black;
+                border-radius: 10px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 432px) {
+    .hari_pelaksanaan {
+        padding: 20px 16px ;
+    
+        .frame-pelaksanaan {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 48px 0;
+            gap: 24px;
+            box-sizing: border-box;
+        
+            .LeftDiv {
+                width: fit-content;
+                // background-color: rgb(80, 0, 0);
+    
+                .SIO {
+                    // background-color: rgb(100, 100, 255);
+                    position: relative;
+                    width: 320px;
+                    height: 150px;
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: nowrap;
+                    transition: 0.2s ease-in;
+                    align-items: center;
+
+                    .image {
+                        width: 100%;
+                    }
+                }
+            }
+    
+            .MidDiv {
+                width: fit-content;
+                height: fit-content;
+                display: flex;
+                gap: 24px;
+                flex-direction: column;
+                flex-wrap: wrap;
+                align-content: center;
+                justify-content: center;
+                align-items: center;
+                // background-color: rgb(100, 0, 0);
+    
+                .TopDiv {
+                    // background-color: red;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    align-content: center;
+                    flex-wrap: wrap;
+                    gap: 24px;
+    
+                    .HariPemupukan {
+                        width: 320px;
+                        height: 150px;
+                        transition: 0.2s ease-in;
+                        // background-color: rgb(43, 43, 255);
+    
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+    
+                .BottomDiv {
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: wrap;
+                    // background-color: aqua;
+                    justify-content: center;
+                    gap: 24px;
+                    .PerkembanganHari1,
+                    .PerkembanganHari2 {
+                        position: relative;
+                        display: block;
+                        width: 320px;
+                        height: 150px;
+                        transition: 0.2s ease-in;
+                        // background-color: rgb(6, 6, 132);
+
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+    
+            .RightDiv {
+                width: fit-content;
+                // background-color: rgb(200, 0, 0);
+                .STS {
+                    position: relative;
+                    display: flex;
+                    width: 320px;
+                    height: 150px;
+                    flex-direction: column;
+                    flex-wrap: nowrap;
+                    transition: 0.2s ease-in;
+                    // justify-content: center;
+                    // background-color: blue;
+                
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+    
+            p {
+                color: var(--Black, #000);
+                text-align: center;
+                font-family: "DM Sans";
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                margin: 0;
+                position: relative;
+                z-index: 3;
+                margin-top: auto;
+                padding-top: auto;
+                margin-bottom: 0px;
+            }
+    
+            img {
+                height: 90%;
+                object-fit: cover;
+                display: block;
+                overflow: clip;
+                border: 1px solid black;
+                border-radius: 10px;
+            }
+        }
     }
 }
