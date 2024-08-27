@@ -1,33 +1,33 @@
 import React, { useState } from "react";
 import "./masonrygaleri.scss";
 
-//sio
-import sio1 from "../../images/meliora/foto/SIO/Sesi Informasi OMB_Allison_Edited_2.jpg"
-import sio2 from "../../images/meliora/foto/SIO/Sesi Informasi OMB_Salman_6.jpg"
-import sio3 from "../../images/meliora/foto/SIO/Sesi Informasi OMB_Salman_9.jpg"
-import sio4 from "../../images/meliora/foto/SIO/SIO_Andrew Su_ 8.jpg"
-import sio5 from "../../images/meliora/foto/SIO/SIO_Baskara_Rether_5.jpg"
-import sio6 from "../../images/meliora/foto/SIO/SIO_Diana Angyulia_7.jpg"
-import sio7 from "../../images/meliora/foto/SIO/SIO_Kristian Delon_2.jpg"
-import sio8 from "../../images/meliora/foto/SIO/SIO_Kristian Delon_9.jpg"
-import sio9 from "../../images/meliora/foto/SIO/SIO_Maria Cahaya_2.jpg"
-import sio10 from "../../images/meliora/foto/SIO/SIO_Qhedy_2.jpg"
-import sio11 from "../../images/meliora/foto/SIO/SIO_Ravalen Virginia_3.jpg"
-import sio12 from "../../images/meliora/foto/SIO/SIO_Steven Hans_5.jpg"
-import sio13 from "../../images/meliora/foto/SIO/SIO_Steven Hans_8.jpg"
-import sio14 from "../../images/meliora/foto/SIO/SIO_Valentino Kriswahyudi_5.jpg"
-import sio15 from "../../images/meliora/foto/SIO/SIO_Diana Angyulia_3.jpg"
-import sio16 from "../../images/meliora/foto/SIO/SIO_Diana Angyulia_5.jpg"
-import sio17 from "../../images/meliora/foto/SIO/SIO_Diana Angyulia_8.jpg"
-import sio18 from "../../images/meliora/foto/SIO/SIO_Baskara_Rether_3.jpg"
-import sio19 from "../../images/meliora/foto/SIO/SIO_Ravalen Virginia_1.jpg"
-import sio20 from "../../images/meliora/foto/SIO/SIO_Kristian Delon_5.jpg"
-import sio21 from "../../images/meliora/foto/SIO/SIO_Qhedy_1.jpg"
-import sio22 from "../../images/meliora/foto/SIO/SIO_Qhedy_5.jpg"
-import sio23 from "../../images/meliora/foto/SIO/SIO_Valentino Kriswahyudi_3.jpg"
-import sio24 from "../../images/meliora/foto/SIO/SIO_Valentino Kriswahyudi_8.jpg"
-import sio25 from "../../images/meliora/foto/SIO/SIO_Ravalen Virginia_10.jpg"
-import sio26 from "../../images/meliora/foto/SIO/SIO_Steven Hans_1.jpg"
+//h
+import h1 from "../../images/meliora/foto/HARI1/Perkembangan Hari 1_Allison-1.jpg";
+import h2 from "../../images/meliora/foto/HARI1/Perkembangan Hari 1_Allison-9.jpg";
+import h3 from "../../images/meliora/foto/HARI1/Perkembangan Hari 1_Allison-13.jpg";
+import h4 from "../../images/meliora/foto/HARI1/Perkembangan Hari 1_Allison-17.jpg";
+import h5 from "../../images/meliora/foto/HARI1/Perkembangan Hari 1_Allison-55.jpg";
+import h6 from "../../images/meliora/foto/HARI1/Perkembangan Hari 1_Andrew Su-57.jpg";
+import h7 from "../../images/meliora/foto/HARI1/Perkembangan Hari 1_Andrew Su-73.jpg";
+import h8 from "../../images/meliora/foto/HARI1/Perkembangan Hari 1_Delon_53.jpg";
+import h9 from "../../images/meliora/foto/HARI1/Perkembangan Hari 1_Diana Angyulia_Foto Terbaik-7.jpg";
+import h10 from "../../images/meliora/foto/HARI1/Perkembangan Hari 1_Maria Cahaya-3.jpg";
+import h11 from "../../images/meliora/foto/HARI1/Perkembangan Hari 1_Maria Cahaya-5.jpg";
+import h12 from "../../images/meliora/foto/HARI1/Perkembangan Hari 1_Maria Cahaya-17.jpg";
+import h13 from "../../images/meliora/foto/HARI1/Perkembangan Hari 1_Maria Cahaya-19.jpg";
+import h14 from "../../images/meliora/foto/HARI1/Perkembangan Hari 1_Maria Cahaya-34.jpg";
+import h15 from "../../images/meliora/foto/HARI1/Perkembangan Hari 1_Rether_1.jpg";
+import h16 from "../../images/meliora/foto/HARI1/Perkembangan Hari 1_Rether_31.jpg";
+import h17 from "../../images/meliora/foto/HARI1/Perkembangan Hari 1_Steven Hans_174.jpg";
+import h18 from "../../images/meliora/foto/HARI1/Perkembangan Hari 1_Valentino-17.jpg";
+import h19 from "../../images/meliora/foto/HARI1/Perkembangan Hari 1_Valentino-80.jpg";
+import h20 from "../../images/meliora/foto/HARI1/PerkembanganHari1_Ravalen Virginia-31.jpg";
+import h21 from "../../images/meliora/foto/HARI1/PerkembanganHari1_Ravalen Virginia-58.jpg";
+import h22 from "../../images/meliora/foto/HARI1/Qhedyzya Ricardiane_Perkembangan Hari 1  (13 of 77).jpg";
+import h25 from "../../images/meliora/foto/HARI1/Qhedyzya Ricardiane_Perkembangan Hari 1  (32 of 77).jpg";
+import h23 from "../../images/meliora/foto/HARI1/Qhedyzya Ricaridiane_Perkembangan hari 1 (1).jpg";
+import h24 from "../../images/meliora/foto/HARI1/Qhedyzya Ricaridiane_Perkembangan hari 1 (2).jpg";
+import h26 from "../../images/meliora/foto/HARI1/tall/Perkembangan Hari 1_Delon_19.jpg";
 
 import close from "../../images/meliora/icon/cross.png";
 
@@ -38,32 +38,32 @@ function hari1Galeri() {
   const [selectedFoto, setSelectedFoto] = useState(0);
 
   const fotos = [
-    sio1,
-    sio2,
-    sio3,
-    sio4,
-    sio5,
-    sio6,
-    sio7,
-    sio8,
-    sio9,
-    sio10,
-    sio11,
-    sio12,
-    sio13,
-    sio14,
-    sio15,
-    sio16,
-    sio17,
-    sio18,
-    sio19,
-    sio20,
-    sio21,
-    sio22,
-    sio23,
-    sio24,
-    sio25,
-    sio26
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    h7,
+    h8,
+    h9,
+    h10,
+    h11,
+    h12,
+    h13,
+    h14,
+    h15,
+    h16,
+    h17,
+    h18,
+    h19,
+    h20,
+    h21,
+    h22,
+    h23,
+    h24,
+    h25,
+    h26,
   ];
 
   const fotoKlik = (index) => {
@@ -78,82 +78,82 @@ function hari1Galeri() {
   return (
     <div className="galeri-main">
       <div className="wide">
-        <img src={sio1} onClick={() => fotoKlik(0)}></img>
+        <img src={h1} onClick={() => fotoKlik(0)}></img>
       </div>
       <div className="big">
-        <img src={sio6} onClick={() => fotoKlik(1)}></img>
+        <img src={h6} onClick={() => fotoKlik(1)}></img>
       </div>
       <div>
-        <img src={sio3} onClick={() => fotoKlik(2)}></img>
+        <img src={h3} onClick={() => fotoKlik(2)}></img>
       </div>
       <div>
-        <img src={sio4} onClick={() => fotoKlik(3)}></img>
+        <img src={h4} onClick={() => fotoKlik(3)}></img>
       </div>
       <div>
-        <img src={sio5} onClick={() => fotoKlik(4)}></img>
+        <img src={h5} onClick={() => fotoKlik(4)}></img>
       </div>
       <div className="wide">
-        <img src={sio2} onClick={() => fotoKlik(5)}></img>
+        <img src={h2} onClick={() => fotoKlik(5)}></img>
       </div>
       <div>
-        <img src={sio7} onClick={() => fotoKlik(6)}></img>
+        <img src={h7} onClick={() => fotoKlik(6)}></img>
       </div>
       <div className="tall">
-        <img src={sio8} onClick={() => fotoKlik(7)}></img>
+        <img src={h8} onClick={() => fotoKlik(7)}></img>
       </div>
       <div className="tall">
-        <img src={sio10} onClick={() => fotoKlik(8)}></img>
+        <img src={h10} onClick={() => fotoKlik(8)}></img>
       </div>
       <div>
-        <img src={sio9} onClick={() => fotoKlik(9)}></img>
+        <img src={h9} onClick={() => fotoKlik(9)}></img>
       </div>
       <div>
-        <img src={sio11} onClick={() => fotoKlik(10)}></img>
+        <img src={h11} onClick={() => fotoKlik(10)}></img>
       </div>
       <div>
-        <img src={sio12} onClick={() => fotoKlik(11)}></img>
+        <img src={h12} onClick={() => fotoKlik(11)}></img>
       </div>
       <div>
-        <img src={sio13} onClick={() => fotoKlik(12)}></img>
+        <img src={h13} onClick={() => fotoKlik(12)}></img>
       </div>
       <div className="big">
-        <img src={sio14} onClick={() => fotoKlik(13)}></img>
+        <img src={h14} onClick={() => fotoKlik(13)}></img>
       </div>
       <div className="wide">
-        <img src={sio15} onClick={() => fotoKlik(14)}></img>
+        <img src={h15} onClick={() => fotoKlik(14)}></img>
       </div>
       <div>
-        <img src={sio16} onClick={() => fotoKlik(15)}></img>
+        <img src={h16} onClick={() => fotoKlik(15)}></img>
       </div>
       <div>
-        <img src={sio17} onClick={() => fotoKlik(16)}></img>
+        <img src={h17} onClick={() => fotoKlik(16)}></img>
       </div>
       <div>
-        <img src={sio18} onClick={() => fotoKlik(17)}></img>
+        <img src={h18} onClick={() => fotoKlik(17)}></img>
       </div>
       <div className="wide">
-        <img src={sio19} onClick={() => fotoKlik(18)} className="sio-19"></img>
+        <img src={h19} onClick={() => fotoKlik(18)} className="h-19"></img>
       </div>
       <div>
-        <img src={sio20} onClick={() => fotoKlik(19)}></img>
+        <img src={h20} onClick={() => fotoKlik(19)}></img>
       </div>
       <div>
-        <img src={sio21} onClick={() => fotoKlik(20)}></img>
+        <img src={h21} onClick={() => fotoKlik(20)}></img>
       </div>
       <div>
-        <img src={sio22} onClick={() => fotoKlik(21)}></img>
+        <img src={h22} onClick={() => fotoKlik(21)}></img>
       </div>
       <div className="tall">
-        <img src={sio23} onClick={() => fotoKlik(22)}></img>
+        <img src={h23} onClick={() => fotoKlik(22)}></img>
       </div>
       <div className="tall">
-        <img src={sio24} onClick={() => fotoKlik(23)}></img>
+        <img src={h24} onClick={() => fotoKlik(23)}></img>
       </div>
       <div>
-        <img src={sio25} onClick={() => fotoKlik(24)}></img>
+        <img src={h25} onClick={() => fotoKlik(24)}></img>
       </div>
       <div>
-        <img src={sio26} onClick={() => fotoKlik(25)}></img>
+        <img src={h26} onClick={() => fotoKlik(25)}></img>
       </div>
 
       {/* modal */}

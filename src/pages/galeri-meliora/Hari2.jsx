@@ -1,17 +1,17 @@
 import React from "react";
 import "./galeri.scss";
-import H1Galeri from "./hari1Galeri";
+import H2Galeri from "./hari2Galeri";
 
 import DriveIcon from "../../images/meliora/icon/download-drive-icon.png";
 
-function Hari1() {
+function Hari2() {
   return (
     <div className="main-container">
       <div className="galeri">
         <div className="container-utama-header">
           <div className="container-judul">
             <div className="judul">
-              <h1>Perkembangan Hari - 1</h1>
+              <h1>Perkembangan Hari - 2</h1>
             </div>
             <div className="deskripsi-judul">
               <p>
@@ -39,11 +39,11 @@ function Hari1() {
             </div>
           </div>
         </div>
-        <H1Galeri />
+        <H2Galeri />
       </div>
       <div className="white-space"></div>
     </div>
   );
 }
 
-export default Hari1;
+export default Hari2;
