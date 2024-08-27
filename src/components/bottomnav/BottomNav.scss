@@ -34,7 +34,8 @@
         position: relative;
         box-shadow: 0px 6px 34.1px 0px rgba(0, 0, 0, 0.19);
         transition: width 0.3s ease, background-color 0.3s ease;
-      
+        border-radius: 16px;
+        
         &.active {
             width: 100%;
             background: #ffffff;
@@ -50,6 +51,7 @@
             cursor: pointer;
             transition: background-color 0.3s ease;
             margin-right: 10px;
+            border-radius: 16px;
         
             img {
                 width: 16px;
@@ -76,6 +78,7 @@
             border-left: 1.5px solid rgb(228, 228, 228);
             margin-left: 60px;
             padding-left: 12px;
+            border-radius: 16px;
 
             .movie-button {
                 cursor: pointer;
@@ -88,6 +91,7 @@
                 background-repeat: no-repeat;
                 background-position: center;
                 background-size: cover;
+                border-radius: 16px;
     
                 p {
                     color: #FFF;
@@ -107,12 +111,14 @@
         background: linear-gradient(169deg, #F4AC56 8.25%, #DDC6AF 91.75%);
         transition: background-color 0.3s ease;
         position: relative;
+        border-radius: 16px;
       
         &:not(.active) {
             background: none;
             background-image: none;
             box-shadow: none;
             padding: 8px 12px;
+            border-radius: 16px;
         }
       
         img {
