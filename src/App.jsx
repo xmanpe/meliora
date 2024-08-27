@@ -23,7 +23,7 @@ function App() {
           <Route path="*" element={<Error />} />
           <Route path="/hari-pelaksanaan/sio" element={<Galeri />} />
           <Route path="/hari-pelaksanaan/hari-pemupukan" element={<Pemupukan />} />
-          <Route path="/hari-pelaksanan/perkembangan-hari-1" element={<Hari1 />} />
+          <Route path="/hari-pelaksanaan/perkembangan-hari-1" element={<Hari1 />} />
           <Route path="/hari-pelaksanaan/perkembangan-hari-2" element={<Hari2 />} />
           <Route path="/sayembara-visual" element={<SayembaraVisual />} />
         </Routes>
