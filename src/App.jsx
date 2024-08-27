@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, useLocation } from "react-router-dom";
 
 // import pages
 import HariPelaksanaan from "./pages/HariPelaksanaan/HariPelaksanaan";
@@ -11,10 +11,8 @@ import Hari2 from "./pages/galeri-meliora/Hari2";
 import Error from "./pages/error/Error";
 
 // import components
-import NavigationBar from "./components/navbar/NavigationBar";
 import SayembaraVisual from "./pages/SayembaraVisual";
 import BottomNavbar from "./components/bottomnav/BottomNav";
-
 
 function App() {
   return (
@@ -30,11 +28,20 @@ function App() {
           <Route path="/sayembara-visual" element={<SayembaraVisual />} />
           <Route path="*" element={<Error />} />
         </Routes>
-        {/* <NavigationBar /> */}
-        {window.location.pathname != '/' && <BottomNavbar /> }
+        <BottomNavbarWithPathCheck />
       </Router>
     </div>
   );
 }
+
+const BottomNavbarWithPathCheck = () => {
+  const location = useLocation();
+  
+  return (
+    <>
+      {location.pathname !== '/' && <BottomNavbar />}
+    </>
+  );
+};
 
 export default App;
