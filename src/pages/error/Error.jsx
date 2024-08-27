@@ -4,14 +4,14 @@ import FloatingParticle from '../../components/particles/FloatingParticle';
 
 
 const cardData = [
-    { title: 'Daffa Akbari', description: 'Description 1' },
-    { title: 'Jose Andreas', description: 'Description 2' },
-    { title: 'Axel Ferdinand', description: 'Description 3' },
-    { title: 'Caleb Steve', description: 'Description 4' },
-    { title: 'Deswandy Wong', description: 'Description 5' },
-    { title: 'Kafijaya', description: 'Description 6' },
-    { title: 'Kevin Ken', description: 'Description 7' },
-    { title: 'Valentino Fernando', description: 'Description 8' },
+    { title: 'Daffa Akbari', description: 'Koordinator' },
+    { title: 'Jose Andreas', description: 'Koordinator' },
+    { title: 'Axel Ferdinand', description: 'Anggota' },
+    { title: 'Caleb Steve', description: 'Anggota' },
+    { title: 'Deswandy Wong', description: 'Anggota' },
+    { title: 'Kafijaya', description: 'Anggota' },
+    { title: 'Kevin Ken', description: 'Anggota' },
+    { title: 'Valentino Fernando', description: 'Anggota' },
 ];
 
 const Error = () => {
