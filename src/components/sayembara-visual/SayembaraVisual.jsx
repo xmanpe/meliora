@@ -21,13 +21,20 @@ const SayembaraVisualComponent = ({ videos }) => {
                     allowFullScreen
                   ></iframe>
                 ) : (
-                  <div className='no-video'>
-                    <p>To be announced</p>
+                  <div className='no-video'
+                  >
+                    <p><i>To be announced</i></p>
                   </div>
                 )}
                 <div className='video-info'>
-                  <h3 className='video-title'> {video.title || 'To be announced'}</h3>
-                  <p className='video-subtitle'> {video.title || 'To be announced'}</p>
+                  <div
+                    className='video-title'
+                    dangerouslySetInnerHTML={{ __html: video.title || '<i>To be announced</i>' }}
+                  ></div>
+                  <div
+                    className='video-subtitle'
+                    dangerouslySetInnerHTML={{ __html: video.subtitle || '<i>To be announced</i>' }}
+                  ></div>
                 </div>
               </div>
             </div>
@@ -42,20 +49,29 @@ const App = () => {
   const youtubeVideos = [
     {
       link: "",
-      title: "",
+      title: "Terbaik 2",
       subtitle: ""
     },
     {
       link: "",  // No link provided
-      title: "",
+      title: "Terbaik 1",
       subtitle: ""
     },
     {
       link: "",
-      title: "",
+      title: "Terbaik 3",
+      subtitle: ""
+    },
+    {
+      link: "",
+      title: "<i>Runner Up</i>",
+      subtitle: ""
+    },
+    {
+      link: "",
+      title: "<i>Runner Up</i>",
       subtitle: ""
     }
-    // Add more video objects here
   ];
 
   return (
