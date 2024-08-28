@@ -34,15 +34,19 @@ const DokumentasiDivisi = () => {
     <div className='foto-section'>
       <div className='foto-tabs'>
         {dataDokumentasi["FOTO"].map((dataDokumentasi,index)=>{
-          if (index === activeIndex) {
+          if (index === activeIndex && dataDokumentasi.kelompok.length>1) {
             return dataDokumentasi.kelompok.map((dataKelompok, kelompokIndex) => (
-              <button
-                key={kelompokIndex}
-                className={`tab-button ${activeTab === kelompokIndex ? 'active' : ''}`}
-                onClick={() => setActiveTab(kelompokIndex)}
-              >
-                {kelompokIndex + 1}
-              </button>
+              <>
+                <div className='tab-wrapper'>
+                  <button
+                    key={kelompokIndex}
+                    className={`tab-button ${activeTab === kelompokIndex ? 'active' : ''}`}
+                    onClick={() => setActiveTab(kelompokIndex)}
+                  >
+                    {kelompokIndex + 1}
+                  </button>
+                </div>
+              </>
             ));
           }
         })}

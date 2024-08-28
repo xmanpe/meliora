@@ -1,7 +1,45 @@
 @import '../../index.scss';
 
 .foto-section{
-    padding: 100px 160px 100px 160px;
+    padding: 10px 160px 100px 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    .foto-tabs{
+        display: flex;
+        gap: 0px;
+        border: 1.5px solid rgba(0, 0, 0, 0.056);
+        justify-content: center;
+        align-items: center;
+        width: fit-content;
+        margin: 10px;
+        padding: 2px;
+        border-radius: 4px;
+        background: white;
+        box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.1);
+        .tab-wrapper{
+            .tab-button{
+                border: none;
+                border-radius: 4px;
+                padding: 12px 16px;
+                font-size: 16px;
+                font-family: 'GSN';
+                background: none;
+                color: rgba(0, 0, 0, 0.365);
+                cursor: pointer;
+            }
+            .active {
+                border: 2px solid $meliora-color;
+                border-radius: 4px;
+                padding: 10px 14px;
+                font-size: 16px;
+                font-family: 'GSN';
+                background-color: rgba(244, 173, 86, 0.5);
+                color: black;
+            }
+        }
+    }
     .swiper{
         width: 80%;
         height: 100%;
@@ -150,7 +188,7 @@
             padding: 10px;
             .anggota{
                 p{
-
+                    text-align: justify;
                 }
             }
         }

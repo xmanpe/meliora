@@ -47,7 +47,7 @@ const CarouselDivisi = () => {
             <div className='divisi-swiper'>
                 <Swiper
                     slidesPerView={3}  
-                    spaceBetween={10}  
+                    spaceBetween={0}  
                     centeredSlides={true}
                     loop={true}
                     keyboard={{

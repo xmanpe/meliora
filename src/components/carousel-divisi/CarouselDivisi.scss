@@ -25,11 +25,11 @@
 .divisi-swiper{
     // position: -webkit-sticky;
     // position: sticky;
-    padding: 100px 160px 100px 160px;
+    padding: 100px 160px 10px 160px;
     top: 0;
     z-index: 5;
     .swiper {
-      width: 100%;
+      width: 80%;
       height: 100%;
     }
     
@@ -61,6 +61,8 @@
     justify-content: center;
     align-items: center;
     .image-wrapper-{
+      margin-left: -36px;
+      transform: scale(0.8);
       position: relative;
       width: 400px;
       height: 300px;
@@ -320,4 +322,8 @@
   background-color: rgba($color: #999999, $alpha: 0.1);
   transition: background-color 200ms ease-in-out;
  }
+}
+
+@media screen {
+  
 }
