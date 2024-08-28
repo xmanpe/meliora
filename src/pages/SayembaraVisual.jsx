@@ -17,7 +17,7 @@ const SayembaraVisual = () => {
                 <Header
                     image={MelioraYellow}
                     top='Sayembara Visual'
-                    bottom='Kompetisi tahunan khusus yang diadakan untuk Peserta OMB UMN 2024 untuk mengekspresikan kreativitas para Pejuang Lotus Biru.'
+                    bottom='Setiap sentuhan seni adalah cerminan dari semangat yang menggelora, menampilkan keindahan dan kedalaman jiwa para peserta dalam setiap karya. Melalui Sayembara Visual OMB UMN 2024, peserta berkesempatan untuk menciptakan mahakarya yang menginspirasi dan meninggalkan jejak estetika yang tak terlupakan.'
                 />
                 <SayembaraVisualComponent />
                 <FloatingParticle />

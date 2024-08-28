@@ -12,14 +12,14 @@ import FloatingParticle from "../../components/particles/FloatingParticle";
 const HariPelaksanaan = () => {
     return (
         <div className='margin_layout'>
-            <FloatingParticle />
             <TopInfo />
             <Header
                 image={MelioraYellow}
                 top='Hari Pelaksanaan'
-                bottom='Hari Pelaksanaan adalah hari dimana kegiatan akan dilaksanakan.'
+                bottom='Hari demi hari berlalu, rangkaian telah dirancang sedemikian rupa agar peserta dapat merasakan eratnya kebersamaan dan menciptakan  momen indah yang terjalin dalam OMB UMN 2024.'
             />
             <FramePelaksanaanRevisi />
+            <FloatingParticle />
         </div>
     );
 }
