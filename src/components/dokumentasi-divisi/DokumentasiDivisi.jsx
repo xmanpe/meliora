@@ -21,7 +21,14 @@ const DokumentasiDivisi = () => {
   useEffect(()=>{
     setActiveTab(0);
     swiperRef.current.swiper.slideTo(0);
-  },[activeIndex,activeTab])
+  },[activeIndex])
+
+  useEffect(() => {
+    const swiperInstance = swiperRef.current.swiper;
+    swiperInstance.on('slideChangeTransitionEnd', () => {
+        swiperInstance.update();
+    });
+  }, []);
 
   return (
     <div className='foto-section'>
@@ -47,7 +54,7 @@ const DokumentasiDivisi = () => {
         }}
         navigation={true}
         slidesPerView={1}
-        spaceBetween={30}
+        spaceBetween={0}
         loop={true}
         modules={[Pagination, Navigation]}
         className="mySwiper"
@@ -58,37 +65,77 @@ const DokumentasiDivisi = () => {
                 <>
                   <SwiperSlide key={`slide1-${index}-${activeTab}`}>
                     <div className='image-wrapper'>
-                      {dataDokumentasi.divisi}
                       <img
                         src={`./Assets/images/foto-divisi/divisi/${dataDokumentasi.divisi}/kelompok${activeTab + 1}/foto1.jpg`}
                         alt="Foto 1"
                       />
                     </div>
+                    <div className='vbg-wrapper'>
+                      <img className="vbg" src={`./Assets/images/foto-divisi/divisi/${dataDokumentasi.divisi}/vbg.png`}/>
+                    </div>
                   </SwiperSlide>
                   <SwiperSlide key={`slide2-${index}-${activeTab}`}>
                     <div className='image-wrapper'>
-                      {dataDokumentasi.divisi}
                       <img
                         src={`./Assets/images/foto-divisi/divisi/${dataDokumentasi.divisi}/kelompok${activeTab + 1}/foto2.jpg`}
                         alt="Foto 2"
                       />
                     </div>
+                    <div className='vbg-wrapper'>
+                      <img className="vbg" src={`./Assets/images/foto-divisi/divisi/${dataDokumentasi.divisi}/vbg.png`}/>
+                    </div>
                   </SwiperSlide>
                   <SwiperSlide key={`slide3-${index}-${activeTab}`}>
                     <div className='image-wrapper'>
-                      {dataDokumentasi.divisi}
                       <img
                         src={`./Assets/images/foto-divisi/divisi/${dataDokumentasi.divisi}/kelompok${activeTab + 1}/foto3.jpg`}
                         alt="Foto 3"
                       />
                     </div>
+                    <div className='vbg-wrapper'>
+                      <img className="vbg" src={`./Assets/images/foto-divisi/divisi/${dataDokumentasi.divisi}/vbg.png`}/>
+                    </div>
                   </SwiperSlide>
                 </>
               );
             }
-        })
+          })
         }
       </Swiper>
+      <div className='name-wrapper'>
+        {dataDokumentasi["FOTO"].map((item, index) => {
+          if (index === activeIndex) {
+            return (
+              <>
+                <h1>Koordinator</h1>
+                  <div className='koordinator-wrapper'>
+                  {item.koordinator.map((koor, koorIndex) =>(
+                    <div className='koordinator-person'>
+                        <div className='koordinator-img'>
+                          <img className={item.divisi} src={`./Assets/images/foto-divisi/divisi/${item.divisi}/${koor}.jpg`} />
+                        </div>
+                        <p>{koor}</p>
+                    </div>
+                  ))}
+                </div>
+                <div className='anggota-wrapper'>
+                  <h1>Anggota</h1>
+                  
+                  {item.kelompok.map((kel, kelIndex) =>{
+                    const formattedNames = kel.anggota.join(', ').replace(/, ([^,]*)$/, ', dan $1');
+                    if (kelIndex===activeTab)   
+                      return (
+                        <div className='anggota'>
+                            <p>{formattedNames}</p>
+                        </div>
+                      )
+                  })}
+                </div>
+              </>
+            );
+          }
+        })}
+      </div>
       {/* <img src={test}/> */}
       {/* <img src={`./Assets/images/foto-divisi/divisi/Balwana/kelompok1/foto1.jpg`} alt='' /> */}
     </div>
