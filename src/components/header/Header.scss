@@ -49,7 +49,7 @@
 
 @media screen and (max-width: 810px) {
     .header {
-        padding: 40px 40px 0px;
+        padding: 20px 40px 0px;
         .ttile {
             h1 {
                 font-size: $font-size-xlarge;
@@ -60,7 +60,7 @@
 
 @media screen and (max-width: 560px) {
     .header {
-        padding: 40px 0px 0px;
+        padding: 20px 0px 0px;
         .ttile {
             h1 {
                 font-size: $font-size-large;
@@ -71,7 +71,7 @@
 
 @media screen and (max-width: 432px) {
     .header {
-        padding: 40px 0px 0px;
+        padding: 20px 0px 0px;
         .ttile {
             h1 {
                 font-size: $font-size-xmedium;

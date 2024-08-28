@@ -4,16 +4,16 @@ import { BrowserRouter as Router, Route, Routes, useLocation } from "react-route
 // import pages
 import HariPelaksanaan from "./pages/HariPelaksanaan/HariPelaksanaan";
 import Home from "./pages/home/Home";
-import Galeri from "./pages/galeri-meliora/galeri";
-import Pemupukan from "./pages/galeri-meliora/Pemupukan";
-import Hari1 from "./pages/galeri-meliora/Hari1";
-import Hari2 from "./pages/galeri-meliora/Hari2";
+import SesiInformasiOMB from "./pages/HariPelaksanaan/sio/SesiInformasiOMB";
+import HariPemupukan from "./pages/HariPelaksanaan/hari-pemupukan/HariPemupukan";
+import PerkembanganHari1 from "./pages/HariPelaksanaan/perkembangan-hari-1/PerkembanganHari1";
+import PerkembanganHari2 from "./pages/HariPelaksanaan/perkembangan-hari-2/PerkembanganHari2";
+import SidangTerbukaSenat from "./pages/HariPelaksanaan/sidang-terbuka-senat/SidangTerbukaSenat";
 import Error from "./pages/error/Error";
 
 // import components
 import SayembaraVisual from "./pages/SayembaraVisual";
 import BottomNavbar from "./components/bottomnav/BottomNav";
-import STS from "./pages/galeri-meliora/STS";
 
 function App() {
   return (
@@ -22,11 +22,11 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/hari-pelaksanaan" element={<HariPelaksanaan />} />
-          <Route path="/hari-pelaksanaan/sio" element={<Galeri />} />
-          <Route path="/hari-pelaksanaan/hari-pemupukan" element={<Pemupukan />} />
-          <Route path="/hari-pelaksanaan/perkembangan-hari-1" element={<Hari1 />} />
-          <Route path="/hari-pelaksanaan/perkembangan-hari-2" element={<Hari2 />} />
-          <Route path="/hari-pelaksanaan/sidang-terbuka-senat" element={<STS />} />
+          <Route path="/hari-pelaksanaan/sio" element={<SesiInformasiOMB/>} />
+          <Route path="/hari-pelaksanaan/hari-pemupukan" element={<HariPemupukan />} />
+          <Route path="/hari-pelaksanaan/perkembangan-hari-1" element={<PerkembanganHari1 />} />
+          <Route path="/hari-pelaksanaan/perkembangan-hari-2" element={<PerkembanganHari2 />} />
+          <Route path="/hari-pelaksanaan/sidang-terbuka-senat" element={<SidangTerbukaSenat />} />
           <Route path="/sayembara-visual" element={<SayembaraVisual />} />
           <Route path="*" element={<Error />} />
         </Routes>
