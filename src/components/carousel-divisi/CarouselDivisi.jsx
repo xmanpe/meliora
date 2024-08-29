@@ -45,7 +45,9 @@ const CarouselDivisi = () => {
 
     return(
         <>
-            <img src={bg1} className="background"/>
+            <div className="bg">
+                <img className="background" src={bg1}/>
+            </div>
             <div className='divisi-swiper'>
                 <Swiper
                     slidesPerView={3}  

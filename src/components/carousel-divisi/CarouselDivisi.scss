@@ -22,12 +22,18 @@
   }
 }
 
-.background{
-  transform: scale(1.6);
-  position: absolute;
-  filter: blur(60px);
-  z-index: -1;
+.bg{
+  position: relative;
+  overflow-x: clip;
+  .background{
+    transform: scale(1.6);
+    position: absolute;
+    filter: blur(60px);
+    height: 2000px;
+    z-index: -1;
+  }
 }
+
 .divisi-swiper{
     // position: -webkit-sticky;
     // position: sticky;
@@ -194,6 +200,7 @@
           flex-direction: row;
           align-items: center;
           justify-content: center;
+          padding: 4px;
           gap: 16px;
           left: -20px;
           .logo-divisi{

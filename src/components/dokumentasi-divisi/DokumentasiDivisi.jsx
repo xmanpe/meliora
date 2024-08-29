@@ -74,9 +74,9 @@ const DokumentasiDivisi = () => {
                         alt="Foto 1"
                       />
                     </div>
-                    <div className='vbg-wrapper'>
+                    {/* <div className='vbg-wrapper'>
                       <img className="vbg" src={`./Assets/images/foto-divisi/divisi/${dataDokumentasi.divisi}/vbg.jpg`}/>
-                    </div>
+                    </div> */}
                   </SwiperSlide>
                   <SwiperSlide key={`slide2-${index}-${activeTab}`}>
                     <div className='image-wrapper'>
@@ -85,9 +85,9 @@ const DokumentasiDivisi = () => {
                         alt="Foto 2"
                       />
                     </div>
-                    <div className='vbg-wrapper'>
+                    {/* <div className='vbg-wrapper'>
                       <img className="vbg" src={`./Assets/images/foto-divisi/divisi/${dataDokumentasi.divisi}/vbg.jpg`}/>
-                    </div>
+                    </div> */}
                   </SwiperSlide>
                   <SwiperSlide key={`slide3-${index}-${activeTab}`}>
                     <div className='image-wrapper'>
@@ -96,9 +96,9 @@ const DokumentasiDivisi = () => {
                         alt="Foto 3"
                       />
                     </div>
-                    <div className='vbg-wrapper'>
+                    {/* <div className='vbg-wrapper'>
                       <img className="vbg" src={`./Assets/images/foto-divisi/divisi/${dataDokumentasi.divisi}/vbg.jpg`}/>
-                    </div>
+                    </div> */}
                   </SwiperSlide>
                 </>
               );
