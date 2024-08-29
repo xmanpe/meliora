@@ -4,6 +4,13 @@
   vertical-align: middle;
   display: inline-block;
   cursor: pointer;
+  box-shadow: 0 0 16px #333;
+  transition: all 1.5s ease;
+  aspect-ratio: 1 / 1;
+}
+
+.gallery-main img:hover {
+  box-shadow: 0 0 32px #333;
 }
 
 .galeri-main > div {
@@ -15,28 +22,15 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 .galeri-main {
   display: grid;
-  grid-gap: 10px;
+  grid-gap: 50px;
   grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: 250px;
   grid-auto-flow: dense;
-}
-
-.galeri-main .wide {
-  grid-column: span 2;
-}
-
-.galeri-main .tall {
-  grid-row: span 2;
-}
-
-.galeri-main .big {
-  grid-column: span 2;
-  grid-row: span 2;
 }
 
 //modal

@@ -77,10 +77,10 @@ function masonryGaleri() {
 
   return (
     <div className="galeri-main">
-      <div className="wide">
+      <div>
         <img src={sio1} onClick={() => fotoKlik(0)}></img>
       </div>
-      <div className="big">
+      <div>
         <img src={sio6} onClick={() => fotoKlik(1)}></img>
       </div>
       <div>
@@ -92,16 +92,16 @@ function masonryGaleri() {
       <div>
         <img src={sio5} onClick={() => fotoKlik(4)}></img>
       </div>
-      <div className="wide">
+      <div>
         <img src={sio2} onClick={() => fotoKlik(5)}></img>
       </div>
       <div>
         <img src={sio7} onClick={() => fotoKlik(6)}></img>
       </div>
-      <div className="tall">
+      <div>
         <img src={sio8} onClick={() => fotoKlik(7)}></img>
       </div>
-      <div className="tall">
+      <div>
         <img src={sio10} onClick={() => fotoKlik(8)}></img>
       </div>
       <div>
@@ -116,10 +116,10 @@ function masonryGaleri() {
       <div>
         <img src={sio13} onClick={() => fotoKlik(12)}></img>
       </div>
-      <div className="big">
+      <div>
         <img src={sio14} onClick={() => fotoKlik(13)}></img>
       </div>
-      <div className="wide">
+      <div>
         <img src={sio15} onClick={() => fotoKlik(14)}></img>
       </div>
       <div>
@@ -131,7 +131,7 @@ function masonryGaleri() {
       <div>
         <img src={sio18} onClick={() => fotoKlik(17)}></img>
       </div>
-      <div className="wide">
+      <div>
         <img src={sio19} onClick={() => fotoKlik(18)} className="sio-19"></img>
       </div>
       <div>
