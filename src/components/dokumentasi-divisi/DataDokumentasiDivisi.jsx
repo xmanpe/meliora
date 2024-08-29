@@ -2,7 +2,14 @@ const dataDokumentasi = {
     "FOTO":[
         {
             divisi:"Gandara",
-            koordinator:["Ralph Theodoric","Wilcoustine Pniel", "Jehezkiel Immanuel", "Cecillia Abbygail","Idayu Ringandani","Assyifa Salsabila"],
+            koordinator:[],
+            bph:[
+                {nama :"Ralph Theodoric", jabatan: "Supervisi"},
+                {nama :"Wilcoustine Pniel", jabatan: "Ketua"}, 
+                {nama :"Jehezkiel Immanuel", jabatan: "Wakil Ketua"}, 
+                {nama :"Cecillia Abbygail", jabatan: "Sekretaris 1"},
+                {nama :"Idayu Ringandani", jabatan: "Sekretaris 2"},
+                {nama :"Assyifa Salsabila", jabatan: "Bendahara"}],
             kelompok:[
                 {
                     indexkelompok:"kelompok1",

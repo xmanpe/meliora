@@ -1,26 +1,27 @@
 @import '../../index.scss';
 
 .foto-section{
-    padding: 10px 160px 100px 160px;
+    padding: 60px 160px 100px 160px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     .foto-tabs{
         display: flex;
-        gap: 0px;
         border: 1.5px solid rgba(0, 0, 0, 0.056);
         justify-content: center;
         align-items: center;
         width: fit-content;
-        margin: 10px;
+        margin: 10px 10px -16px 10px;
+        z-index: 5;
         padding: 2px;
         border-radius: 4px;
-        background: white;
         box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.1);
         .tab-wrapper{
             .tab-button{
+                font-family: Arial, Helvetica, sans-serif;
                 border: none;
+                border-color: $meliora-color;
                 border-radius: 4px;
                 padding: 12px 16px;
                 font-size: 16px;
@@ -28,6 +29,12 @@
                 background: none;
                 color: rgba(0, 0, 0, 0.365);
                 cursor: pointer;
+                transition: background-color 200ms ease-in-out;
+                transition: border 200ms ease-in-out;
+            }
+            .tab-button:hover{
+                background-color: rgba(244, 173, 86, 0.4);
+                transition: background-color 100ms ease-in-out;
             }
             .active {
                 border: 2px solid $meliora-color;
@@ -37,6 +44,12 @@
                 font-family: 'GSN';
                 background-color: rgba(244, 173, 86, 0.5);
                 color: black;
+                transition: background-color 200ms ease-in-out;
+                transition: border 200ms ease-in-out;
+            }
+            .active:hover{
+                background-color: rgba(244, 173, 86, 0.5);
+                cursor: default;
             }
         }
     }
@@ -46,17 +59,24 @@
         .swiper-wrapper{
             .swiper-slide {
                 position: relative;
-                padding: 10px;
+                // padding: 10px;
                 text-align: center;
                 font-size: 18px;
-                background: #fff;
               
                 /* Center slide text vertically */
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 height: 100%;
-              }       
+                transform: scale(0.6);
+                opacity: 0;
+                transition: all 200ms ease-in-out;  
+            }       
+            .swiper-slide-active{
+                transition: all 200ms ease-in-out;
+                opacity: 1;
+                transform: scale(1);
+            }
         }
         .swiper-pagination{
             position: relative;
@@ -72,7 +92,7 @@
             position: relative;
         }
         .swiper-button-prev{
-            margin-left: 28px;
+            margin-left: 8px;
             content: url("../../../public/Assets/images/icons/left2.svg");
         }
         .swiper-button-next{
@@ -84,9 +104,9 @@
 
     .image-wrapper{
         width: 800px;
-        height: 600px;
+        height: 560px;
         img{
-            margin-top: 86px;
+            margin-top: 60px;
             object-position: 50% 74%;
             object-fit: cover;
             width: 90%;
@@ -113,6 +133,7 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        gap: 20px;
         h1{
             text-align: center;
             font-family: "DM Serif Display", serif;
@@ -125,11 +146,18 @@
             display: flex;
             flex-direction: row;
             justify-content: center;
-            gap: 16px;
+            gap: 20px;
+            .koordinator-person{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
             .koordinator-img{
+                gap: 10px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                flex-direction: column;
                 img{
                     border-radius: 100px;
                     object-fit: cover;
@@ -171,6 +199,11 @@
                     border-color: $saraya-color;
                 }
             }
+            h2{
+                font-family: "DM Serif Display", serif;
+                font-size: $font-size-medium;
+                font-weight: normal;
+            }
             p{
                 
             }
@@ -181,7 +214,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            width: 40%;
+            width: 60%;
             border-radius: 4px;
             background-color: #fff;
             box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.4);

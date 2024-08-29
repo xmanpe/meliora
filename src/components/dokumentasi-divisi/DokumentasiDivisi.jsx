@@ -75,7 +75,7 @@ const DokumentasiDivisi = () => {
                       />
                     </div>
                     <div className='vbg-wrapper'>
-                      <img className="vbg" src={`./Assets/images/foto-divisi/divisi/${dataDokumentasi.divisi}/vbg.png`}/>
+                      <img className="vbg" src={`./Assets/images/foto-divisi/divisi/${dataDokumentasi.divisi}/vbg.jpg`}/>
                     </div>
                   </SwiperSlide>
                   <SwiperSlide key={`slide2-${index}-${activeTab}`}>
@@ -86,7 +86,7 @@ const DokumentasiDivisi = () => {
                       />
                     </div>
                     <div className='vbg-wrapper'>
-                      <img className="vbg" src={`./Assets/images/foto-divisi/divisi/${dataDokumentasi.divisi}/vbg.png`}/>
+                      <img className="vbg" src={`./Assets/images/foto-divisi/divisi/${dataDokumentasi.divisi}/vbg.jpg`}/>
                     </div>
                   </SwiperSlide>
                   <SwiperSlide key={`slide3-${index}-${activeTab}`}>
@@ -97,7 +97,7 @@ const DokumentasiDivisi = () => {
                       />
                     </div>
                     <div className='vbg-wrapper'>
-                      <img className="vbg" src={`./Assets/images/foto-divisi/divisi/${dataDokumentasi.divisi}/vbg.png`}/>
+                      <img className="vbg" src={`./Assets/images/foto-divisi/divisi/${dataDokumentasi.divisi}/vbg.jpg`}/>
                     </div>
                   </SwiperSlide>
                 </>
@@ -108,35 +108,53 @@ const DokumentasiDivisi = () => {
       </Swiper>
       <div className='name-wrapper'>
         {dataDokumentasi["FOTO"].map((item, index) => {
-          if (index === activeIndex) {
+          if (index === activeIndex && index === 0) {
             return (
               <>
-                <h1>Koordinator</h1>
-                  <div className='koordinator-wrapper'>
-                  {item.koordinator.map((koor, koorIndex) =>(
-                    <div className='koordinator-person'>
-                        <div className='koordinator-img'>
-                          <img className={item.divisi} src={`./Assets/images/foto-divisi/divisi/${item.divisi}/${koor}.jpg`} />
-                        </div>
-                        <p>{koor}</p>
+                <div className='koordinator-wrapper'>
+                {item.bph.map((bph, bphIndex)=>(
+                  <>
+                    <div className='koordinator-img'>
+                      <h2>{bph.jabatan}</h2>
+                      <img className={item.divisi} src={`./Assets/images/foto-divisi/divisi/${item.divisi}/${bph.nama}.jpg`} />
+                      <p>{bph.nama}</p>
                     </div>
-                  ))}
-                </div>
-                <div className='anggota-wrapper'>
-                  <h1>Anggota</h1>
-                  
-                  {item.kelompok.map((kel, kelIndex) =>{
-                    const formattedNames = kel.anggota.join(', ').replace(/, ([^,]*)$/, ', dan $1');
-                    if (kelIndex===activeTab)   
-                      return (
-                        <div className='anggota'>
-                            <p>{formattedNames}</p>
-                        </div>
-                      )
-                  })}
+                  </>
+                ))}
                 </div>
               </>
-            );
+            )
+          } else { 
+            if(index===activeIndex){
+              return(
+                <>
+                  <h1>Koordinator</h1>
+                  <div className='koordinator-wrapper'>
+                      {item.koordinator.map((koor, koorIndex) =>(
+                        <div className='koordinator-person'>
+                            <div className='koordinator-img'>
+                              <img className={item.divisi} src={`./Assets/images/foto-divisi/divisi/${item.divisi}/${koor}.jpg`} />
+                            </div>
+                            <p>{koor}</p>
+                        </div>
+                      ))}
+                    </div>
+                    <div className='anggota-wrapper'>
+                      <h1>Anggota</h1>
+                      
+                      {item.kelompok.map((kel, kelIndex) =>{
+                        const formattedNames = kel.anggota.join(', ').replace(/, ([^,]*)$/, ', dan $1');
+                        if (kelIndex===activeTab)   
+                          return (
+                            <div className='anggota'>
+                                <p>{formattedNames}</p>
+                            </div>
+                          )
+                      })}
+                    </div>
+                </>
+              )
+            }
           }
         })}
       </div>

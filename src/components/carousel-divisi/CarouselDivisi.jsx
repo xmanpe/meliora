@@ -17,6 +17,7 @@ import { Navigation, Keyboard } from 'swiper/modules';
 import carouselData from "./DataCarouselDivisi";
 import { DivisiContext } from '../../pages/FotoDivisi';
 import Frame1 from '../../images/frame/FRAME MELIORA 1;1.svg';
+import bg1 from '../../images/background/BG-02.png';
 
 const CarouselDivisi = () => {
     const {activeIndex, setActiveIndex} = useContext(DivisiContext);
@@ -44,6 +45,7 @@ const CarouselDivisi = () => {
 
     return(
         <>
+            <img src={bg1} className="background"/>
             <div className='divisi-swiper'>
                 <Swiper
                     slidesPerView={3}  
@@ -53,7 +55,8 @@ const CarouselDivisi = () => {
                     keyboard={{
                         enabled: true,
                     }}
-                    allowTouchMove={false}
+                    // allowTouchMove={false}
+                    resistanceRatio={0.1}
                     navigation={true}
                     modules={[Navigation, Keyboard]}
                     onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
