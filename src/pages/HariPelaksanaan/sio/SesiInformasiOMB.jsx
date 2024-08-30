@@ -1,6 +1,6 @@
 import React from "react";
 import "../hariHariPelaksanaan.scss";
-import SIO from "../../../components/gallery/masonryGaleri";
+
 import SIO2 from "../../../components/gallery/Sio"
 import Header from "../../../components/header/Header";
 import TopInfo from "../../../components/top-info/TopInfo";

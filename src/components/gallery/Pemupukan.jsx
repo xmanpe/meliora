@@ -1,6 +1,6 @@
 import React from "react";
 import "./galeri.scss";
-import Mupuk from "./pemupukanGaleri"
+import Mupuk from "./PemupukanGaleri"
 
 import DriveIcon from "../../images/meliora/icon/download-drive-icon.png";
 
