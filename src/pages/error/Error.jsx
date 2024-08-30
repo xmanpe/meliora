@@ -21,9 +21,9 @@ const Error = () => {
             <div className="upper_content">
               <h1>404</h1>
               <p>
-                Maaf, halaman yang kalian cari tidak ditemukan.
+                Maaf, halaman yang kamu cari tidak ditemukan.
                 <br />
-                “Teruslah berjuang dan semangat, para Lotus Biru! Kami percaya pada kemampuan dan tekad kalian.”
+                “Teruslah berjuang dan semangat, para Lotus Biru! Kami percaya pada kemampuan dan tekad kamu.”
                 <br />
                 <br />
                 Nayanika, pamit undur diri.
