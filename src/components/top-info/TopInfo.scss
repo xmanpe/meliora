@@ -4,6 +4,7 @@
     justify-content: space-between;
     margin-top: 16px;
     margin-bottom: 16px;
+    padding: 20px 50px ;
     .box-info {
         display: flex;
         align-items: center;
@@ -75,7 +76,8 @@
 @media screen and (max-width: 432px) {
     .top-info {
         flex-direction: column;
-        margin-bottom: 24px;
+        margin-bottom: 0px;
+        padding: 20px 20px ;
         .box-info {
             .logo {
                 width: 20px;
