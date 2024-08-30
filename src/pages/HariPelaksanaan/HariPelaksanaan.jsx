@@ -7,10 +7,13 @@ import MelioraYellow from '../../images/logo/meliora yellow.svg'
 // import components
 import Header from '../../components/header/Header';
 import FloatingParticle from "../../components/particles/FloatingParticle";
-
 import FramePelaksanaan from "../../components/frame-pelaksanaan/FramePelaksanaan";
 
 const HariPelaksanaan = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     return (
         <div className="hari-pelaksanaan">
             <Header
