@@ -1,94 +1,39 @@
-// TOP INFO
+@import "../../index.scss";
+
 .top-info {
     display: flex;
     justify-content: space-between;
-    margin-top: 16px;
-    margin-bottom: 16px;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: -webkit-fill-available;
+    z-index: 999;
+    padding: 8px 20px;
+
     .box-info {
         display: flex;
+        flex-direction: row;
+        gap: 8px;
         align-items: center;
+
         .logo {
-            width: 50px;
-            height: fit-content;
+            width: 36px;
+            height: 36px;
         }
+
         .nama {
-            font-family: Chopper;
-            font-size: 24px;
-            font-style: normal;
-            font-weight: 400;
-            margin: 0 0 0 8px;
-            background: linear-gradient(150deg, #92463B 0%, #B9594A 100%);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            font-size: 16px;
+            font-family: "DM Serif Display", system-ui;
+            color: $meliora-color;
+            font-weight: 500;
         }
     }
+
     .copyright {
-        color: #AEAEAE;
-        font-family: DM Sans;
         font-size: 12px;
-        font-style: normal;
-        font-weight: 500;
-        height: fit-content;
-        margin-top: auto;
-        margin-bottom: auto;
-    }
-}
-
-// WIDTH 1919 - 1440
-@media screen and (max-width: 1439px) {
-    .top-info {
-        .box-info {
-            .logo {
-                width: 32px;
-            }
-            .nama {
-                font-size: 20px;
-                margin: 0 0 0 4px;
-            }
-        }
-        .copyright {
-            font-size: 12px;     
-        }
-    }
-}
-
-// WIDTH <= 810 dan > 432
-@media screen and (max-width: 809px) {
-    .top-info {
-        .box-info {
-            .logo {
-                width: 20px;
-            }
-            .nama {
-                font-size: 18px;
-                margin: 0 0 0 4px;
-            }
-        }
-        .copyright {
-            font-size: 10px;     
-        }
-    }
-}
-
-// WIDTH <= 432
-@media screen and (max-width: 432px) {
-    .top-info {
-        flex-direction: column;
-        margin-bottom: 24px;
-        .box-info {
-            .logo {
-                width: 20px;
-            }
-            .nama {
-                font-size: 16px;
-                margin: 0 0 0 4px;
-            }
-        }
-        .copyright {
-            margin-top: 4;
-            margin-bottom: 0;
-            font-size: 8px;     
-        }
+        color: rgba(255, 255, 255, 0.32);
     }
 }

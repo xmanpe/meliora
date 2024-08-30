@@ -14,12 +14,15 @@ import Error from "./pages/error/Error";
 
 // import components
 import SayembaraVisual from "./pages/SayembaraVisual";
-import BottomNavbar from "./components/bottomnav/BottomNav";
+import TopInfo from "./components/top-info/TopInfo";
+// import BottomNavbar from "./components/bottomnav/BottomNav";
+import NavigationBar from "./components/navbar/NavigationBar";
 
 function App() {
   return (
     <div className="omb">
       <Router>
+        <TopInfo />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/hari-pelaksanaan" element={<HariPelaksanaan />} />
@@ -43,7 +46,7 @@ const BottomNavbarWithPathCheck = () => {
   
   return (
     <>
-      {location.pathname !== '/' && <BottomNavbar />}
+      {location.pathname !== '/' && <NavigationBar />}
     </>
   );
 };

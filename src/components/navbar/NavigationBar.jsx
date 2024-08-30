@@ -10,7 +10,7 @@ import sayembaraVisual from '../../images/navbar-icon/sayembara visual.svg';
 
 const tabsConfig = [
     {
-        path: '/',
+        path: '/hari-pelaksanaan',
         icon: hariPelaksanaan,
         text: 'Hari Pelaksanaan'
     },
@@ -24,11 +24,11 @@ const tabsConfig = [
         icon: diBalikKepanitiaan,
         text: 'Di Balik Kepanitiaan'
     },
-    {
-        path: '/sayembara-visual',
-        icon: sayembaraVisual,
-        text: 'Sayembara Visual'
-    },
+    // {
+    //     path: '/sayembara-visual',
+    //     icon: sayembaraVisual,
+    //     text: 'Sayembara Visual'
+    // },
 ];
 
 const NavigationBar = () => {

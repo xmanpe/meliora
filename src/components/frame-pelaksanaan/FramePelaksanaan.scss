@@ -1,546 +1,138 @@
-@import "../../index.scss";
+.pelaksanaan_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    box-sizing: border-box;
+    max-width: 800px;
+    width: -webkit-fill-available;
+    margin: 0 auto;
 
-.hari_pelaksanaan {
-    padding: 20px 50px ;
+    .card-wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+        gap: 16px;
 
-    .frame-pelaksanaan {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        padding: 48px 0;
-        gap: 24px;
-        box-sizing: border-box;
-    
-        .LeftDiv {
-            width: fit-content;
-            // background-color: rgb(80, 0, 0);
-
-            .SIO {
-                // background-color: rgb(100, 100, 255);
-                position: relative;
-                width: 250px;
-                height: 400px;
-                display: flex;
-                flex-direction: column;
-                flex-wrap: nowrap;
-                transition: 0.2s ease-in;
-                align-items: center;
-            }
-        }
-
-        .MidDiv {
-            width: fit-content;
-            height: fit-content;
+        .each-card {
             display: flex;
-            gap: 24px;
             flex-direction: column;
-            flex-wrap: wrap;
-            align-content: center;
-            justify-content: center;
-            align-items: center;
-            // background-color: rgb(100, 0, 0);
+            gap: 12px;
+            padding: 8px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            width: -webkit-fill-available;
+            box-shadow: 1px 2px 8px 2px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.3s ease;
 
-            .TopDiv {
-                // background-color: red;
-                display: flex;
-                justify-content: center;
+            &::before {
+                content: '';
+                position: absolute;
+                top: -80%;
+                left: -50%;
+                width: 200%;
+                height: 200%;
+                background: linear-gradient(
+                    to bottom right,
+                    rgba(255, 255, 255, 0.3) 20%,
+                    rgba(255, 255, 255, 0.2) 40%,
+                    rgba(255, 255, 255, 0) 60%
+                );
+                transform: rotate(30deg);
+                opacity: 0;
+                transition: opacity 0.3s ease, transform 0.5s ease;
+                pointer-events: none; 
+            }
+
+            .image-wrapper {
+                display: grid;
+                grid-template-columns: 1fr 0.7fr;
+                gap: 8px;
                 align-items: center;
-                align-content: center;
-                flex-wrap: wrap;
-                gap: 24px;
 
-                .HariPemupukan {
-                    width: 400px;
-                    height: 250px;
-                    transition: 0.2s ease-in;
-                    // background-color: rgb(43, 43, 255);
-
+                .card-image {
+                    display: flex;
+                    flex-direction: column;
+                    border-radius: 16px;
+                    height: 320px;
+                    overflow: hidden;
+    
                     img {
                         width: 100%;
+                        height: 100%;
+                        object-fit: cover;
                     }
                 }
             }
 
-            .BottomDiv {
+            .inverted {
+                grid-template-columns: 0.7fr 1fr;
+            }
+
+            .card-info {
                 display: flex;
                 flex-direction: row;
-                flex-wrap: wrap;
-                // background-color: aqua;
-                justify-content: center;
-                gap: 24px;
-                .PerkembanganHari1,
-                .PerkembanganHari2 {
-                    position: relative;
-                    display: flex;
-                    flex-direction: column;
-                    flex-wrap: wrap;
-                    width: 250px;
-                    height: 400px;
-                    transition: 0.2s ease-in;
-                    align-items: center;
-                    // background-color: rgb(6, 6, 132);
-                }
-            }
-        }
-
-        .RightDiv {
-            width: fit-content;
-            // background-color: rgb(200, 0, 0);
-            .STS {
-                position: relative;
-                display: flex;
-                width: 250px;
-                height: 400px;
-                flex-direction: column;
-                flex-wrap: nowrap;
-                transition: 0.2s ease-in;
-                // justify-content: center;
-                // background-color: blue;
-            }
-        }
-
-        p {
-            color: var(--Black, #000);
-            text-align: center;
-            font-family: "DM Sans";
-            font-size: 24px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: normal;
-            margin: 0;
-            position: relative;
-            z-index: 3;
-            margin-top: auto;
-            padding-top: auto;
-            margin-bottom: 0px;
-        }
-
-        img {
-            height: 90%;
-            object-fit: cover;
-            display: block;
-            overflow: clip;
-            border: 1px solid black;
-            border-radius: 10px;
-        }
-    }
-}
-
-
-@media screen and (max-width: 1200px) {
-    .hari_pelaksanaan {
-        padding: 20px 50px ;
-    
-        .frame-pelaksanaan {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 48px 0;
-            gap: 24px;
-            box-sizing: border-box;
-        
-            .LeftDiv {
-                width: fit-content;
-                // background-color: rgb(80, 0, 0);
-    
-                .SIO {
-                    // background-color: rgb(100, 100, 255);
-                    position: relative;
-                    width: 500px;
-                    height: 300px;
-                    display: flex;
-                    flex-direction: column;
-                    flex-wrap: nowrap;
-                    transition: 0.2s ease-in;
-                    align-items: center;
-
-                    .image {
-                        width: 100%;
-                    }
-                }
-            }
-    
-            .MidDiv {
-                width: fit-content;
-                height: fit-content;
-                display: flex;
-                gap: 24px;
-                flex-direction: column;
-                flex-wrap: wrap;
-                align-content: center;
-                justify-content: center;
+                gap: 12px;
                 align-items: center;
-                // background-color: rgb(100, 0, 0);
-    
-                .TopDiv {
-                    // background-color: red;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    align-content: center;
-                    flex-wrap: wrap;
-                    gap: 24px;
-    
-                    .HariPemupukan {
-                        width: 500px;
-                        height: 300px;
-                        transition: 0.2s ease-in;
-                        // background-color: rgb(43, 43, 255);
-    
-                        img {
-                            width: 100%;
-                        }
-                    }
-                }
-    
-                .BottomDiv {
-                    display: flex;
-                    flex-direction: column;
-                    flex-wrap: wrap;
-                    // background-color: aqua;
-                    justify-content: center;
-                    gap: 24px;
-                    .PerkembanganHari1,
-                    .PerkembanganHari2 {
-                        position: relative;
-                        display: block;
-                        width: 500px;
-                        height: 300px;
-                        transition: 0.2s ease-in;
-                        // background-color: rgb(6, 6, 132);
+                padding: 0px 12px 12px 12px;
+                justify-content: space-between;
 
-                        img {
-                            width: 100%;
-                        }
-                    }
-                }
-            }
-    
-            .RightDiv {
-                width: fit-content;
-                // background-color: rgb(200, 0, 0);
-                .STS {
-                    position: relative;
+                .card-text {
                     display: flex;
-                    width: 500px;
-                    height: 300px;
                     flex-direction: column;
-                    flex-wrap: nowrap;
-                    transition: 0.2s ease-in;
-                    // justify-content: center;
-                    // background-color: blue;
-                
-                    img {
-                        width: 100%;
+                    gap: 0px;
+    
+                    h1 {
+                        font-size: 24px;
+                        font-weight: 600;
+                        color: #000000;
+                    }
+    
+                    p {
+                        font-size: 14px;
+                        color: rgba(0, 0, 0, 0.32);
                     }
                 }
-            }
-    
-            p {
-                color: var(--Black, #000);
-                text-align: center;
-                font-family: "DM Sans";
-                font-size: 24px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: normal;
-                margin: 0;
-                position: relative;
-                z-index: 3;
-                margin-top: auto;
-                padding-top: auto;
-                margin-bottom: 0px;
-            }
-    
-            img {
-                height: 90%;
-                object-fit: cover;
-                display: block;
-                overflow: clip;
-                border: 1px solid black;
-                border-radius: 10px;
+
+                .card-button {
+                    display: flex;
+                    padding: 8px 16px;
+                    align-items: center;
+                    gap: 8px;
+                    border: 1px solid rgba(0, 0, 0, 0.1);
+                    border-radius: 100px;
+                    background: transparent;
+                    transition: background-color 0.3s ease;
+                    cursor: pointer;
+
+                    img {
+                        width: 20px;
+                        height: 20px;
+                    }
+
+                    p {
+                        font-size: 14px;
+                        color: black;
+                    }
+
+                    &:hover {
+                        background: rgba(0, 0, 0, 0.05) !important;
+                    }
+                }
             }
         }
-    }
-}
 
-@media screen and (max-width: 810px) {
-    
-}
+        .each-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 12px 28px -6px rgba(24, 39, 75, 0.18), 0px 18px 88px -4px rgba(24, 39, 75, 0.18);
 
-@media screen and (max-width: 560px) {
-    .hari_pelaksanaan {
-        padding: 20px 50px ;
-    
-        .frame-pelaksanaan {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 48px 0;
-            gap: 24px;
-            box-sizing: border-box;
-        
-            .LeftDiv {
-                width: fit-content;
-                // background-color: rgb(80, 0, 0);
-    
-                .SIO {
-                    // background-color: rgb(100, 100, 255);
-                    position: relative;
-                    width: 400px;
-                    height: 200px;
-                    display: flex;
-                    flex-direction: column;
-                    flex-wrap: nowrap;
-                    transition: 0.2s ease-in;
-                    align-items: center;
-
-                    .image {
-                        width: 100%;
-                    }
-                }
-            }
-    
-            .MidDiv {
-                width: fit-content;
-                height: fit-content;
-                display: flex;
-                gap: 24px;
-                flex-direction: column;
-                flex-wrap: wrap;
-                align-content: center;
-                justify-content: center;
-                align-items: center;
-                // background-color: rgb(100, 0, 0);
-    
-                .TopDiv {
-                    // background-color: red;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    align-content: center;
-                    flex-wrap: wrap;
-                    gap: 24px;
-    
-                    .HariPemupukan {
-                        width: 400px;
-                        height: 200px;
-                        transition: 0.2s ease-in;
-                        // background-color: rgb(43, 43, 255);
-    
-                        img {
-                            width: 100%;
-                        }
-                    }
-                }
-    
-                .BottomDiv {
-                    display: flex;
-                    flex-direction: column;
-                    flex-wrap: wrap;
-                    // background-color: aqua;
-                    justify-content: center;
-                    gap: 24px;
-                    .PerkembanganHari1,
-                    .PerkembanganHari2 {
-                        position: relative;
-                        display: block;
-                        width: 400px;
-                        height: 200px;
-                        transition: 0.2s ease-in;
-                        // background-color: rgb(6, 6, 132);
-
-                        img {
-                            width: 100%;
-                        }
-                    }
-                }
-            }
-    
-            .RightDiv {
-                width: fit-content;
-                // background-color: rgb(200, 0, 0);
-                .STS {
-                    position: relative;
-                    display: flex;
-                    width: 400px;
-                    height: 200px;
-                    flex-direction: column;
-                    flex-wrap: nowrap;
-                    transition: 0.2s ease-in;
-                    // justify-content: center;
-                    // background-color: blue;
-                
-                    img {
-                        width: 100%;
-                    }
-                }
-            }
-    
-            p {
-                color: var(--Black, #000);
-                text-align: center;
-                font-family: "DM Sans";
-                font-size: 24px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: normal;
-                margin: 0;
-                position: relative;
-                z-index: 3;
-                margin-top: auto;
-                padding-top: auto;
-                margin-bottom: 0px;
-            }
-    
-            img {
-                height: 90%;
-                object-fit: cover;
-                display: block;
-                overflow: clip;
-                border: 1px solid black;
-                border-radius: 10px;
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 432px) {
-    .hari_pelaksanaan {
-        padding: 20px 16px ;
-    
-        .frame-pelaksanaan {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 48px 0;
-            gap: 24px;
-            box-sizing: border-box;
-        
-            .LeftDiv {
-                width: fit-content;
-                // background-color: rgb(80, 0, 0);
-    
-                .SIO {
-                    // background-color: rgb(100, 100, 255);
-                    position: relative;
-                    width: 320px;
-                    height: 150px;
-                    display: flex;
-                    flex-direction: column;
-                    flex-wrap: nowrap;
-                    transition: 0.2s ease-in;
-                    align-items: center;
-
-                    .image {
-                        width: 100%;
-                    }
-                }
-            }
-    
-            .MidDiv {
-                width: fit-content;
-                height: fit-content;
-                display: flex;
-                gap: 24px;
-                flex-direction: column;
-                flex-wrap: wrap;
-                align-content: center;
-                justify-content: center;
-                align-items: center;
-                // background-color: rgb(100, 0, 0);
-    
-                .TopDiv {
-                    // background-color: red;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    align-content: center;
-                    flex-wrap: wrap;
-                    gap: 24px;
-    
-                    .HariPemupukan {
-                        width: 320px;
-                        height: 150px;
-                        transition: 0.2s ease-in;
-                        // background-color: rgb(43, 43, 255);
-    
-                        img {
-                            width: 100%;
-                        }
-                    }
-                }
-    
-                .BottomDiv {
-                    display: flex;
-                    flex-direction: column;
-                    flex-wrap: wrap;
-                    // background-color: aqua;
-                    justify-content: center;
-                    gap: 24px;
-                    .PerkembanganHari1,
-                    .PerkembanganHari2 {
-                        position: relative;
-                        display: block;
-                        width: 320px;
-                        height: 150px;
-                        transition: 0.2s ease-in;
-                        // background-color: rgb(6, 6, 132);
-
-                        img {
-                            width: 100%;
-                        }
-                    }
-                }
-            }
-    
-            .RightDiv {
-                width: fit-content;
-                // background-color: rgb(200, 0, 0);
-                .STS {
-                    position: relative;
-                    display: flex;
-                    width: 320px;
-                    height: 150px;
-                    flex-direction: column;
-                    flex-wrap: nowrap;
-                    transition: 0.2s ease-in;
-                    // justify-content: center;
-                    // background-color: blue;
-                
-                    img {
-                        width: 100%;
-                    }
-                }
-            }
-    
-            p {
-                color: var(--Black, #000);
-                text-align: center;
-                font-family: "DM Sans";
-                font-size: 16px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: normal;
-                margin: 0;
-                position: relative;
-                z-index: 3;
-                margin-top: auto;
-                padding-top: auto;
-                margin-bottom: 0px;
-            }
-    
-            img {
-                height: 90%;
-                object-fit: cover;
-                display: block;
-                overflow: clip;
-                border: 1px solid black;
-                border-radius: 10px;
+            &::before {
+                opacity: 1;
+                transform: rotate(30deg) translate(10%, 10%);
             }
         }
     }

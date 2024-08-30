@@ -1,5 +1,5 @@
 import React from "react";
-import "../hariHariPelaksanaan.scss";
+import "../HariPelaksanaan.scss";
 import HariPemupukan from "../../../components/gallery/pemupukanGaleri";
 import Header from "../../../components/header/Header";
 import TopInfo from "../../../components/top-info/TopInfo";
