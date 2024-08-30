@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes, useLocation } from "react-route
 
 // import pages
 import HariPelaksanaan from "./pages/HariPelaksanaan/HariPelaksanaan";
+import FotoDivisi from "./pages/FotoDivisi";
 import Home from "./pages/home/Home";
 import SesiInformasiOMB from "./pages/HariPelaksanaan/sio/SesiInformasiOMB";
 import HariPemupukan from "./pages/HariPelaksanaan/hari-pemupukan/HariPemupukan";
@@ -27,6 +28,7 @@ function App() {
           <Route path="/hari-pelaksanaan/perkembangan-hari-1" element={<PerkembanganHari1 />} />
           <Route path="/hari-pelaksanaan/perkembangan-hari-2" element={<PerkembanganHari2 />} />
           <Route path="/hari-pelaksanaan/sidang-terbuka-senat" element={<SidangTerbukaSenat />} />
+          <Route path="/foto-divisi" element={<FotoDivisi />} />
           <Route path="/sayembara-visual" element={<SayembaraVisual />} />
           <Route path="*" element={<Error />} />
         </Routes>

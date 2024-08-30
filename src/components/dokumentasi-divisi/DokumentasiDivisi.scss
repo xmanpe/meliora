@@ -1,0 +1,242 @@
+@import '../../index.scss';
+
+.foto-section{
+    padding: 60px 160px 100px 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    .foto-tabs{
+        display: flex;
+        border: 1.5px solid rgba(0, 0, 0, 0.056);
+        justify-content: center;
+        align-items: center;
+        width: fit-content;
+        margin: 10px 10px -16px 10px;
+        z-index: 5;
+        padding: 2px;
+        border-radius: 4px;
+        box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.1);
+        .tab-wrapper{
+            .tab-button{
+                font-family: Arial, Helvetica, sans-serif;
+                border: none;
+                border-color: $meliora-color;
+                border-radius: 4px;
+                padding: 12px 16px;
+                font-size: 16px;
+                font-family: 'GSN';
+                background: none;
+                color: rgba(0, 0, 0, 0.365);
+                cursor: pointer;
+                transition: background-color 200ms ease-in-out;
+                transition: border 200ms ease-in-out;
+            }
+            .tab-button:hover{
+                background-color: rgba(244, 173, 86, 0.4);
+                transition: background-color 100ms ease-in-out;
+            }
+            .active {
+                border: 2px solid $meliora-color;
+                border-radius: 4px;
+                padding: 10px 14px;
+                font-size: 16px;
+                font-family: 'GSN';
+                background-color: rgba(244, 173, 86, 0.5);
+                color: black;
+                transition: background-color 200ms ease-in-out;
+                transition: border 200ms ease-in-out;
+            }
+            .active:hover{
+                background-color: rgba(244, 173, 86, 0.5);
+                cursor: default;
+            }
+        }
+    }
+    .swiper{
+        width: 80%;
+        height: 100%;
+        .swiper-wrapper{
+            .swiper-slide {
+                position: relative;
+                // padding: 10px;
+                text-align: center;
+                font-size: 18px;
+              
+                /* Center slide text vertically */
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+                transform: scale(0.6);
+                opacity: 0;
+                transition: all 200ms ease-in-out;  
+            }       
+            .swiper-slide-active{
+                transition: all 200ms ease-in-out;
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        .swiper-pagination{
+            position: relative;
+            margin-top: -20px;
+            font-family: "DM Serif Display", serif;
+            font-size: $font-size-xmedium;
+            color: #fff;
+
+            // font-weight: medium;
+        }
+        .swiper-pagination-current{
+            font-size: $font-size-xxlarge;
+        }
+        .swiper-button{
+            position: relative;
+        }
+        .swiper-button-prev{
+            margin-left: 8px;
+            content: url("../../../public/Assets/images/icons/left2.svg");
+        }
+        .swiper-button-next{
+            margin-right: 8px;
+            content: url("../../../public/Assets/images/icons/right2.svg")
+        }
+
+    }
+
+    .image-wrapper{
+        width: 800px;
+        height: 420px;
+        img{
+            object-position: 50% 74%;
+            object-fit: cover;
+            width: 90%;
+            height: 380px;
+            // border: solid 20px #fff ;
+            border-radius: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+    }
+    // .vbg-wrapper{
+    //     width: 800px;
+    //     position: absolute;
+    //     z-index: -1;
+    //     transform: rotate(-7deg);
+    //     .vbg{
+    //         object-fit: cover;
+    //         width: 90%;
+    //         height: 90%;
+    //         border: solid 20px #fff ;
+    //         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    //     }
+    // }
+    .name-wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        // gap: 20px;
+        h1{
+            text-align: center;
+            font-family: "DM Serif Display", serif;
+            font-size: $font-size-large;
+            font-weight: normal;
+            color: #fff;
+        }
+        .koordinator-wrapper{
+            margin: 16px 0px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 20px;
+            .koordinator-person{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                p{
+                    color: #fff;
+                }
+            }
+            .koordinator-img{
+                gap: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                p{
+                    color: #fff;
+                }
+                img{
+                    border-radius: 100px;
+                    object-fit: cover;
+                    height: 70px;
+                    width: 70px;
+                    border: solid 2px;
+                }
+                .Gandara{
+                    border-color: $gandara-color;
+                }
+                .Gajendra{
+                    border-color: $gajendra-color;
+                }
+                .Balwana{
+                    border-color: $balwana-color;
+                }
+                .Baskara{
+                    border-color:$baskara-color;
+                }
+                .Bimasena{
+                    border-color:$bimasena-color;
+                }
+                .Caksana{
+                    border-color:$caksana-color;
+                }
+                .Lavanya{
+                    border-color:$lavanya-color;
+                }
+                .Nayanika{
+                    border-color: $nayanika-color;
+                }
+                .Sakha{
+                    border-color: $sakha-color;
+                }
+                .Sarkara{
+                    border-color: $sarkara-color;
+                }
+                .Saraya{
+                    border-color: $saraya-color;
+                }
+            }
+            h2{
+                font-family: "DM Serif Display", serif;
+                font-size: $font-size-medium;
+                font-weight: normal;
+                color: #fff;
+            }
+            p{
+                
+            }
+        }
+        .anggota-wrapper{
+            margin-top: 20px;
+            gap: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 60%;
+            border-radius: 4px;
+            background-color: #fff;
+            box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.4);
+            padding: 10px;
+            h1{
+                color: #000;
+            }
+            .anggota{
+                p{
+                    text-align: justify;
+                }
+            }
+        }
+    }
+}
