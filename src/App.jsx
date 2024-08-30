@@ -1,27 +1,51 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, useLocation } from "react-router-dom";
 
 // import pages
 import HariPelaksanaan from "./pages/HariPelaksanaan/HariPelaksanaan";
 import FotoDivisi from "./pages/FotoDivisi";
+import Home from "./pages/home/Home";
+import SesiInformasiOMB from "./pages/HariPelaksanaan/sio/SesiInformasiOMB";
+import HariPemupukan from "./pages/HariPelaksanaan/hari-pemupukan/HariPemupukan";
+import PerkembanganHari1 from "./pages/HariPelaksanaan/perkembangan-hari-1/PerkembanganHari1";
+import PerkembanganHari2 from "./pages/HariPelaksanaan/perkembangan-hari-2/PerkembanganHari2";
+import SidangTerbukaSenat from "./pages/HariPelaksanaan/sidang-terbuka-senat/SidangTerbukaSenat";
 import Error from "./pages/error/Error";
 
 // import components
-import NavigationBar from "./components/navbar/NavigationBar";
+import SayembaraVisual from "./pages/SayembaraVisual";
+import BottomNavbar from "./components/bottomnav/BottomNav";
 
 function App() {
   return (
     <div className="omb">
       <Router>
         <Routes>
-          <Route path="/" element={<HariPelaksanaan />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/hari-pelaksanaan" element={<HariPelaksanaan />} />
+          <Route path="/hari-pelaksanaan/sio" element={<SesiInformasiOMB/>} />
+          <Route path="/hari-pelaksanaan/hari-pemupukan" element={<HariPemupukan />} />
+          <Route path="/hari-pelaksanaan/perkembangan-hari-1" element={<PerkembanganHari1 />} />
+          <Route path="/hari-pelaksanaan/perkembangan-hari-2" element={<PerkembanganHari2 />} />
+          <Route path="/hari-pelaksanaan/sidang-terbuka-senat" element={<SidangTerbukaSenat />} />
           <Route path="/foto-divisi" element={<FotoDivisi />} />
+          <Route path="/sayembara-visual" element={<SayembaraVisual />} />
           <Route path="*" element={<Error />} />
         </Routes>
-        <NavigationBar />
+        <BottomNavbarWithPathCheck />
       </Router>
     </div>
   );
 }
+
+const BottomNavbarWithPathCheck = () => {
+  const location = useLocation();
+  
+  return (
+    <>
+      {location.pathname !== '/' && <BottomNavbar />}
+    </>
+  );
+};
 
 export default App;

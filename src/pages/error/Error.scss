@@ -1,0 +1,82 @@
+.error_section {
+  background: linear-gradient(97deg, rgba(244, 172, 86, 0.90) 0%, rgba(221, 198, 175, 0.90) 56.97%, rgba(255, 246, 209, 0.90)  100%), url('../../images/background/nayanika-error.jpg'), lightgray 50% / cover no-repeat;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  padding: 0px 16px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-shrink: 0;
+  height: 100vh;
+
+  .upper_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+      // margin-top: -100px;
+      // margin-bottom: -40px;
+      color: #FFF;
+      text-shadow: 0px 4px 24.9px #FFF;
+      font-family: "GSN";
+      font-size: clamp(8px, 12vw, 105px);
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      mix-blend-mode: soft-light;
+    }
+
+    p {
+      color: #FFF;
+      text-align: center;
+      text-shadow: 0px 4px 24.9px #FFF;
+      font-family: "GSN";
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+    }
+  }
+
+  .card_container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px; // Adjust the spacing between cards
+    max-width: 1200px; // Adjust the maximum width as needed
+    width: 100%;
+  }
+
+  .card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+
+    .card_image {
+      width: 100%;
+      height: auto;
+    }
+
+    .card_content {
+      padding: 16px;
+
+      h2 {
+        font-size: 1rem;
+        margin: 0 0 8px;
+      }
+
+      p {
+        font-size: 1rem;
+        font-weight: 300;
+        color: #666;
+        margin: 0;
+      }
+    }
+  }
+}

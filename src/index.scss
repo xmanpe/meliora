@@ -77,3 +77,13 @@ body {
         box-sizing: border-box;
     }
 }
+
+.margin_layout {
+    padding: 20px 50px ;
+}
+
+@media screen and (max-width: 432px) {
+    .margin_layout {
+        padding: 20px 16px ;
+    }
+}

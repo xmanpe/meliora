@@ -9,7 +9,7 @@ const Header = ({image, top, bottom}) => {
             <img className='header-logo' src={image} alt="image header" />
             <div className='title'>
                 <h1>{top}</h1>
-                <p>{bottom}</p>
+                <p dangerouslySetInnerHTML={{ __html: bottom }} />
             </div>
         </section>
     );

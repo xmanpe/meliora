@@ -1,7 +1,7 @@
 @import "../../index.scss";
 
 .header {
-    padding: 40px 40px 0px 40px;
+    padding: 40px 350px 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -23,12 +23,67 @@
             font-size: $font-size-xxlarge;
             color: $meliora-color;
             font-weight: 500;
+            text-align: center;
         }
 
         p {
             font-size: $font-size-medium;
             color: $paragraph-color;
             font-weight: 500;
+            text-align: center;
         }
     }
 }
+
+
+@media screen and (max-width: 1200px) {
+    .header {
+        padding: 40px 150px 0px;
+        .ttile {
+            h1 {
+                font-size: $font-size-xlarge;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 810px) {
+    .header {
+        padding: 20px 40px 0px;
+        .ttile {
+            h1 {
+                font-size: $font-size-xlarge;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .header {
+        padding: 20px 0px 0px;
+        .ttile {
+            h1 {
+                font-size: $font-size-large;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 432px) {
+    .header {
+        padding: 20px 0px 0px;
+        .ttile {
+            h1 {
+                font-size: $font-size-xmedium;
+            }
+        }
+    }
+}
+
+// $font-size-xxsmall: 0.75rem;
+// $font-size-small: 1rem;
+// $font-size-medium: 1.25rem;
+// $font-size-xmedium: 1.5rem;
+// $font-size-large: 1.75rem;
+// $font-size-xlarge: 2rem;
+// $font-size-xxlarge: 3rem;
