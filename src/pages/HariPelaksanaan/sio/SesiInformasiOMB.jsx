@@ -1,6 +1,7 @@
 import React from "react";
 import "../hariHariPelaksanaan.scss";
 import SIO from "../../../components/gallery/masonryGaleri";
+import SIO2 from "../../../components/gallery/Sio"
 import Header from "../../../components/header/Header";
 import TopInfo from "../../../components/top-info/TopInfo";
 import AksesDrive from "../../../components/aksesDrive/aksesDrive";
@@ -23,7 +24,7 @@ function SesiInformasiOMB() {
                 bottom='Sesi Informasi Orientasi Mahasiswa Baru yang dilaksanakan oleh divisi Caksana atau <i>Public Relations </i> bertujuan untuk memberikan seluruh informasi agar peserta dapat mempersiapkan kebutuhan rangkaian OMB UMN 2024.'
             />
            <AksesDrive background="linear-gradient(144deg,rgba(224, 172, 86, 1)  0%, rgba(221, 198, 175, 1) 100%)" href="https://www.youtube.com/@OMBUMN" />
-          <SIO />
+          <SIO2 />
           <FloatingParticle />
       </div>
       <div className="white-space"></div>
