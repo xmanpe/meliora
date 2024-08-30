@@ -16,7 +16,7 @@ import SayembaraVisualActive from '../../images/icons/navigation/sayembara_visua
 const tabsConfig = [
     { path: '/hari-pelaksanaan', icon: HariPelaksaanNotActive, activeIcon: HariPelaksaanActive, text: 'Hari Pelaksanaan' },
     { path: '/dibalik-kepanitiaan', icon: DibalikKepanitiaanNotActive, activeIcon: DibalikKepanitiaanActive, text: 'Di Balik Kepanitiaan' },
-    { path: '/divisi', icon: FotoDivisiNotActive, activeIcon: FotoDivisiActive, text: 'Foto Divisi' },
+    { path: '/foto-divisi', icon: FotoDivisiNotActive, activeIcon: FotoDivisiActive, text: 'Foto Divisi' },
     { path: '/sayembara-visual', icon: SayembaraVisualNotActive, activeIcon: SayembaraVisualActive, text: 'Sayembara Visual' },
 ];
 

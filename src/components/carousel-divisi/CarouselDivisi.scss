@@ -22,22 +22,22 @@
   }
 }
 
-.bg{
-  position: relative;
-  overflow-x: clip;
-  .background{
-    transform: scale(1.6);
-    position: absolute;
-    filter: blur(60px);
-    height: 2000px;
-    z-index: -1;
-  }
-}
+// .bg{
+//   position: relative;
+//   overflow-x: clip;
+//   .background{
+//     transform: scale(1.6);
+//     position: absolute;
+//     filter: blur(60px);
+//     height: 2000px;
+//     z-index: -1;
+//   }
+// }
 
 .divisi-swiper{
     // position: -webkit-sticky;
     // position: sticky;
-    padding: 100px 160px 10px 160px;
+    padding: 10px 160px 10px 160px;
     top: 0;
     z-index: 5;
     .swiper {
