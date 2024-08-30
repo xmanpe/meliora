@@ -30,14 +30,12 @@ const FramePelaksanaanRevisi = ({ dataHariPelaksanaan }) => {
                   className="content-image"
                 />
                 <div className='frame-info'>
-                  <div
-                    className='frame-title'
+                  <h2
                     dangerouslySetInnerHTML={{ __html: item.title}}
-                  ></div>
-                  <div
-                    className='frame-date'
+                  ></h2>
+                  <p
                     dangerouslySetInnerHTML={{ __html: item.date}}
-                  ></div>
+                  ></p>
                 </div>
               </div>
             </div>
