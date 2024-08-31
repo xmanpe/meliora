@@ -7,7 +7,7 @@ import Header from '../components/header/Header';
 import CarouselDivisi from "../components/carousel-divisi/CarouselDivisi";
 import DokumentasiDivisi from "../components/dokumentasi-divisi/DokumentasiDivisi";
 import PhotocardDivisi from "../components/photocard-divisi/PhotocardDivisi";
-import SectionFoto from "../components/section-foto/SectionFoto"
+import SectionFoto from "../components/section-foto/sectionFoto"
 
 //import images
 import BackgroundDivisi from '../images/background/BG-02.png';
