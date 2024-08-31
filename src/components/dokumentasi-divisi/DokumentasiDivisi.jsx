@@ -17,40 +17,41 @@ const DokumentasiDivisi = () => {
   const { activeIndex } = useContext(DivisiContext);
   const [activeTab,setActiveTab] = useState(0);
   const swiperRef = useRef(null);
+  
 
   useEffect(()=>{
     setActiveTab(0);
     swiperRef.current.swiper.slideTo(0);
   },[activeIndex])
 
-  useEffect(() => {
-    const swiperInstance = swiperRef.current.swiper;
-    swiperInstance.on('slideChangeTransitionEnd', () => {
-        swiperInstance.update();
-    });
-  }, []);
+  // useEffect(() => {
+  //   const swiperInstance = swiperRef.current.swiper;
+  //   swiperInstance.on('slideChangeTransitionEnd', () => {
+  //       swiperInstance.update();
+  //   });
+  // }, []);
 
   return (
     <div className='foto-section'>
-      <div className='foto-tabs'>
-        {dataDokumentasi["FOTO"].map((dataDokumentasi,index)=>{
-          if (index === activeIndex && dataDokumentasi.kelompok.length>1) {
-            return dataDokumentasi.kelompok.map((dataKelompok, kelompokIndex) => (
-              <>
-                <div className='tab-wrapper'>
-                  <button
-                    key={kelompokIndex}
-                    className={`tab-button ${activeTab === kelompokIndex ? 'active' : ''}`}
-                    onClick={() => setActiveTab(kelompokIndex)}
-                  >
-                    {kelompokIndex + 1}
-                  </button>
-                </div>
-              </>
-            ));
-          }
-        })}
-      </div>
+      {dataDokumentasi["FOTO"].map((dataDokumentasi,index)=>{
+        if (index === activeIndex && dataDokumentasi.kelompok.length>1) {
+          return (
+          <div className='foto-tabs'>
+            {dataDokumentasi.kelompok.map((dataKelompok, kelompokIndex) => (
+            <>
+                <button
+                  key={kelompokIndex}
+                  className={`tab-button ${activeTab === kelompokIndex ? 'active' : ''}`}
+                  onClick={() => setActiveTab(kelompokIndex)}
+                >
+                  {/* {kelompokIndex + 1} */}
+                </button>
+            </>
+            ))}
+          </div>
+          )
+        }
+      })}
       <Swiper
         ref={swiperRef}
         pagination={{
@@ -114,9 +115,10 @@ const DokumentasiDivisi = () => {
                 <div className='koordinator-wrapper'>
                 {item.bph.map((bph, bphIndex)=>(
                   <>
+                  <h1 className={`koordinator-head-${item.divisi}`}>BPH</h1>
                     <div className='koordinator-img'>
                       <h2>{bph.jabatan}</h2>
-                      <img className={item.divisi} src={`./Assets/images/foto-divisi/divisi/${item.divisi}/${bph.nama}.jpg`} />
+                      {/* <img className={item.divisi} src={`./Assets/images/foto-divisi/divisi/${item.divisi}/${bph.nama}.jpg`} /> */}
                       <p>{bph.nama}</p>
                     </div>
                   </>
@@ -125,16 +127,22 @@ const DokumentasiDivisi = () => {
               </>
             )
           } else { 
-            if(index===activeIndex){
+            if(index===activeIndex && (index === 5 || index===8) ){
               return(
                 <>
-                  <h1>Koordinator</h1>
-                  <div className='koordinator-wrapper'>
+                </>
+              )
+            } else{
+              if(index===activeIndex){
+                return(
+                  <>
+                  <h1 className={`koordinator-head-${item.divisi}`}>Koordinator</h1>
+                  <div className="koordinator-wrapper">
                       {item.koordinator.map((koor, koorIndex) =>(
-                        <div className='koordinator-person'>
-                            <div className='koordinator-img'>
+                        <div className="koordinator-person">
+                            {/* <div className='koordinator-img'>
                               <img className={item.divisi} src={`./Assets/images/foto-divisi/divisi/${item.divisi}/${koor}.jpg`} />
-                            </div>
+                            </div> */}
                             <p>{koor}</p>
                         </div>
                       ))}
@@ -153,7 +161,8 @@ const DokumentasiDivisi = () => {
                       })}
                     </div>
                 </>
-              )
+                )
+              }
             }
           }
         })}

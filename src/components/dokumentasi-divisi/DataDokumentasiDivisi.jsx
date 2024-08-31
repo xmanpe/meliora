@@ -195,7 +195,7 @@ const dataDokumentasi = {
                         "Christalin Barbietta",
                         "Indah Safitri",
                         "Alroy Reynardo",
-                        "Airin Suryani",
+                        "Airin Maitri",
                         "Dicky Rusandana",
                         "Darlene Chryshilla",
                         "Natan Adi",
