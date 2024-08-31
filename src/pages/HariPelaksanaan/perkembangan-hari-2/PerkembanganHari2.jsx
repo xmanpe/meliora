@@ -13,9 +13,7 @@ import MelioraYellow from '../../../images/logo/meliora yellow.svg'
 function PerkembanganHari1Page() {
   return (
     <div className="main-container">
-     <div className="margin_layout">
       <TopInfo />
-      </div>
       <div className="galeri">
             <Header
                 image={MelioraYellow}
