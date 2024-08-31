@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./masonrygaleri.scss";
+import "./Galeri.scss";
 
 import mupuk1 from "../../images/meliora/foto/pemupukan/Andrew Su_Hari Pemupukan (1).jpg";
 import mupuk2 from "../../images/meliora/foto/pemupukan/Andrew Su_Hari Pemupukan (7).jpg";
@@ -30,7 +30,7 @@ import mupuk26 from "../../images/meliora/foto/pemupukan/Qhedyzya Ricardiane_Har
 
 import close from "../../images/meliora/icon/cross.png";
 
-function pemupukanGaleri() {
+function GalleryPemupukan() {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const [isOpen, setIsOpen] = useState(false);
   // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -74,86 +74,85 @@ function pemupukanGaleri() {
 
   return (
     <div className="galeri-main">
-      <div className="wide">
+      <div className="each-photo">
         <img src={mupuk5} onClick={() => fotoKlik(0)}></img>
       </div>
-      <div className="big">
+      <div className="each-photo">
         <img src={mupuk2} onClick={() => fotoKlik(1)}></img>
       </div>
-      <div>
+      <div className="each-photo">
         <img src={mupuk3} onClick={() => fotoKlik(2)}></img>
       </div>
-      <div>
+      <div className="each-photo">
         <img src={mupuk4} onClick={() => fotoKlik(3)}></img>
       </div>
-      <div>
+      <div className="each-photo">
         <img src={mupuk6} onClick={() => fotoKlik(4)}></img>
       </div>
-      <div className="wide">
+      <div className="each-photo">
         <img src={mupuk7} onClick={() => fotoKlik(5)}></img>
       </div>
-      <div>
+      <div className="each-photo">
         <img src={mupuk8} onClick={() => fotoKlik(6)}></img>
       </div>
-      <div className="tall">
+      <div className="each-photo">
         <img src={mupuk9} onClick={() => fotoKlik(7)}></img>
       </div>
-      <div className="tall">
+      <div className="each-photo">
         <img src={mupuk10} onClick={() => fotoKlik(8)}></img>
       </div>
-      <div>
+      <div className="each-photo">
         <img src={mupuk11} onClick={() => fotoKlik(9)}></img>
       </div>
-      <div>
+      <div className="each-photo">
         <img src={mupuk12} onClick={() => fotoKlik(10)}></img>
       </div>
-      <div>
+      <div className="each-photo">
         <img src={mupuk13} onClick={() => fotoKlik(11)}></img>
       </div>
-      <div>
+      <div className="each-photo">
         <img src={mupuk15} onClick={() => fotoKlik(12)}></img>
       </div>
-      <div className="big">
+      <div className="each-photo">
         <img src={mupuk16} onClick={() => fotoKlik(13)}></img>
       </div>
-      <div className="wide">
+      <div className="each-photo">
         <img src={mupuk14} onClick={() => fotoKlik(14)}></img>
       </div>
-      <div>
+      <div className="each-photo">
         <img src={mupuk17} onClick={() => fotoKlik(15)}></img>
       </div>
-      <div>
+      <div className="each-photo">
         <img src={mupuk18} onClick={() => fotoKlik(16)}></img>
       </div>
-      <div>
+      <div className="each-photo">
         <img src={mupuk19} onClick={() => fotoKlik(17)}></img>
       </div>
-      <div className="wide">
+      <div className="each-photo">
         <img
           src={mupuk20}
           onClick={() => fotoKlik(18)}
-          className="sio-19"
         ></img>
       </div>
-      <div>
+      <div className="each-photo">
         <img src={mupuk21} onClick={() => fotoKlik(19)}></img>
       </div>
-      <div>
+      <div className="each-photo">
         <img src={mupuk22} onClick={() => fotoKlik(20)}></img>
       </div>
-      <div>
+      <div className="each-photo">
         <img src={mupuk23} onClick={() => fotoKlik(21)}></img>
       </div>
-      <div className="tall">
+      <div className="each-photo">
         <img src={mupuk24} onClick={() => fotoKlik(22)}></img>
       </div>
-      <div className="tall">
+      <div className="each-photo">
         <img src={mupuk25} onClick={() => fotoKlik(23)}></img>
       </div>
-      <div>
+      <div className="each-photo">
         <img src={mupuk26} onClick={() => fotoKlik(24)}></img>
       </div>
-      <div>
+      <div className="each-photo">
         <img src={mupuk1} onClick={() => fotoKlik(25)}></img>
       </div>
 
@@ -198,4 +197,4 @@ function pemupukanGaleri() {
   );
 }
 
-export default pemupukanGaleri;
+export default GalleryPemupukan;

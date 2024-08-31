@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "./masonrygaleri.scss";
 
 //sio
 import sio1 from "../../images/meliora/foto/SIO/Sesi Informasi OMB_Allison_Edited_2.jpg"
@@ -31,7 +30,7 @@ import sio26 from "../../images/meliora/foto/SIO/SIO_Steven Hans_1.jpg"
 
 import close from "../../images/meliora/icon/cross.png";
 
-function masonryGaleri() {
+function GallerySIO() {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const [isOpen, setIsOpen] = useState(false);
   // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -77,82 +76,82 @@ function masonryGaleri() {
 
   return (
     <div className="galeri-main">
-      <div>
+      <div className="each-photo">
         <img src={sio1} onClick={() => fotoKlik(0)}></img>
       </div>
-      <div>
+      <div className="each-photo">
         <img src={sio6} onClick={() => fotoKlik(1)}></img>
       </div>
-      <div>
+      <div className="each-photo">
         <img src={sio3} onClick={() => fotoKlik(2)}></img>
       </div>
-      <div>
+      <div className="each-photo">
         <img src={sio4} onClick={() => fotoKlik(3)}></img>
       </div>
-      <div>
+      <div className="each-photo">
         <img src={sio5} onClick={() => fotoKlik(4)}></img>
       </div>
-      <div>
+      <div className="each-photo">
         <img src={sio2} onClick={() => fotoKlik(5)}></img>
       </div>
-      <div>
+      <div className="each-photo">
         <img src={sio7} onClick={() => fotoKlik(6)}></img>
       </div>
-      <div>
+      <div className="each-photo">
         <img src={sio8} onClick={() => fotoKlik(7)}></img>
       </div>
-      <div>
+      <div className="each-photo">
         <img src={sio10} onClick={() => fotoKlik(8)}></img>
       </div>
-      <div>
+      <div className="each-photo">
         <img src={sio9} onClick={() => fotoKlik(9)}></img>
       </div>
-      <div>
+      <div className="each-photo">
         <img src={sio11} onClick={() => fotoKlik(10)}></img>
       </div>
-      <div>
+      <div className="each-photo">
         <img src={sio12} onClick={() => fotoKlik(11)}></img>
       </div>
-      <div>
+      <div className="each-photo">
         <img src={sio13} onClick={() => fotoKlik(12)}></img>
       </div>
-      <div>
+      <div className="each-photo">
         <img src={sio14} onClick={() => fotoKlik(13)}></img>
       </div>
-      <div>
+      <div className="each-photo">
         <img src={sio15} onClick={() => fotoKlik(14)}></img>
       </div>
-      <div>
+      <div className="each-photo">
         <img src={sio16} onClick={() => fotoKlik(15)}></img>
       </div>
-      <div>
+      <div className="each-photo">
         <img src={sio17} onClick={() => fotoKlik(16)}></img>
       </div>
-      <div>
+      <div className="each-photo">
         <img src={sio18} onClick={() => fotoKlik(17)}></img>
       </div>
-      <div>
-        <img src={sio19} onClick={() => fotoKlik(18)} className="sio-19"></img>
+      <div className="each-photo">
+        <img src={sio19} onClick={() => fotoKlik(18)}></img>
       </div>
-      <div>
+      <div className="each-photo">
         <img src={sio20} onClick={() => fotoKlik(19)}></img>
       </div>
-      <div>
+      <div className="each-photo">
         <img src={sio21} onClick={() => fotoKlik(20)}></img>
       </div>
-      <div>
+      <div className="each-photo">
         <img src={sio22} onClick={() => fotoKlik(21)}></img>
       </div>
-      <div className="tall">
+      <div className="each-photo">
         <img src={sio23} onClick={() => fotoKlik(22)}></img>
       </div>
-      <div className="tall">
+      <div className="each-photo">
         <img src={sio24} onClick={() => fotoKlik(23)}></img>
       </div>
-      <div>
+      <div className="each-photo">
         <img src={sio25} onClick={() => fotoKlik(24)}></img>
       </div>
-      <div>
+      <div className="each-photo">
         <img src={sio26} onClick={() => fotoKlik(25)}></img>
       </div>
 
@@ -197,4 +196,4 @@ function masonryGaleri() {
   );
 }
 
-export default masonryGaleri;
+export default GallerySIO;

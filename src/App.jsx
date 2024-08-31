@@ -7,8 +7,8 @@ import FotoDivisi from "./pages/FotoDivisi";
 import Home from "./pages/home/Home";
 import SesiInformasiOMB from "./pages/HariPelaksanaan/sio/SesiInformasiOMB";
 import HariPemupukan from "./pages/HariPelaksanaan/hari-pemupukan/HariPemupukan";
-import PerkembanganHari1 from "./pages/HariPelaksanaan/perkembangan-hari-1/PerkembanganHari1";
-import PerkembanganHari2 from "./pages/HariPelaksanaan/perkembangan-hari-2/PerkembanganHari2";
+import PerkembanganHari1 from "./pages/HariPelaksanaan/perkembangan-hari-1/PerkembanganHariSatu";
+import PerkembanganHari2 from "./pages/HariPelaksanaan/perkembangan-hari-2/PerkembanganHariDua";
 import SidangTerbukaSenat from "./pages/HariPelaksanaan/sidang-terbuka-senat/SidangTerbukaSenat";
 import Error from "./pages/error/Error";
 

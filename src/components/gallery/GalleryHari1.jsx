@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./gridgaleri.scss";
+import "./Galeri.scss";
 
 import h1 from "../../images/meliora/foto/HARI1/Perkembangan Hari 1_Allison-1.jpg";
 import h2 from "../../images/meliora/foto/HARI1/Perkembangan Hari 1_Allison-9.jpg";
@@ -61,7 +61,7 @@ function Modal({ isOpen, onClose, image, onThumbnailClick }) {
   );
 }
 
-function Hari1Galeri() {
+function GalleryHari1() {
 const [isModalOpen, setIsModalOpen] = useState(false);
 const [selectedImage, setSelectedImage] = useState(null);
 
@@ -80,15 +80,16 @@ const ThumbnailClick = (image) => {
 };
 
 return (
-  <div className='grid-galeri'>
+  <div className='galeri-main'>
     {hari1.map((image, index) => (
-      <img
-        key={index}
-        src={image}
-        alt=""
-        onClick={() => openModal(image)}
-        className="grid-image"
-      />
+      <div className="each-photo">
+        <img
+          key={index}
+          src={image}
+          alt=""
+          onClick={() => openModal(image)}
+        />
+      </div>
     ))}
     <Modal
       isOpen={isModalOpen}
@@ -100,4 +101,4 @@ return (
 );
 }
 
-export default Hari1Galeri;
+export default GalleryHari1;

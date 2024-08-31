@@ -22,31 +22,31 @@ const cardData = [
     title: "Sesi Informasi OMB",
     date: "Senin, 12 Agustus 2024",
     images: [coverSIO1, coverSIO2],
-    path: "/sesi-informasi-omb"
+    path: "/hari-pelaksanaan/sio"
   },
   {
     title: "Hari Pemupukan",
     date: "Senin, 19 Agustus 2024",
     images: [coverHariPemupukan, coverHariPemupukan2],
-    path: "/hari-pemupukan"
+    path: "/hari-pelaksanaan/hari-pemupukan"
   },
   {
     title: "Perkembangan Hari 1",
     date: "Selasa, 20 Agustus 2024",
     images: [coverPerkembanganHari1, coverPerkembanganHari1_2],
-    path: "/perkembangan-hari-1"
+    path: "/hari-pelaksanaan/perkembangan-hari-1"
   },
   {
     title: "Perkembangan Hari 2",
     date: "Rabu, 21 Agustus 2024",
     images: [coverPerkembanganHari2, coverPerkembanganHari2_2],
-    path: "/perkembangan-hari-2"
+    path: "/hari-pelaksanaan/perkembangan-hari-2"
   },
   {
     title: "Sidang Terbuka Senat",
     date: "Jumat, 23 Agustus 2024",
     images: [coverSidangTerbukaSenat, coverSidangTerbukaSenat2],
-    path: "/sidang-terbuka-senat"
+    path: "/hari-pelaksanaan/sidang-terbuka-senat"
   }
 ];
 
