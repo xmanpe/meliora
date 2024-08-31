@@ -13,12 +13,12 @@ import saraya from "../../images/foto-divisi/logo-divisi/Saraya Large.png";
 
 
 // foto
-import gandara1 from "../../images/foto-divisi/divisi/Saraya/TES1.JPG";
+import gandara1 from "../../images/foto-divisi/divisi/Gandara/Simulasi 2_Oxa_1_Foto Terbaik.jpg";
 import gandara2 from "../../images/foto-divisi/divisi/Saraya/TES1.JPG";
 import gandara3 from "../../images/foto-divisi/divisi/Saraya/TES1.JPG";
-import balwana1 from "../../images/foto-divisi/divisi/Saraya/TES1.JPG";
-import balwana2 from "../../images/foto-divisi/divisi/Saraya/TES1.JPG";
-import balwana3 from "../../images/foto-divisi/divisi/Saraya/TES1.JPG";
+import balwana1 from "../../images/foto-divisi/divisi/Balwana/Perkembangan Hari 1_Oxa_Foto Terbaik-80.jpg";
+import balwana2 from "../../images/foto-divisi/divisi/Balwana/Perkembangan Hari 2_Diana Angyulia-14.jpg";
+import balwana3 from "../../images/foto-divisi/divisi/Balwana/QHEDY_FOTO TERBAIK_SIMUILASI 2 (10).JPG";
 import caksana1 from "../../images/foto-divisi/divisi/Saraya/TES1.JPG";
 import caksana2 from "../../images/foto-divisi/divisi/Saraya/TES1.JPG";
 import caksana3 from "../../images/foto-divisi/divisi/Saraya/TES1.JPG";
@@ -28,9 +28,9 @@ import lavanya3 from "../../images/foto-divisi/divisi/Saraya/TES1.JPG";
 import bimasena1 from "../../images/foto-divisi/divisi/Saraya/TES1.JPG";
 import bimasena2 from "../../images/foto-divisi/divisi/Saraya/TES1.JPG";
 import bimasena3 from "../../images/foto-divisi/divisi/Saraya/TES1.JPG";
-import baskara1 from "../../images/foto-divisi/divisi/Saraya/TES1.JPG";
-import baskara2 from "../../images/foto-divisi/divisi/Saraya/TES1.JPG";
-import baskara3 from "../../images/foto-divisi/divisi/Saraya/TES1.JPG";
+import baskara1 from "../../images/foto-divisi/divisi/Baskara/Simulasi 3_Steven Hans_57.jpg";
+import baskara2 from "../../images/foto-divisi/divisi/Baskara/IMG_2736.jpg";
+import baskara3 from "../../images/foto-divisi/divisi/Baskara/Perkembangan Hari 1_Salman A_59.jpg";
 import gajendra1 from "../../images/foto-divisi/divisi/Saraya/TES1.JPG";
 import gajendra2 from "../../images/foto-divisi/divisi/Saraya/TES1.JPG";
 import gajendra3 from "../../images/foto-divisi/divisi/Saraya/TES1.JPG";
