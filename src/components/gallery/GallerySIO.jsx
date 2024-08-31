@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import './Gallery.scss';
+
+import ImageModal from "../imageModal/ImageModal";
 
 //sio
 import sio1 from "../../images/meliora/foto/SIO/Sesi Informasi OMB_Allison_Edited_2.jpg"
@@ -28,170 +31,60 @@ import sio24 from "../../images/meliora/foto/SIO/SIO_Valentino Kriswahyudi_8.jpg
 import sio25 from "../../images/meliora/foto/SIO/SIO_Ravalen Virginia_10.jpg"
 import sio26 from "../../images/meliora/foto/SIO/SIO_Steven Hans_1.jpg"
 
-import close from "../../images/meliora/icon/cross.png";
+const sioImages = [sio1, sio2, sio3, sio4, sio5, sio6, sio7, sio8, sio9, sio10, sio11, sio12, sio13, sio14, sio15, sio16, sio17, sio18, sio19, sio20, sio21, sio22, sio23, sio24, sio25, sio26];
 
 function GallerySIO() {
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-  const [isOpen, setIsOpen] = useState(false);
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-  const [selectedFoto, setSelectedFoto] = useState(0);
+  const [modalOpen, setModalOpen] = useState(false);
+  const [currentImage, setCurrentImage] = useState(null);
 
-  const fotos = [
-    sio1,
-    sio2,
-    sio3,
-    sio4,
-    sio5,
-    sio6,
-    sio7,
-    sio8,
-    sio9,
-    sio10,
-    sio11,
-    sio12,
-    sio13,
-    sio14,
-    sio15,
-    sio16,
-    sio17,
-    sio18,
-    sio19,
-    sio20,
-    sio21,
-    sio22,
-    sio23,
-    sio24,
-    sio25,
-    sio26
-  ];
-
-  const fotoKlik = (index) => {
-    setSelectedFoto(index);
-    setIsOpen(true);
+  const openModal = (image) => {
+    setCurrentImage(image);
+    setModalOpen(true);
   };
 
   const closeModal = () => {
-    setIsOpen(false);
+    setModalOpen(false);
+    setCurrentImage(null);
+  };
+
+  const nextImage = () => {
+    const currentIndex = sioImages.indexOf(currentImage);
+    if (currentIndex < sioImages.length - 1) {
+      setCurrentImage(sioImages[currentIndex + 1]);
+    }
+  };
+
+  const prevImage = () => {
+    const currentIndex = sioImages.indexOf(currentImage);
+    if (currentIndex > 0) {
+      setCurrentImage(sioImages[currentIndex - 1]);
+    }
+  };
+
+  const selectImage = (image) => {
+    setCurrentImage(image);
   };
 
   return (
     <div className="galeri-main">
-      <div className="each-photo">
-        <img src={sio1} onClick={() => fotoKlik(0)}></img>
-      </div>
-      <div className="each-photo">
-        <img src={sio6} onClick={() => fotoKlik(1)}></img>
-      </div>
-      <div className="each-photo">
-        <img src={sio3} onClick={() => fotoKlik(2)}></img>
-      </div>
-      <div className="each-photo">
-        <img src={sio4} onClick={() => fotoKlik(3)}></img>
-      </div>
-      <div className="each-photo">
-        <img src={sio5} onClick={() => fotoKlik(4)}></img>
-      </div>
-      <div className="each-photo">
-        <img src={sio2} onClick={() => fotoKlik(5)}></img>
-      </div>
-      <div className="each-photo">
-        <img src={sio7} onClick={() => fotoKlik(6)}></img>
-      </div>
-      <div className="each-photo">
-        <img src={sio8} onClick={() => fotoKlik(7)}></img>
-      </div>
-      <div className="each-photo">
-        <img src={sio10} onClick={() => fotoKlik(8)}></img>
-      </div>
-      <div className="each-photo">
-        <img src={sio9} onClick={() => fotoKlik(9)}></img>
-      </div>
-      <div className="each-photo">
-        <img src={sio11} onClick={() => fotoKlik(10)}></img>
-      </div>
-      <div className="each-photo">
-        <img src={sio12} onClick={() => fotoKlik(11)}></img>
-      </div>
-      <div className="each-photo">
-        <img src={sio13} onClick={() => fotoKlik(12)}></img>
-      </div>
-      <div className="each-photo">
-        <img src={sio14} onClick={() => fotoKlik(13)}></img>
-      </div>
-      <div className="each-photo">
-        <img src={sio15} onClick={() => fotoKlik(14)}></img>
-      </div>
-      <div className="each-photo">
-        <img src={sio16} onClick={() => fotoKlik(15)}></img>
-      </div>
-      <div className="each-photo">
-        <img src={sio17} onClick={() => fotoKlik(16)}></img>
-      </div>
-      <div className="each-photo">
-        <img src={sio18} onClick={() => fotoKlik(17)}></img>
-      </div>
-      <div className="each-photo">
-        <img src={sio19} onClick={() => fotoKlik(18)}></img>
-      </div>
-      <div className="each-photo">
-        <img src={sio20} onClick={() => fotoKlik(19)}></img>
-      </div>
-      <div className="each-photo">
-        <img src={sio21} onClick={() => fotoKlik(20)}></img>
-      </div>
-      <div className="each-photo">
-        <img src={sio22} onClick={() => fotoKlik(21)}></img>
-      </div>
-      <div className="each-photo">
-        <img src={sio23} onClick={() => fotoKlik(22)}></img>
-      </div>
-      <div className="each-photo">
-        <img src={sio24} onClick={() => fotoKlik(23)}></img>
-      </div>
-      <div className="each-photo">
-        <img src={sio25} onClick={() => fotoKlik(24)}></img>
-      </div>
-      <div className="each-photo">
-        <img src={sio26} onClick={() => fotoKlik(25)}></img>
-      </div>
-
-      {/* modal */}
-      {isOpen && (
-        <div className="modal" id="modal">
-          <div className="modal-content">
-            <div className="modal-header">
-              <span className="close" onClick={closeModal}>
-                <img src={close}></img>
-              </span>
-            </div>
-            <div className="modal-body">
-              <div className="carousel">
-                <div className="slide-foto">
-                  <img
-                    src={fotos[selectedFoto]}
-                    alt={`Selected Foto ${selectedFoto + 1}`}
-                    className="fo-to"
-                  />
-                </div>
-                <div className="thumb-foto">
-                  {fotos
-                    .slice(selectedFoto, selectedFoto + 6)
-                    .map((foto, index) => (
-                      <div key={index} className="thumb-item">
-                        <img
-                          src={foto}
-                          alt={`Foto ${selectedFoto + index + 1}`}
-                          onClick={() => setSelectedFoto(selectedFoto + index)}
-                          className="thumb-image"
-                        />
-                      </div>
-                    ))}
-                </div>
-              </div>
-            </div>
-          </div>
+      {sioImages.map((image, index) => (
+        <div
+          key={index}
+          className="each-photo"
+          onClick={() => openModal(image)}
+        >
+          <img src={image} alt={`Thumbnail ${index + 1}`} />
         </div>
-      )}
+      ))}
+      <ImageModal
+        isOpen={modalOpen}
+        onClose={closeModal}
+        currentImage={currentImage}
+        onPrev={prevImage}
+        onNext={nextImage}
+        onSelectImage={selectImage}
+        images={sioImages}
+      />
     </div>
   );
 }

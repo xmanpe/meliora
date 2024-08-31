@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Galeri.scss";
+import "./Gallery.scss";
 
 import h1 from "../../images/meliora/foto/HARI1/Perkembangan Hari 1_Allison-1.jpg";
 import h2 from "../../images/meliora/foto/HARI1/Perkembangan Hari 1_Allison-9.jpg";
@@ -30,55 +30,7 @@ import h26 from "../../images/meliora/foto/HARI1/tall/Perkembangan Hari 1_Delon_
 
 const hari1 = [h1, h2, h3, h4, h5, h6, h7, h8, h9, h10, h11, h12, h13, h14, h15, h16, h17, h18, h19, h20, h21, h22, h25, h23, h24, h26];
 
-
-
-function Modal({ isOpen, onClose, image, onThumbnailClick }) {
-  if (!isOpen) return null;
-  
-  const currentIndex = hari1.indexOf(image);
-
-  const thumbnails = hari1.slice(currentIndex + 1, currentIndex + 6);
-
-  return (
-    <div className="modal-overlay" onClick={onClose}>
-      <div className="modal-content" onClick={e => e.stopPropagation()}>
-        <div className="modal-image-container">
-          <img src={image} alt="" className='modal-image' />
-        </div>
-        <div className="thumbnail-container">
-          {thumbnails.map((thumbImage, index) => ( 
-            <img
-              key={index}
-              src={thumbImage}
-              alt=""
-              className='thumbnail'
-              onClick={() => onThumbnailClick(thumbImage)}
-            />
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-}
-
 function GalleryHari1() {
-const [isModalOpen, setIsModalOpen] = useState(false);
-const [selectedImage, setSelectedImage] = useState(null);
-
-const openModal = (image) => {
-  setSelectedImage(image);
-  setIsModalOpen(true);
-};
-
-const closeModal = () => {
-  setIsModalOpen(false);
-  setSelectedImage(null);
-};
-
-const ThumbnailClick = (image) => {
-  setSelectedImage(image);
-};
-
 return (
   <div className='galeri-main'>
     {hari1.map((image, index) => (
@@ -87,16 +39,9 @@ return (
           key={index}
           src={image}
           alt=""
-          onClick={() => openModal(image)}
         />
       </div>
     ))}
-    <Modal
-      isOpen={isModalOpen}
-      onClose={closeModal}
-      image={selectedImage}
-      onThumbnailClick={ThumbnailClick}
-    />
   </div>
 );
 }

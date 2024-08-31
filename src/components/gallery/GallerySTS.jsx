@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import './Galeri.scss'
+import './Gallery.scss'
 
-//h
+import ImageModal from "../imageModal/ImageModal";
+
 import h1 from "../../images/meliora/foto/sts/Sidang Senat Terbuka_Andrew Su-12-min.jpg";
 import h2 from "../../images/meliora/foto/sts/Sidang Senat Terbuka_Andrew Su-36-min.jpg";
 import h3 from "../../images/meliora/foto/sts/Sidang Senat Terbuka_Oxa-1-min.jpg";
@@ -31,73 +32,60 @@ import h26 from "../../images/meliora/foto/sts/Sidang Terbuka Senat_Steven Hans_
 
 const Sts = [h1, h2, h3, h4, h5, h6, h7, h8, h9, h10, h11, h12, h13, h14, h15, h16, h17, h18, h19, h20, h21, h22, h23, h24, h25, h26];
 
-function Modal({ isOpen, onClose, image, onThumbnailClick }) {
-  if (!isOpen) return null;
-  
-  const currentIndex = Sts.indexOf(image);
+const GallerySTS = () => {
+  const [modalOpen, setModalOpen] = useState(false);
+  const [currentImage, setCurrentImage] = useState(null);
 
-  const thumbnails = Sts.slice(currentIndex + 1, currentIndex + 6);
+  const openModal = (image) => {
+    setCurrentImage(image);
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+    setCurrentImage(null);
+  };
+
+  const nextImage = () => {
+    const currentIndex = Sts.indexOf(currentImage);
+    if (currentIndex < Sts.length - 1) {
+      setCurrentImage(Sts[currentIndex + 1]);
+    }
+  };
+
+  const prevImage = () => {
+    const currentIndex = Sts.indexOf(currentImage);
+    if (currentIndex > 0) {
+      setCurrentImage(Sts[currentIndex - 1]);
+    }
+  };
+
+  const selectImage = (image) => {
+    setCurrentImage(image);
+  };
 
   return (
-    <div className="modal-overlay" onClick={onClose}>
-      <div className="modal-content" onClick={e => e.stopPropagation()}>
-        <div className="modal-image-container">
-          <img src={image} alt="" className='modal-image' />
+    <div className='galeri-main'>
+      {Sts.map((image, index) => (
+        <div
+          key={index}
+          className="each-photo"
+          onClick={() => openModal(image)}
+        >
+          <img src={image} alt="" />
         </div>
-        <div className="thumbnail-container">
-          {thumbnails.map((thumbImage, index) => ( 
-            <img
-              key={index}
-              src={thumbImage}
-              alt=""
-              className='thumbnail'
-              onClick={() => onThumbnailClick(thumbImage)}
-            />
-          ))}
-        </div>
-      </div>
+      ))}
+      <ImageModal
+        isOpen={modalOpen}
+        onClose={closeModal}
+        currentImage={currentImage}
+        onPrev={prevImage}
+        onNext={nextImage}
+        onSelectImage={selectImage}
+        images={Sts}
+      />
     </div>
   );
-}
-
-function GallerySTS() {
-const [isModalOpen, setIsModalOpen] = useState(false);
-const [selectedImage, setSelectedImage] = useState(null);
-
-const openModal = (image) => {
-  setSelectedImage(image);
-  setIsModalOpen(true);
 };
-
-const closeModal = () => {
-  setIsModalOpen(false);
-  setSelectedImage(null);
-};
-
-const ThumbnailClick = (image) => {
-  setSelectedImage(image);
-};
-
-return (
-  <div className='galeri-main'>
-    {Sts.map((image, index) => (
-      <div className="each-photo">
-        <img
-          key={index}
-          src={image}
-          alt=""
-          onClick={() => openModal(image)}
-        />
-      </div>
-    ))}
-    <Modal
-      isOpen={isModalOpen}
-      onClose={closeModal}
-      image={selectedImage}
-      onThumbnailClick={ThumbnailClick}
-    />
-  </div>
-);
-}
 
 export default GallerySTS;

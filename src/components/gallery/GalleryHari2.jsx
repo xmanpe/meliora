@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Galeri.scss";
+import "./Gallery.scss";
 
 //h
 import h21 from "../../images/meliora/foto/hari2/Perkembangan Hari 2_Allison-86.jpg";
@@ -31,53 +31,7 @@ import h226 from "../../images/meliora/foto/hari2/Perkembangan Hari 2_Andrew Su-
 
 const hari2 = [h21, h22, h23, h24, h25, h26, h27, h28, h29, h210, h211, h212, h213, h214, h215, h216, h217, h218, h219, h220, h221, h222, h223, h224, h225, h226];
 
-function Modal({ isOpen, onClose, image, onThumbnailClick }) {
-  if (!isOpen) return null;
-  
-  const currentIndex = hari2.indexOf(image);
-
-  const thumbnails = hari2.slice(currentIndex + 1, currentIndex + 6);
-
-  return (
-    <div className="modal-overlay" onClick={onClose}>
-      <div className="modal-content" onClick={e => e.stopPropagation()}>
-        <div className="modal-image-container">
-          <img src={image} alt="" className='modal-image' />
-        </div>
-        <div className="thumbnail-container">
-          {thumbnails.map((thumbImage, index) => ( 
-            <img
-              key={index}
-              src={thumbImage}
-              alt=""
-              className='thumbnail'
-              onClick={() => onThumbnailClick(thumbImage)}
-            />
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-}
-
 function GalleryHari2() {
-const [isModalOpen, setIsModalOpen] = useState(false);
-const [selectedImage, setSelectedImage] = useState(null);
-
-const openModal = (image) => {
-  setSelectedImage(image);
-  setIsModalOpen(true);
-};
-
-const closeModal = () => {
-  setIsModalOpen(false);
-  setSelectedImage(null);
-};
-
-const ThumbnailClick = (image) => {
-  setSelectedImage(image);
-};
-
 return (
   <div className='galeri-main'>
     {hari2.map((image, index) => (
@@ -86,16 +40,9 @@ return (
           key={index}
           src={image}
           alt=""
-          onClick={() => openModal(image)}
         />
       </div>
     ))}
-    <Modal
-      isOpen={isModalOpen}
-      onClose={closeModal}
-      image={selectedImage}
-      onThumbnailClick={ThumbnailClick}
-    />
   </div>
 );
 }
