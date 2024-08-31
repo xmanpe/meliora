@@ -23,6 +23,7 @@ const CarouselDivisi = () => {
     const {activeIndex, setActiveIndex} = useContext(DivisiContext);
     const [hideImages, setHideImages] = useState(false);
     const [scrollY, setScrollY] = useState(0);
+    
     // useEffect(() => {
     //     const handleScroll = () => {
     //         console.log(window.scrollY)
@@ -57,8 +58,28 @@ const CarouselDivisi = () => {
                     keyboard={{
                         enabled: true,
                     }}
+                    breakpoints={{
+                        1440: {
+                          slidesPerView: 3,
+                        },
+                        1200: {
+                          slidesPerView: 3,
+                        },
+                        810: {
+                          slidesPerView:3,
+                        },
+                        560:{
+                            slidesPerView:1,
+                        },
+                        432:{
+                            slidesPerView:1,
+                        },
+                        0:{
+                            slidesPerView:1,
+                        }
+                      }}
                     // allowTouchMove={false}
-                    resistanceRatio={0.1}
+                    resistanceRatio={0.01}
                     navigation={true}
                     modules={[Navigation, Keyboard]}
                     onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
@@ -83,10 +104,12 @@ const CarouselDivisi = () => {
                                     </div>
                                     <div className="keterangan-divisi">
                                         <img className="logo-divisi" src={carouselData.logo}/>
-                                        <div className="text-divisi">
-                                            <div className={`text-divisi-${carouselData.warna}`}>
+                                        <div className="text-wrapper">
+                                            <div className={`nama-wrapper-${carouselData.warna}`}>
                                                 <p className="text-nama">{carouselData.nama}</p>
-                                                <p className="text-divisi">{carouselData.divisi}</p>
+                                            </div>
+                                            <div className="divisi-wrapper">
+                                                <p className={`text-divisi-${carouselData.warna}`}>{carouselData.divisi}</p>
                                             </div>
                                         </div>
                                     </div>
