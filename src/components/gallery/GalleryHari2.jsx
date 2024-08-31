@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./Gallery.scss";
 
+import ImageModal from "../imageModal/ImageModal";
+
 //h
 import h21 from "../../images/meliora/foto/hari2/Perkembangan Hari 2_Allison-86.jpg";
 import h22 from "../../images/meliora/foto/hari2/Perkembangan Hari 2_Allison-130.jpg";
@@ -32,19 +34,62 @@ import h226 from "../../images/meliora/foto/hari2/Perkembangan Hari 2_Andrew Su-
 const hari2 = [h21, h22, h23, h24, h25, h26, h27, h28, h29, h210, h211, h212, h213, h214, h215, h216, h217, h218, h219, h220, h221, h222, h223, h224, h225, h226];
 
 function GalleryHari2() {
-return (
-  <div className='galeri-main'>
-    {hari2.map((image, index) => (
-      <div className="each-photo">
-        <img
+  const [modalOpen, setModalOpen] = useState(false);
+  const [currentImage, setCurrentImage] = useState(null);
+
+  const openModal = (image) => {
+    setCurrentImage(image);
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+    setCurrentImage(null);
+  };
+
+  const nextImage = () => {
+    const currentIndex = hari2.indexOf(currentImage);
+    if (currentIndex < hari2.length - 1) {
+      setCurrentImage(hari2[currentIndex + 1]);
+    }
+  };
+
+  const prevImage = () => {
+    const currentIndex = hari2.indexOf(currentImage);
+    if (currentIndex > 0) {
+      setCurrentImage(hari2[currentIndex - 1]);
+    }
+  };
+
+  const selectImage = (image) => {
+    setCurrentImage(image);
+  };
+
+  return (
+    <div className='galeri-main'>
+      {hari2.map((image, index) => (
+        <div 
           key={index}
-          src={image}
-          alt=""
-        />
-      </div>
-    ))}
-  </div>
-);
+          className="each-photo"
+          onClick={() => openModal(image)}  
+        >
+          <img
+            src={image}
+            alt={`Thumbnail ${index + 1}`}
+          />
+        </div>
+      ))}
+      <ImageModal
+        isOpen={modalOpen}
+        onClose={closeModal}
+        currentImage={currentImage}
+        onPrev={prevImage}
+        onNext={nextImage}
+        onSelectImage={selectImage}
+        images={hari2}
+      />
+    </div>
+  );
 }
 
 export default GalleryHari2;

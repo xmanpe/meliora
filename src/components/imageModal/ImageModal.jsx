@@ -4,24 +4,58 @@ import { motion, AnimatePresence } from 'framer-motion';
 import './ImageModal.scss';
 
 const ImageModal = ({ isOpen, onClose, currentImage, onPrev, onNext, images, onSelectImage }) => {
-  if (!isOpen) return null;
-
   const currentIndex = images.indexOf(currentImage);
+
+  const handleOverlayClick = (e) => {
+    if (e.target === e.currentTarget) {
+      onClose();
+    }
+  };
+
+  const overlayVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
+    exit: { opacity: 0 }
+  };
+
+  const modalVariants = {
+    hidden: { scale: 0.8, opacity: 0 },
+    visible: { 
+      scale: 1, 
+      opacity: 1,
+      transition: { 
+        type: 'spring', 
+        stiffness: 300, 
+        damping: 30 
+      }
+    },
+    exit: { 
+      scale: 0.8, 
+      opacity: 0,
+      transition: { 
+        duration: 0.2 
+      }
+    }
+  };
 
   return (
     <AnimatePresence>
       {isOpen && (
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
+          key="modal-overlay"
+          variants={overlayVariants}
+          initial="hidden"
+          animate="visible"
+          exit="exit"
           className="modal-overlay"
+          onClick={handleOverlayClick}
         >
           <motion.div
-            initial={{ scale: 0.9, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            exit={{ scale: 0.9, opacity: 0 }}
-            transition={{ type: 'spring', stiffness: 300, damping: 30 }}
+            key="modal-content"
+            variants={modalVariants}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
             className="modal-content"
           >
             <button onClick={onClose} className="close-button">

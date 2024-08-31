@@ -31,7 +31,7 @@ const Home = () => {
                 <div className="box-button" onClick={() => togglePlay()}>
                     <div className="buttonMulai">
                         {!isPlaying && <div>
-                            Tekan Logo Meliora untuk Lanjut
+                            Tekan Logo Meliora untuk lanjut!
                         </div>}
                     </div>
                 </div>
