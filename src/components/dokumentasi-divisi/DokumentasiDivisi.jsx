@@ -51,7 +51,7 @@ const DokumentasiDivisi = () => {
         navigation={true}
         slidesPerView={1}
         spaceBetween={0}
-        loop={true}
+        loop={false}
         modules={[Pagination, Navigation]}
         className="mySwiper"
       >
@@ -140,7 +140,7 @@ const DokumentasiDivisi = () => {
                         if (kelIndex===activeTab)   
                           return (
                             <div className='anggota'>
-                                <p>{formattedNames}</p>
+                                <p>{formattedNames}.</p>
                             </div>
                           )
                       })}
