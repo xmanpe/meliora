@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import "./PerkembanganHariSatu.scss";
 
+import BackButton from "../../../components/backButton/BackButton";
+
 import PerkembanganHari1 from "../../../components/gallery/GalleryHari1";
 import Header from "../../../components/header/Header";
 import FloatingParticle from "../../../components/particles/FloatingParticle";
@@ -14,6 +16,7 @@ const PerkembanganHariSatu = () => {
 
   return (
     <div className="perkembangan-hari-1">
+      <BackButton />
       <Header 
         image={MelioraYellow}
         top="Perkembangan Hari 1"

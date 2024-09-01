@@ -32,2204 +32,283 @@
   }
 }
 
-// .bg{
-//   position: relative;
-//   overflow-x: clip;
-//   .background{
-//     transform: scale(1.6);
-//     position: absolute;
-//     filter: blur(60px);
-//     height: 2000px;
-//     z-index: -1;
-//   }
-// }
-
 .divisi-swiper{
-    // position: -webkit-sticky;
-    // position: sticky;
-    padding: 10px 160px 10px 160px;
-    top: 0;
-    z-index: 5;
-    .swiper {
-      width: 80%;
-      height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  width: -webkit-fill-available;
+
+  .swiper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0px 0px 0px;
+    justify-content: space-between;
+    gap: 32px;
+    // min-height: fit-content;
+
+    .swiper-button-prev, .swiper-button-next {
+      display: none;
+    }
+
+    .swiper-wrapper {
+      display: flex;
+      flex-direction: row;
+
       .swiper-slide {
         opacity: 1;
-        transform: scale(0.6);
-        filter: blur(2px);
-        position: relative;
-        text-align: center;
-        font-size: 18px;
-        height: fit-content;
-  
-        /* Center slide text vertically */
+        transform: scale(0.7);
+        filter: blur(10px);
         display: flex;
-        justify-content: center;
         align-items: center;
-        flex-direction: column;
-        .swiper-content{
-          .image-wrapper-{
+        justify-content: center;
+        transition: all 0.3s ease-in-out;
+  
+        .swiper-content {
+          display: flex;
+          flex-direction: column;
+          gap: 32px;
+          justify-content: center;
+          align-items: center;
+
+          .image-wrapper- {
             position: relative;
-            width: 400px;
-            height: 300px;
-            margin-bottom: 20px;
+            width: -webkit-fill-available;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
             .left-frame-container,
             .middle-frame-container,
             .right-frame-container{
-              position: absolute;
-              top: 0;
-              left: 0;
-              width: 40%;
-              display: flex;
-              align-items: center;
-              justify-content: center;      
+              border: 3px solid white;
+              border-radius: 20px;
+              width: 240px;
+              overflow: hidden;
+              height: 280px;
+              box-shadow: 1px 2px 8px 2px rgba(0, 0, 0, 0.1);
+
               .left,
               .middle,
               .right {
-                position: absolute;
-                width: 96%;
-                object-fit: cover;
-                aspect-ratio: 1/1;
-              }
-              .left-frame,
-              .middle-frame,
-              .right-frame {
-                position: absolute;
-                left: 0;
                 width: 100%;
+                height: 100%;
                 object-fit: cover;
-                aspect-ratio: 1/1;
-                box-shadow: 0px 0px 4px black;
-              }  
-              .left-frame,.left{
-                z-index: 1;
-                top: 140px;
-                left: 80px;
-                transform: rotate(-2deg);
+
               }
-        
-              .middle-frame,.middle {
-                z-index: 2;
-                top: 80px;
-                left: 100px;
-                transform: rotate(2deg);
-                width:120%;
+            }
+
+            .left-frame-container {
+              z-index: 1;
+              margin-right: -240px;
+              margin-top: 0px;
+              transform: rotate(-10deg);
+              transition: all 0.3s ease-in-out;
+            }
+
+            .middle-frame-container {
+              z-index: 2;
+              transform: rotate(-2deg);
+              transition: all 0.3s ease-in-out;
+            }
+
+            .right-frame-container {
+              z-index: 1;
+              margin-left: -240px;
+              margin-top: 0px;
+              transform: rotate(10deg);
+              transition: all 0.3s ease-in-out;
+            }
+          }
+
+          .keterangan-divisi {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            align-items: center;
+            justify-content: center;
+
+            .logo-divisi {
+              width: 120px;
+              height: auto;
+              border-radius: 50%;
+            }
+
+            .text-wrapper {
+              display: flex;
+              flex-direction: column;
+              gap: 0px;
+
+              h1 {
+                font-family: "DM Serif Display", system-ui;
+                font-size: 40px;
+                color: white;
+                font-weight: 500;
+                text-align: left;
+                text-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25);
               }
-        
-              .right-frame,.right {
-                z-index: -1;
-                top: 120px;
-                left: 150px;
-                transform: rotate(1deg);
+
+              .text-divisi-wrapper {
+                width: fit-content;
+                display: none;
+                padding: 6px 16px;
+                border-radius: 100px;
+                background: white;
+                font-size: 16px;
+                font-weight: 500;
+                transition: all 0.3s ease-in-out;
+
+                .text-divisi-merah{
+                  color:$balwana-color;
+                }
+                .text-divisi-biru{
+                  color:$gandara-color;
+                }
+                .text-divisi-pink{
+                  color:$sakha-color;
+                }
+                .text-divisi-abu{
+                  color:$caksana-color;
+                }
+                .text-divisi-toska{
+                  color:$lavanya-color;
+                }
+                .text-divisi-kuning{
+                  color:$nayanika-color;
+                }
+                .text-divisi-oranye{
+                  color:$baskara-color;
+                }
+                .text-divisi-hitam{
+                  color:$bimasena-color;
+                }
+                .text-divisi-ungu{
+                  color:$gajendra-color;
+                }
+                .text-divisi-cokelat{
+                  color:$sarkara-color;
+                }
+                .text-divisi-hijau{
+                  color:$saraya-color;
+                }
               }
             }
           }
         }
       }
-      .swiper-slide-active{
+
+      .swiper-slide-active {
         animation: slideIn 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
         transform: scale(1);
         transition: filter 100ms ease-in-out;
         transition: all 0.5s ease-in-out;
         opacity: 1;
         filter: blur(0px);
-        .swiper-content{
-          .image-wrapper-{
-            margin-left: -36px;
-            transform: scale(1);
-            position: relative;
-            width: 400px;
-            height: 300px;
-            margin-bottom: 20px;
-            .left-frame-container,
-            .middle-frame-container,
-            .right-frame-container{
-              transition: transform 0.3s ease;
-              position: absolute;
-              top: 0;
-              left: 0;
-              width: 40%;
-              display: flex;
-              align-items: center;
-              justify-content: center;      
-              .left,
-              .middle,
-              .right {
-                position: absolute;
-                width: 96%;
-                object-fit: cover;
-                aspect-ratio: 1/1;
-              }
-              .left-frame,
-              .middle-frame,
-              .right-frame {
-                position: absolute;
-                left: 0;
-                width: 100%;
-                object-fit: cover;
-                aspect-ratio: 1/1;
-              }  
-              .left-frame,.left{
-                z-index: 1;
-                top: 120px;
-                left: 10px;
-                transform: rotate(-4deg);
-              }
-        
-              .middle-frame,.middle {
-                z-index: 2;
-                top: 60px;
-                left: 120px;
-                transform: rotate(0deg);
-                width:120%;
-              }
-        
-              .right-frame,.right {
-                z-index: -1;
-                top: 120px;
-                left: 260px;
-                transform: rotate(3deg);
-              }
-            }
-          }
-        }
-      }
-      .swiper-slide-prev,
-      .swiper-slide-next{
-        transform: scale(0.6);
-        opacity: 1;
-        transition: all 200ms ease-in-out;
-        filter: blur(1.6px);
-      }
-      .swiper-content{
-        justify-content: center;
-        align-items: center;
-        .keterangan-divisi{
-          position: relative;
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          justify-content: center;
-          padding: 4px;
-          gap: 16px;
-          left: -20px;
-          .logo-divisi{
-            filter: drop-shadow(0 0 12px rgba(255, 255, 255,0.4));
-            width: 100px;
-            padding: 16px;
-          }
-          .text-wrapper{
-            filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.4));
-            font-family: "DM Serif Display", serif;
-            text-align: center;
-            color: white;
-            font-size: $font-size-large;
-            // .nama-wrapper-biru{
-            //   background-color: $gandara-color;
-            //   border-radius: 100px;
-            // }
-            .divisi-wrapper{
-              background-color: white;
-              border-radius: 100px;
-              font-size: $font-size-small;
-              padding: 2px 10px 2px 10px;
-              .text-divisi-merah{
-                color:$balwana-color;
-              }
-              .text-divisi-biru{
-                color:$gandara-color;
-              }
-              .text-divisi-pink{
-                color:$sakha-color;
-              }
-              .text-divisi-abu{
-                color:$caksana-color;
-              }
-              .text-divisi-toska{
-                color:$lavanya-color;
-              }
-              .text-divisi-kuning{
-                color:$nayanika-color;
-              }
-              .text-divisi-oranye{
-                color:$baskara-color;
-              }
-              .text-divisi-hitam{
-                color:$bimasena-color;
-              }
-              .text-divisi-ungu{
-                color:$gajendra-color;
-              }
-              .text-divisi-cokelat{
-                color:$sarkara-color;
-              }
-              .text-divisi-hijau{
-                color:$saraya-color;
-              }
-            }
-          }
-        }
-      }
-      .swiper-slide-next{
-        z-index: -1;
-        .image-wrapper-{
-          position: relative;
-          width: 400px;
-          height: 300px;
-          margin-bottom: 20px;
-          .left-frame-container,
-          .middle-frame-container,
-          .right-frame-container{
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 40%;
-            display: flex;
-            align-items: center;
-            justify-content: center;      
-            .left,
-            .middle,
-            .right {
-              position: absolute;
-              width: 96%;
-              object-fit: cover;
-              aspect-ratio: 1/1;
-            }
-            .left-frame,
-            .middle-frame,
-            .right-frame {
-              position: absolute;
-              left: 0;
-              width: 100%;
-              object-fit: cover;
-              aspect-ratio: 1/1;
-            }  
-            .left-frame,.left{
-              z-index: 1;
-              top: 140px;
-              left: 80px;
-              transform: rotate(-2deg);
-            }
-      
-            .middle-frame,.middle {
-              z-index: 2;
-              top: 80px;
-              left: 100px;
-              transform: rotate(2deg);
-              width:120%;
-            }
-      
-            .right-frame,.right {
-              z-index: -1;
-              top: 120px;
-              left: 150px;
-              transform: rotate(1deg);
-            }
-          }
-        }
-      }
-      .swiper-slide-prev{
-        z-index: -1;
-        .image-wrapper-{
-          position: relative;
-          width: 400px;
-          height: 300px;
-          margin-bottom: 20px;
-          .left-frame-container,
-          .middle-frame-container,
-          .right-frame-container{
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 40%;
-            display: flex;
-            align-items: center;
-            justify-content: center;      
-            .left,
-            .middle,
-            .right {
-              position: absolute;
-              width: 96%;
-              object-fit: cover;
-              aspect-ratio: 1/1;
-            }
-            .left-frame,
-            .middle-frame,
-            .right-frame {
-              position: absolute;
-              left: 0;
-              width: 100%;
-              object-fit: cover;
-              aspect-ratio: 1/1;
-            }  
-            .left-frame,.left{
-              z-index: 1;
-              top: 140px;
-              left: 80px;
-              transform: rotate(-2deg);
-            }
-      
-            .middle-frame,.middle {
-              z-index: 2;
-              top: 80px;
-              left: 100px;
-              transform: rotate(2deg);
-              width:120%;
-            }
-      
-            .right-frame,.right {
-              z-index: -1;
-              top: 120px;
-              left: 150px;
-              transform: rotate(1deg);
-            }
-          }
-        }
-      }
-     .swiper-button-next,
-     .swiper-button-prev{
-      color: black;
-      padding: 10px;
-      width: 20px;
-      height: 20px;
-      transition: background-color 200ms ease-in-out;
-      border-radius: 100px;
-     }
-     .swiper-button-next{
-      content: url("../../../public/Assets/images/icons/right1.svg");
-     }
-     .swiper-button-prev{
-      content: url("../../../public/Assets/images/icons/left1.svg");
-     }
-     .swiper-button-next:hover,
-     .swiper-button-prev:hover{
-      background-color: rgba($color: #999999, $alpha: 0.1);
-      transition: background-color 200ms ease-in-out;
-     }
-    }
-}
+        z-index: 10;
 
-@media screen and (max-width: 1440px){
-  .divisi-swiper{
-    // // position: -webkit-sticky;
-    // // position: sticky;
-    padding: 10px 100px;
-    // top: 0;
-    // z-index: 5;
-    .swiper {
-      // width: 80%;
-      // height: 100%;
-      .swiper-slide {
-        // opacity: 1;
-        // transform: scale(0.68);
-        // filter: blur(2px);
-        // position: relative;
-        // text-align: center;
-        // font-size: 18px;
-        // height: fit-content;
-  
-        // /* Center slide text vertically */
-        // display: flex;
-        // justify-content: center;
-        // align-items: center;
-        // flex-direction: column;
-        .swiper-content{
-          .image-wrapper-{
-            // position: relative;
-            // width: 400px;
-            // height: 300px;
-            // margin-bottom: 20px;
+        .swiper-content {
+          .image-wrapper- {
+
             .left-frame-container,
             .middle-frame-container,
-            .right-frame-container{
-              // position: absolute;
-              // top: 0;
-              // left: 0;
-              // width: 40%;
-              // display: flex;
-              // align-items: center;
-              // justify-content: center;      
+            .right-frame-container{              
+
               .left,
               .middle,
               .right {
-                // position: absolute;
-                // width: 96%;
-                // object-fit: cover;
-                // aspect-ratio: 1/1;
               }
-              .left-frame,
-              .middle-frame,
-              .right-frame {
-                // position: absolute;
-                // left: 0;
-                // width: 100%;
-                // object-fit: cover;
-                // aspect-ratio: 1/1;
-                // box-shadow: 0px 0px 4px black;
-              }  
-              .left-frame,.left{
-                // z-index: 1;
-                // top: 140px;
-                // left: 80px;
-                // transform: rotate(-2deg);
-              }
-        
-              .middle-frame,.middle {
-                // z-index: 2;
-                // top: 80px;
-                // left: 100px;
-                // transform: rotate(2deg);
-                // width:120%;
-              }
-        
-              .right-frame,.right {
-                // z-index: -1;
-                // top: 120px;
-                // left: 150px;
-                // transform: rotate(1deg);
-              }
+            }
+
+            .left-frame-container {
+              z-index: 1;
+              margin-right: -120px;
+              margin-top: 20px;
+              transform: rotate(-10deg);
+            }
+
+            .middle-frame-container {
+              z-index: 2;
+              transform: rotate(-0deg);
+            }
+
+            .right-frame-container {
+              z-index: 1;
+              margin-left: -120px;
+              margin-top: 20px;
+              transform: rotate(10deg);
             }
           }
-        }
-      }
-      .swiper-slide-active{
-        // animation: slideIn 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
-        // transform: scale(1);
-        // transition: filter 100ms ease-in-out;
-        // transition: all 0.5s ease-in-out;
-        // opacity: 1;
-        // filter: blur(0px);
-        .swiper-content{
-          .image-wrapper-{
-            // margin-left: -36px;
-            // transform: scale(1);
-            // position: relative;
-            // width: 400px;
-            // height: 300px;
-            // margin-bottom: 20px;
-            .left-frame-container,
-            .middle-frame-container,
-            .right-frame-container{
-              // transition: transform 0.3s ease;
-              // position: absolute;
-              // top: 0;
-              // left: 0;
-              // width: 40%;
-              // display: flex;
-              // align-items: center;
-              // justify-content: center;      
-              .left,
-              .middle,
-              .right {
-                // position: absolute;
-                // width: 96%;
-                // object-fit: cover;
-                // aspect-ratio: 1/1;
-              }
-              .left-frame,
-              .middle-frame,
-              .right-frame {
-                // position: absolute;
-                // left: 0;
-                // width: 100%;
-                // object-fit: cover;
-                // aspect-ratio: 1/1;
-              }  
-              .left-frame,.left{
-                // z-index: 1;
-                // top: 120px;
-                // left: 10px;
-                // transform: rotate(-4deg);
-              }
-        
-              .middle-frame,.middle {
-                // z-index: 2;
-                // top: 60px;
-                // left: 120px;
-                // transform: rotate(0deg);
-                // width:120%;
-              }
-        
-              .right-frame,.right {
-                // z-index: -1;
-                // top: 120px;
-                // left: 260px;
-                // transform: rotate(3deg);
-              }
+
+          .keterangan-divisi {
+            .logo-divisi {
             }
-          }
-        }
-      }
-      .swiper-slide-prev,
-      .swiper-slide-next{
-        // transform: scale(0.68);
-        // opacity: 1;
-        // transition: all 200ms ease-in-out;
-        // filter: blur(1.6px);
-      }
-      .swiper-content{
-        // justify-content: center;
-        // align-items: center;
-        .keterangan-divisi{
-          // position: relative;
-          // display: flex;
-          // flex-direction: row;
-          // align-items: center;
-          // justify-content: center;
-          // padding: 4px;
-          // gap: 16px;
-          // left: -20px;
-          .logo-divisi{
-            // filter: drop-shadow(0 0 12px rgba(255, 255, 255,0.4));
-            // width: 100px;
-            // padding: 16px;
-          }
-          .text-wrapper{
-            // filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.4));
-            // font-family: "DM Serif Display", serif;
-            // text-align: center;
-            // color: white;
-            // font-size: $font-size-large;
-            // // .nama-wrapper-biru{
-            // //   background-color: $gandara-color;
-            // //   border-radius: 100px;
-            // // }
-            .divisi-wrapper{
-              // background-color: white;
-              // border-radius: 100px;
-              // font-size: $font-size-small;
-              // padding: 2px 10px 2px 10px;
-              .text-divisi-merah{
-                // color:$balwana-color;
+
+            .text-wrapper {
+              h1 {
               }
-              .text-divisi-biru{
-                // // color:$gandara-color;
-              }
-              .text-divisi-pink{
-                // // color:$sakha-color;
-              }
-              .text-divisi-abu{
-                // // color:$caksana-color;
-              }
-              .text-divisi-toska{
-                // // color:$lavanya-color;
-              }
-              .text-divisi-kuning{
-                // // color:$nayanika-color;
-              }
-              .text-divisi-oranye{
-                // // color:$baskara-color;
-              }
-              .text-divisi-hitam{
-                // // color:$bimasena-color;
-              }
-              .text-divisi-ungu{
-                // // color:$gajendra-color;
-              }
-              .text-divisi-cokelat{
-                // // color:$sarkara-color;
-              }
-              .text-divisi-hijau{
-                // // color:$saraya-color;
-              }
-            }
-          }
-        }
-      }
-      .swiper-slide-next{
-        .image-wrapper-{
-          // position: relative;
-          // width: 400px;
-          // height: 300px;
-          // margin-bottom: 20px;
-          .left-frame-container,
-          .middle-frame-container,
-          .right-frame-container{
-            // position: absolute;
-            // top: 0;
-            // left: 0;
-            // width: 40%;
-            // display: flex;
-            // align-items: center;
-            // justify-content: center;      
-            .left,
-            .middle,
-            .right {
-              // position: absolute;
-              // width: 96%;
-              // object-fit: cover;
-              // aspect-ratio: 1/1;
-            }
-            .left-frame,
-            .middle-frame,
-            .right-frame {
-              // position: absolute;
-              // left: 0;
-              // width: 100%;
-              // object-fit: cover;
-              // aspect-ratio: 1/1;
-            }  
-            .left-frame,.left{
-              // z-index: 1;
-              // top: 140px;
-              // left: 80px;
-              // transform: rotate(-2deg);
-            }
-      
-            .middle-frame,.middle {
-              // z-index: 2;
-              // top: 80px;
-              // left: 100px;
-              // transform: rotate(2deg);
-              // width:120%;
-            }
-      
-            .right-frame,.right {
-              // z-index: -1;
-              // top: 120px;
-              // left: 150px;
-              // transform: rotate(1deg);
-            }
-          }
-        }
-      }
-      .swiper-slide-prev{
-        .image-wrapper-{
-          // position: relative;
-          // width: 400px;
-          // height: 300px;
-          // margin-bottom: 20px;
-          .left-frame-container,
-          .middle-frame-container,
-          .right-frame-container{
-            // position: absolute;
-            // top: 0;
-            // left: 0;
-            // width: 40%;
-            // display: flex;
-            // align-items: center;
-            // justify-content: center;      
-            .left,
-            .middle,
-            .right {
-              // position: absolute;
-              // width: 96%;
-              // object-fit: cover;
-              // aspect-ratio: 1/1;
-            }
-            .left-frame,
-            .middle-frame,
-            .right-frame {
-              // position: absolute;
-              // left: 0;
-              // width: 100%;
-              // object-fit: cover;
-              // aspect-ratio: 1/1;
-            }  
-            .left-frame,.left{
-              // z-index: 1;
-              // top: 140px;
-              // left: 80px;
-              // transform: rotate(-2deg);
-            }
-      
-            .middle-frame,.middle {
-              // z-index: 2;
-              // top: 80px;
-              // left: 100px;
-              // transform: rotate(2deg);
-              // width:120%;
-            }
-      
-            .right-frame,.right {
-              // z-index: -1;
-              // top: 120px;
-              // left: 150px;
-              // transform: rotate(1deg);
-            }
-          }
-        }
-      }
-     .swiper-button-next,
-     .swiper-button-prev{
-      // color: black;
-      // padding: 10px;
-      // width: 20px;
-      // height: 20px;
-      // transition: background-color 200ms ease-in-out;
-      // border-radius: 100px;
-     }
-     .swiper-button-next{
-      // content: url("../../../public/Assets/images/icons/right1.svg");
-     }
-     .swiper-button-prev{
-      // content: url("../../../public/Assets/images/icons/left1.svg");
-     }
-     .swiper-button-next:hover,
-     .swiper-button-prev:hover{
-      // background-color: rgba($color: #999999, $alpha: 0.1);
-      // transition: background-color 200ms ease-in-out;
-     }
-    }
-  }
-}
-@media screen and (max-width: 1200px){
-    .divisi-swiper{
-      // // position: -webkit-sticky;
-      // // position: sticky;
-      padding: 10px 80px;
-      // top: 0;
-      // z-index: 5;
-      .swiper {
-        width: 100%;
-        // height: 100%;
-        .swiper-slide {
-          // opacity: 1;
-          // transform: scale(0.68);
-          // filter: blur(2px);
-          // position: relative;
-          // text-align: center;
-          // font-size: 18px;
-          // height: fit-content;
-    
-          // /* Center slide text vertically */
-          // display: flex;
-          // justify-content: center;
-          // align-items: center;
-          // flex-direction: column;
-          .swiper-content{
-            .image-wrapper-{
-              // position: relative;
-              // width: 400px;
-              // height: 300px;
-              // margin-bottom: 20px;
-              .left-frame-container,
-              .middle-frame-container,
-              .right-frame-container{
-                // position: absolute;
-                // top: 0;
-                // left: 0;
-                // width: 40%;
-                // display: flex;
-                // align-items: center;
-                // justify-content: center;      
-                .left,
-                .middle,
-                .right {
-                  // position: absolute;
-                  // width: 96%;
-                  // object-fit: cover;
-                  // aspect-ratio: 1/1;
-                }
-                .left-frame,
-                .middle-frame,
-                .right-frame {
-                  // position: absolute;
-                  // left: 0;
-                  // width: 100%;
-                  // object-fit: cover;
-                  // aspect-ratio: 1/1;
-                  // box-shadow: 0px 0px 4px black;
-                }  
-                .left-frame,.left{
-                  // z-index: 1;
-                  // top: 140px;
-                  // left: 80px;
-                  // transform: rotate(-2deg);
-                }
-          
-                .middle-frame,.middle {
-                  // z-index: 2;
-                  // top: 80px;
-                  // left: 100px;
-                  // transform: rotate(2deg);
-                  // width:120%;
-                }
-          
-                .right-frame,.right {
-                  // z-index: -1;
-                  // top: 120px;
-                  // left: 150px;
-                  // transform: rotate(1deg);
-                }
-              }
-            }
-          }
-        }
-        .swiper-slide-active{
-          // animation: slideIn 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
-          // transform: scale(1);
-          // transition: filter 100ms ease-in-out;
-          // transition: all 0.5s ease-in-out;
-          // opacity: 1;
-          // filter: blur(0px);
-          .swiper-content{
-            .image-wrapper-{
-              // margin-left: -36px;
-              // transform: scale(1);
-              // position: relative;
-              // width: 400px;
-              // height: 300px;
-              // margin-bottom: 20px;
-              .left-frame-container,
-              .middle-frame-container,
-              .right-frame-container{
-                // transition: transform 0.3s ease;
-                // position: absolute;
-                // top: 0;
-                // left: 0;
-                // width: 40%;
-                // display: flex;
-                // align-items: center;
-                // justify-content: center;      
-                .left,
-                .middle,
-                .right {
-                  // position: absolute;
-                  // width: 96%;
-                  // object-fit: cover;
-                  // aspect-ratio: 1/1;
-                }
-                .left-frame,
-                .middle-frame,
-                .right-frame {
-                  // position: absolute;
-                  // left: 0;
-                  // width: 100%;
-                  // object-fit: cover;
-                  // aspect-ratio: 1/1;
-                }  
-                .left-frame,.left{
-                  // z-index: 1;
-                  // top: 120px;
-                  // left: 10px;
-                  // transform: rotate(-4deg);
-                }
-          
-                .middle-frame,.middle {
-                  // z-index: 2;
-                  // top: 60px;
-                  // left: 120px;
-                  // transform: rotate(0deg);
-                  // width:120%;
-                }
-          
-                .right-frame,.right {
-                  // z-index: -1;
-                  // top: 120px;
-                  // left: 260px;
-                  // transform: rotate(3deg);
-                }
-              }
-            }
-          }
-        }
-        .swiper-slide-prev,
-        .swiper-slide-next{
-          // transform: scale(0.68);
-          // opacity: 1;
-          // transition: all 200ms ease-in-out;
-          // filter: blur(1.6px);
-        }
-        .swiper-content{
-          // justify-content: center;
-          // align-items: center;
-          .keterangan-divisi{
-            // position: relative;
-            // display: flex;
-            // flex-direction: row;
-            // align-items: center;
-            // justify-content: center;
-            // padding: 4px;
-            // gap: 16px;
-            // left: -20px;
-            .logo-divisi{
-              // filter: drop-shadow(0 0 12px rgba(255, 255, 255,0.4));
-              // width: 100px;
-              // padding: 16px;
-            }
-            .text-wrapper{
-              // filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.4));
-              // font-family: "DM Serif Display", serif;
-              // text-align: center;
-              // color: white;
-              // font-size: $font-size-large;
-              // // .nama-wrapper-biru{
-              // //   background-color: $gandara-color;
-              // //   border-radius: 100px;
-              // // }
-              .divisi-wrapper{
-                // background-color: white;
-                // border-radius: 100px;
-                // font-size: $font-size-small;
-                // padding: 2px 10px 2px 10px;
+
+              .text-divisi-wrapper {
+                display: flex;
+
                 .text-divisi-merah{
-                  // color:$balwana-color;
+                  color:$balwana-color;
                 }
                 .text-divisi-biru{
-                  // // color:$gandara-color;
+                  color:$gandara-color;
                 }
                 .text-divisi-pink{
-                  // // color:$sakha-color;
+                  color:$sakha-color;
                 }
                 .text-divisi-abu{
-                  // // color:$caksana-color;
+                  color:$caksana-color;
                 }
                 .text-divisi-toska{
-                  // // color:$lavanya-color;
+                  color:$lavanya-color;
                 }
                 .text-divisi-kuning{
-                  // // color:$nayanika-color;
+                  color:$nayanika-color;
                 }
                 .text-divisi-oranye{
-                  // // color:$baskara-color;
+                  color:$baskara-color;
                 }
                 .text-divisi-hitam{
-                  // // color:$bimasena-color;
+                  color:$bimasena-color;
                 }
                 .text-divisi-ungu{
-                  // // color:$gajendra-color;
+                  color:$gajendra-color;
                 }
                 .text-divisi-cokelat{
-                  // // color:$sarkara-color;
+                  color:$sarkara-color;
                 }
                 .text-divisi-hijau{
-                  // // color:$saraya-color;
+                  color:$saraya-color;
                 }
               }
             }
           }
         }
-        .swiper-slide-next{
-          .image-wrapper-{
-            // position: relative;
-            // width: 400px;
-            // height: 300px;
-            // margin-bottom: 20px;
-            .left-frame-container,
-            .middle-frame-container,
-            .right-frame-container{
-              // position: absolute;
-              // top: 0;
-              // left: 0;
-              // width: 40%;
-              // display: flex;
-              // align-items: center;
-              // justify-content: center;      
-              .left,
-              .middle,
-              .right {
-                // position: absolute;
-                // width: 96%;
-                // object-fit: cover;
-                // aspect-ratio: 1/1;
-              }
-              .left-frame,
-              .middle-frame,
-              .right-frame {
-                // position: absolute;
-                // left: 0;
-                // width: 100%;
-                // object-fit: cover;
-                // aspect-ratio: 1/1;
-              }  
-              .left-frame,.left{
-                // z-index: 1;
-                // top: 140px;
-                // left: 80px;
-                // transform: rotate(-2deg);
-              }
-        
-              .middle-frame,.middle {
-                // z-index: 2;
-                // top: 80px;
-                // left: 100px;
-                // transform: rotate(2deg);
-                // width:120%;
-              }
-        
-              .right-frame,.right {
-                // z-index: -1;
-                // top: 120px;
-                // left: 150px;
-                // transform: rotate(1deg);
-              }
-            }
-          }
-        }
-        .swiper-slide-prev{
-          .image-wrapper-{
-            // position: relative;
-            // width: 400px;
-            // height: 300px;
-            // margin-bottom: 20px;
-            .left-frame-container,
-            .middle-frame-container,
-            .right-frame-container{
-              // position: absolute;
-              // top: 0;
-              // left: 0;
-              // width: 40%;
-              // display: flex;
-              // align-items: center;
-              // justify-content: center;      
-              .left,
-              .middle,
-              .right {
-                // position: absolute;
-                // width: 96%;
-                // object-fit: cover;
-                // aspect-ratio: 1/1;
-              }
-              .left-frame,
-              .middle-frame,
-              .right-frame {
-                // position: absolute;
-                // left: 0;
-                // width: 100%;
-                // object-fit: cover;
-                // aspect-ratio: 1/1;
-              }  
-              .left-frame,.left{
-                // z-index: 1;
-                // top: 140px;
-                // left: 80px;
-                // transform: rotate(-2deg);
-              }
-        
-              .middle-frame,.middle {
-                // z-index: 2;
-                // top: 80px;
-                // left: 100px;
-                // transform: rotate(2deg);
-                // width:120%;
-              }
-        
-              .right-frame,.right {
-                // z-index: -1;
-                // top: 120px;
-                // left: 150px;
-                // transform: rotate(1deg);
-              }
-            }
-          }
-        }
-      .swiper-button-next,
-      .swiper-button-prev{
-        // color: black;
-        // padding: 10px;
-        // width: 20px;
-        // height: 20px;
-        // transition: background-color 200ms ease-in-out;
-        // border-radius: 100px;
-      }
-      .swiper-button-next{
-        // content: url("../../../public/Assets/images/icons/right1.svg");
-      }
-      .swiper-button-prev{
-        // content: url("../../../public/Assets/images/icons/left1.svg");
-      }
-      .swiper-button-next:hover,
-      .swiper-button-prev:hover{
-        // background-color: rgba($color: #999999, $alpha: 0.1);
-        // transition: background-color 200ms ease-in-out;
       }
     }
-  }
-}
-@media screen and (max-width: 810px){
-  .divisi-swiper{
-    // // position: -webkit-sticky;
-    // // position: sticky;
-    padding: 10px 40px;
-    // top: 0;
-    // z-index: 5;
-    .swiper {
-      // width: 80%;
-      // height: 100%;
-      .swiper-slide {
-        // opacity: 1;
-        // transform: scale(0.68);
-        // filter: blur(2px);
-        // position: relative;
-        // text-align: center;
-        // font-size: 18px;
-        // height: fit-content;
+
+    .swiper-pagination {
+      .swiper-pagination-bullet {
+        background: #FFF;
+        opacity: 0.3;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        transition: all 0.3s ease-in-out;
+      }
   
-        // /* Center slide text vertically */
-        // display: flex;
-        // justify-content: center;
-        // align-items: center;
-        // flex-direction: column;
-        .swiper-content{
-          .image-wrapper-{
-            // position: relative;
-            // width: 400px;
-            // height: 300px;
-            // margin-bottom: 20px;
-            .left-frame-container,
-            .middle-frame-container,
-            .right-frame-container{
-              // position: absolute;
-              // top: 0;
-              // left: 0;
-              // width: 40%;
-              // display: flex;
-              // align-items: center;
-              // justify-content: center;      
-              .left,
-              .middle,
-              .right {
-                // position: absolute;
-                // width: 96%;
-                // object-fit: cover;
-                // aspect-ratio: 1/1;
-              }
-              .left-frame,
-              .middle-frame,
-              .right-frame {
-                // position: absolute;
-                // left: 0;
-                // width: 100%;
-                // object-fit: cover;
-                // aspect-ratio: 1/1;
-                // box-shadow: 0px 0px 4px black;
-              }  
-              .left-frame,.left{
-                // z-index: 1;
-                // top: 140px;
-                // left: 80px;
-                // transform: rotate(-2deg);
-              }
-        
-              .middle-frame,.middle {
-                // z-index: 2;
-                // top: 80px;
-                // left: 100px;
-                // transform: rotate(2deg);
-                // width:120%;
-              }
-        
-              .right-frame,.right {
-                // z-index: -1;
-                // top: 120px;
-                // left: 150px;
-                // transform: rotate(1deg);
-              }
-            }
-          }
-        }
+      .swiper-pagination-bullet-active {
+        background: #FFF;
+        opacity: 0.8;
+        width: 32px;
+        height: 8px;
+        border-radius: 100px;
       }
-      .swiper-slide-active{
-        animation: slideIn2 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
-        transform: scale(0.84);
-        // transition: filter 100ms ease-in-out;
-        // transition: all 0.5s ease-in-out;
-        // opacity: 1;
-        // filter: blur(0px);
-        .swiper-content{
-          .image-wrapper-{
-            // margin-left: -36px;
-            // transform: scale(1);
-            // position: relative;
-            // width: 400px;
-            // height: 300px;
-            // margin-bottom: 20px;
-            .left-frame-container,
-            .middle-frame-container,
-            .right-frame-container{
-              // transition: transform 0.3s ease;
-              // position: absolute;
-              // top: 0;
-              // left: 0;
-              // width: 40%;
-              // display: flex;
-              // align-items: center;
-              // justify-content: center;      
-              .left,
-              .middle,
-              .right {
-                // position: absolute;
-                // width: 96%;
-                // object-fit: cover;
-                // aspect-ratio: 1/1;
-              }
-              .left-frame,
-              .middle-frame,
-              .right-frame {
-                // position: absolute;
-                // left: 0;
-                // width: 100%;
-                // object-fit: cover;
-                // aspect-ratio: 1/1;
-              }  
-              .left-frame,.left{
-                // z-index: 1;
-                // top: 120px;
-                // left: 10px;
-                // transform: rotate(-4deg);
-              }
-        
-              .middle-frame,.middle {
-                // z-index: 2;
-                // top: 60px;
-                // left: 120px;
-                // transform: rotate(0deg);
-                // width:120%;
-              }
-        
-              .right-frame,.right {
-                // z-index: -1;
-                // top: 120px;
-                // left: 260px;
-                // transform: rotate(3deg);
-              }
-            }
-          }
-        }
-      }
-      .swiper-slide-prev,
-      .swiper-slide-next{
-        // transform: scale(0.68);
-        // opacity: 1;
-        // transition: all 200ms ease-in-out;
-        // filter: blur(1.6px);
-      }
-      .swiper-content{
-        // justify-content: center;
-        // align-items: center;
-        .keterangan-divisi{
-          // position: relative;
-          // display: flex;
-          // flex-direction: row;
-          // align-items: center;
-          // justify-content: center;
-          // padding: 4px;
-          // gap: 16px;
-          // left: -20px;
-          .logo-divisi{
-            // filter: drop-shadow(0 0 12px rgba(255, 255, 255,0.4));
-            // width: 100px;
-            // padding: 16px;
-          }
-          .text-wrapper{
-            // filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.4));
-            // font-family: "DM Serif Display", serif;
-            // text-align: center;
-            // color: white;
-            // font-size: $font-size-large;
-            // // .nama-wrapper-biru{
-            // //   background-color: $gandara-color;
-            // //   border-radius: 100px;
-            // // }
-            .divisi-wrapper{
-              // background-color: white;
-              // border-radius: 100px;
-              // font-size: $font-size-small;
-              // padding: 2px 10px 2px 10px;
-              .text-divisi-merah{
-                // color:$balwana-color;
-              }
-              .text-divisi-biru{
-                // // color:$gandara-color;
-              }
-              .text-divisi-pink{
-                // // color:$sakha-color;
-              }
-              .text-divisi-abu{
-                // // color:$caksana-color;
-              }
-              .text-divisi-toska{
-                // // color:$lavanya-color;
-              }
-              .text-divisi-kuning{
-                // // color:$nayanika-color;
-              }
-              .text-divisi-oranye{
-                // // color:$baskara-color;
-              }
-              .text-divisi-hitam{
-                // // color:$bimasena-color;
-              }
-              .text-divisi-ungu{
-                // // color:$gajendra-color;
-              }
-              .text-divisi-cokelat{
-                // // color:$sarkara-color;
-              }
-              .text-divisi-hijau{
-                // // color:$saraya-color;
-              }
-            }
-          }
-        }
-      }
-      .swiper-slide-next{
-        .image-wrapper-{
-          // position: relative;
-          // width: 400px;
-          // height: 300px;
-          // margin-bottom: 20px;
-          .left-frame-container,
-          .middle-frame-container,
-          .right-frame-container{
-            // position: absolute;
-            // top: 0;
-            // left: 0;
-            // width: 40%;
-            // display: flex;
-            // align-items: center;
-            // justify-content: center;      
-            .left,
-            .middle,
-            .right {
-              // position: absolute;
-              // width: 96%;
-              // object-fit: cover;
-              // aspect-ratio: 1/1;
-            }
-            .left-frame,
-            .middle-frame,
-            .right-frame {
-              // position: absolute;
-              // left: 0;
-              // width: 100%;
-              // object-fit: cover;
-              // aspect-ratio: 1/1;
-            }  
-            .left-frame,.left{
-              // z-index: 1;
-              // top: 140px;
-              // left: 80px;
-              // transform: rotate(-2deg);
-            }
-      
-            .middle-frame,.middle {
-              // z-index: 2;
-              // top: 80px;
-              // left: 100px;
-              // transform: rotate(2deg);
-              // width:120%;
-            }
-      
-            .right-frame,.right {
-              // z-index: -1;
-              // top: 120px;
-              // left: 150px;
-              // transform: rotate(1deg);
-            }
-          }
-        }
-      }
-      .swiper-slide-prev{
-        .image-wrapper-{
-          // position: relative;
-          // width: 400px;
-          // height: 300px;
-          // margin-bottom: 20px;
-          .left-frame-container,
-          .middle-frame-container,
-          .right-frame-container{
-            // position: absolute;
-            // top: 0;
-            // left: 0;
-            // width: 40%;
-            // display: flex;
-            // align-items: center;
-            // justify-content: center;      
-            .left,
-            .middle,
-            .right {
-              // position: absolute;
-              // width: 96%;
-              // object-fit: cover;
-              // aspect-ratio: 1/1;
-            }
-            .left-frame,
-            .middle-frame,
-            .right-frame {
-              // position: absolute;
-              // left: 0;
-              // width: 100%;
-              // object-fit: cover;
-              // aspect-ratio: 1/1;
-            }  
-            .left-frame,.left{
-              // z-index: 1;
-              // top: 140px;
-              // left: 80px;
-              // transform: rotate(-2deg);
-            }
-      
-            .middle-frame,.middle {
-              // z-index: 2;
-              // top: 80px;
-              // left: 100px;
-              // transform: rotate(2deg);
-              // width:120%;
-            }
-      
-            .right-frame,.right {
-              // z-index: -1;
-              // top: 120px;
-              // left: 150px;
-              // transform: rotate(1deg);
-            }
-          }
-        }
-      }
-     .swiper-button-next,
-     .swiper-button-prev{
-      // color: black;
-      // padding: 10px;
-      // width: 20px;
-      // height: 20px;
-      // transition: background-color 200ms ease-in-out;
-      // border-radius: 100px;
-     }
-     .swiper-button-next{
-      // content: url("../../../public/Assets/images/icons/right1.svg");
-      // margin-right: -20px;
-     }
-     .swiper-button-prev{
-      // content: url("../../../public/Assets/images/icons/left1.svg");
-      // margin-left: -20px; 
-    }
-     .swiper-button-next:hover,
-     .swiper-button-prev:hover{
-      // background-color: rgba($color: #999999, $alpha: 0.1);
-      // transition: background-color 200ms ease-in-out;
-     }
-    }
-  }
-}
-@media screen and (max-width: 560px){
-  .divisi-swiper{
-    // // position: -webkit-sticky;
-    // // position: sticky;
-    padding: 10px 16px;
-    // top: 0;
-    // z-index: 5;
-    .swiper {
-      // width: 80%;
-      // height: 100%;
-      .swiper-slide {
-        // opacity: 1;
-        // transform: scale(0.8);
-        // filter: blur(2px);
-        // position: relative;
-        // text-align: center;
-        // font-size: 18px;
-        // height: fit-content;
-  
-        // /* Center slide text vertically */
-        // display: flex;
-        // justify-content: center;
-        // align-items: center;
-        // flex-direction: column;
-        .swiper-content{
-          .image-wrapper-{
-            // position: relative;
-            // width: 400px;
-            // height: 300px;
-            // margin-bottom: 20px;
-            .left-frame-container,
-            .middle-frame-container,
-            .right-frame-container{
-              // position: absolute;
-              // top: 0;
-              // left: 0;
-              // width: 40%;
-              // display: flex;
-              // align-items: center;
-              // justify-content: center;      
-              .left,
-              .middle,
-              .right {
-                // position: absolute;
-                // width: 96%;
-                // object-fit: cover;
-                // aspect-ratio: 1/1;
-              }
-              .left-frame,
-              .middle-frame,
-              .right-frame {
-                // position: absolute;
-                // left: 0;
-                // width: 100%;
-                // object-fit: cover;
-                // aspect-ratio: 1/1;
-                // box-shadow: 0px 0px 4px black;
-              }  
-              .left-frame,.left{
-                // z-index: 1;
-                // top: 140px;
-                // left: 80px;
-                // transform: rotate(-2deg);
-              }
-        
-              .middle-frame,.middle {
-                // z-index: 2;
-                // top: 80px;
-                // left: 100px;
-                // transform: rotate(2deg);
-                // width:120%;
-              }
-        
-              .right-frame,.right {
-                // z-index: -1;
-                // top: 120px;
-                // left: 150px;
-                // transform: rotate(1deg);
-              }
-            }
-          }
-        }
-      }
-      .swiper-slide-active{
-        animation: slideIn3 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
-        transform: scale(0.8);
-        // transition: filter 100ms ease-in-out;
-        // transition: all 0.5s ease-in-out;
-        // opacity: 1;
-        // filter: blur(0px);
-        .swiper-content{
-          .image-wrapper-{
-            // margin-left: -36px;
-            // transform: scale(1);
-            // position: relative;
-            // width: 400px;
-            // height: 300px;
-            // margin-bottom: 20px;
-            .left-frame-container,
-            .middle-frame-container,
-            .right-frame-container{
-              // transition: transform 0.3s ease;
-              // position: absolute;
-              // top: 0;
-              // left: 0;
-              // width: 40%;
-              // display: flex;
-              // align-items: center;
-              // justify-content: center;      
-              .left,
-              .middle,
-              .right {
-                // position: absolute;
-                // width: 96%;
-                // object-fit: cover;
-                // aspect-ratio: 1/1;
-              }
-              .left-frame,
-              .middle-frame,
-              .right-frame {
-                // position: absolute;
-                // left: 0;
-                // width: 100%;
-                // object-fit: cover;
-                // aspect-ratio: 1/1;
-              }  
-              .left-frame,.left{
-                // z-index: 1;
-                // top: 120px;
-                // left: 10px;
-                // transform: rotate(-4deg);
-              }
-        
-              .middle-frame,.middle {
-                // z-index: 2;
-                // top: 60px;
-                // left: 120px;
-                // transform: rotate(0deg);
-                // width:120%;
-              }
-        
-              .right-frame,.right {
-                // z-index: -1;
-                // top: 120px;
-                // left: 260px;
-                // transform: rotate(3deg);
-              }
-            }
-          }
-        }
-      }
-      .swiper-slide-prev,
-      .swiper-slide-next{
-        transform: scale(0.4);
-        // opacity: 1;
-        // transition: all 200ms ease-in-out;
-        // filter: blur(1.6px);
-      }
-      .swiper-content{
-        // justify-content: center;
-        // align-items: center;
-        .keterangan-divisi{
-          // position: relative;
-          // display: flex;
-          // flex-direction: row;
-          // align-items: center;
-          // justify-content: center;
-          // padding: 4px;
-          // gap: 16px;
-          // left: -20px;
-          .logo-divisi{
-            // filter: drop-shadow(0 0 12px rgba(255, 255, 255,0.4));
-            // width: 100px;
-            // padding: 16px;
-          }
-          .text-wrapper{
-            // filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.4));
-            // font-family: "DM Serif Display", serif;
-            // text-align: center;
-            // color: white;
-            // font-size: $font-size-large;
-            // // .nama-wrapper-biru{
-            // //   background-color: $gandara-color;
-            // //   border-radius: 100px;
-            // // }
-            .divisi-wrapper{
-              // background-color: white;
-              // border-radius: 100px;
-              // font-size: $font-size-small;
-              // padding: 2px 10px 2px 10px;
-              .text-divisi-merah{
-                // color:$balwana-color;
-              }
-              .text-divisi-biru{
-                // // color:$gandara-color;
-              }
-              .text-divisi-pink{
-                // // color:$sakha-color;
-              }
-              .text-divisi-abu{
-                // // color:$caksana-color;
-              }
-              .text-divisi-toska{
-                // // color:$lavanya-color;
-              }
-              .text-divisi-kuning{
-                // // color:$nayanika-color;
-              }
-              .text-divisi-oranye{
-                // // color:$baskara-color;
-              }
-              .text-divisi-hitam{
-                // // color:$bimasena-color;
-              }
-              .text-divisi-ungu{
-                // // color:$gajendra-color;
-              }
-              .text-divisi-cokelat{
-                // // color:$sarkara-color;
-              }
-              .text-divisi-hijau{
-                // // color:$saraya-color;
-              }
-            }
-          }
-        }
-      }
-      .swiper-slide-next{
-        .image-wrapper-{
-          // position: relative;
-          // width: 400px;
-          // height: 300px;
-          // margin-bottom: 20px;
-          .left-frame-container,
-          .middle-frame-container,
-          .right-frame-container{
-            // position: absolute;
-            // top: 0;
-            // left: 0;
-            // width: 40%;
-            // display: flex;
-            // align-items: center;
-            // justify-content: center;      
-            .left,
-            .middle,
-            .right {
-              // position: absolute;
-              // width: 96%;
-              // object-fit: cover;
-              // aspect-ratio: 1/1;
-            }
-            .left-frame,
-            .middle-frame,
-            .right-frame {
-              // position: absolute;
-              // left: 0;
-              // width: 100%;
-              // object-fit: cover;
-              // aspect-ratio: 1/1;
-            }  
-            .left-frame,.left{
-              // z-index: 1;
-              // top: 140px;
-              // left: 80px;
-              // transform: rotate(-2deg);
-            }
-      
-            .middle-frame,.middle {
-              // z-index: 2;
-              // top: 80px;
-              // left: 100px;
-              // transform: rotate(2deg);
-              // width:120%;
-            }
-      
-            .right-frame,.right {
-              // z-index: -1;
-              // top: 120px;
-              // left: 150px;
-              // transform: rotate(1deg);
-            }
-          }
-        }
-      }
-      .swiper-slide-prev{
-        .image-wrapper-{
-          // position: relative;
-          // width: 400px;
-          // height: 300px;
-          // margin-bottom: 20px;
-          .left-frame-container,
-          .middle-frame-container,
-          .right-frame-container{
-            // position: absolute;
-            // top: 0;
-            // left: 0;
-            // width: 40%;
-            // display: flex;
-            // align-items: center;
-            // justify-content: center;      
-            .left,
-            .middle,
-            .right {
-              // position: absolute;
-              // width: 96%;
-              // object-fit: cover;
-              // aspect-ratio: 1/1;
-            }
-            .left-frame,
-            .middle-frame,
-            .right-frame {
-              // position: absolute;
-              // left: 0;
-              // width: 100%;
-              // object-fit: cover;
-              // aspect-ratio: 1/1;
-            }  
-            .left-frame,.left{
-              // z-index: 1;
-              // top: 140px;
-              // left: 80px;
-              // transform: rotate(-2deg);
-            }
-      
-            .middle-frame,.middle {
-              // z-index: 2;
-              // top: 80px;
-              // left: 100px;
-              // transform: rotate(2deg);
-              // width:120%;
-            }
-      
-            .right-frame,.right {
-              // z-index: -1;
-              // top: 120px;
-              // left: 150px;
-              // transform: rotate(1deg);
-            }
-          }
-        }
-      }
-     .swiper-button-next,
-     .swiper-button-prev{
-      // color: black;
-      // padding: 10px;
-      // width: 20px;
-      // height: 20px;
-      // transition: background-color 200ms ease-in-out;
-      // border-radius: 100px;
-     }
-     .swiper-button-next{
-      // content: url("../../../public/Assets/images/icons/right1.svg");
-     }
-     .swiper-button-prev{
-      // content: url("../../../public/Assets/images/icons/left1.svg");
-     }
-     .swiper-button-next:hover,
-     .swiper-button-prev:hover{
-      // background-color: rgba($color: #999999, $alpha: 0.1);
-      // transition: background-color 200ms ease-in-out;
-     }
-    }
-  }
-}
-@media screen and (max-width: 432px){
-  .divisi-swiper{
-    // // position: -webkit-sticky;
-    // // position: sticky;
-    // padding: 10px 160px 10px 160px;
-    // top: 0;
-    // z-index: 5;
-    .swiper {
-      // width: 80%;
-      // height: 100%;
-      .swiper-slide {
-        // opacity: 1;
-        // transform: scale(0.6);
-        // filter: blur(2px);
-        // position: relative;
-        // text-align: center;
-        // font-size: 18px;
-        // height: fit-content;
-  
-        // /* Center slide text vertically */
-        // display: flex;
-        // justify-content: center;
-        // align-items: center;
-        // flex-direction: column;
-        .swiper-content{
-          .image-wrapper-{
-            // position: relative;
-            // width: 400px;
-            // height: 300px;
-            // margin-bottom: 20px;
-            .left-frame-container,
-            .middle-frame-container,
-            .right-frame-container{
-              // position: absolute;
-              // top: 0;
-              // left: 0;
-              // width: 40%;
-              // display: flex;
-              // align-items: center;
-              // justify-content: center;      
-              .left,
-              .middle,
-              .right {
-                // position: absolute;
-                // width: 96%;
-                // object-fit: cover;
-                // aspect-ratio: 1/1;
-              }
-              .left-frame,
-              .middle-frame,
-              .right-frame {
-                // position: absolute;
-                // left: 0;
-                // width: 100%;
-                // object-fit: cover;
-                // aspect-ratio: 1/1;
-                // box-shadow: 0px 0px 4px black;
-              }  
-              .left-frame,.left{
-                // z-index: 1;
-                // top: 140px;
-                // left: 80px;
-                // transform: rotate(-2deg);
-              }
-        
-              .middle-frame,.middle {
-                // z-index: 2;
-                // top: 80px;
-                // left: 100px;
-                // transform: rotate(2deg);
-                // width:120%;
-              }
-        
-              .right-frame,.right {
-                // z-index: -1;
-                // top: 120px;
-                // left: 150px;
-                // transform: rotate(1deg);
-              }
-            }
-          }
-        }
-      }
-      .swiper-slide-active{
-        // animation: slideIn 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
-        transform: scale(0.64);
-        // transition: filter 100ms ease-in-out;
-        // transition: all 0.5s ease-in-out;
-        // opacity: 1;
-        // filter: blur(0px);
-        .swiper-content{
-          .image-wrapper-{
-            // margin-left: -36px;
-            // transform: scale(1);
-            // position: relative;
-            // width: 400px;
-            // height: 300px;
-            // margin-bottom: 20px;
-            .left-frame-container,
-            .middle-frame-container,
-            .right-frame-container{
-              // transition: transform 0.3s ease;
-              // position: absolute;
-              // top: 0;
-              // left: 0;
-              // width: 40%;
-              // display: flex;
-              // align-items: center;
-              // justify-content: center;      
-              .left,
-              .middle,
-              .right {
-                // position: absolute;
-                // width: 96%;
-                // object-fit: cover;
-                // aspect-ratio: 1/1;
-              }
-              .left-frame,
-              .middle-frame,
-              .right-frame {
-                // position: absolute;
-                // left: 0;
-                // width: 100%;
-                // object-fit: cover;
-                // aspect-ratio: 1/1;
-              }  
-              .left-frame,.left{
-                // z-index: 1;
-                // top: 120px;
-                left: 30px;
-                scale: 0.8;
-                // transform: rotate(-4deg);
-              }
-        
-              .middle-frame,.middle {
-                // z-index: 2;
-                // top: 60px;
-                left: 130px;
-                // transform: rotate(0deg);
-                // width:120%;
-              }
-        
-              .right-frame,.right {
-                // z-index: -1;
-                // top: 120px;
-                left: 250   px;
-                scale: 0.8;
-                // transform: rotate(3deg);
-              }
-            }
-          }
-        }
-      }
-      .swiper-slide-prev,
-      .swiper-slide-next{
-        // transform: scale(0.68);
-        // opacity: 1;
-        // transition: all 200ms ease-in-out;
-        // filter: blur(1.6px);
-      }
-      .swiper-content{
-        // justify-content: center;
-        // align-items: center;
-        .keterangan-divisi{
-          // position: relative;
-          // display: flex;
-          // flex-direction: row;
-          // align-items: center;
-          // justify-content: center;
-          // padding: 4px;
-          // gap: 16px;
-          // left: -20px;
-          .logo-divisi{
-            // filter: drop-shadow(0 0 12px rgba(255, 255, 255,0.4));
-            // width: 100px;
-            // padding: 16px;
-          }
-          .text-wrapper{
-            // filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.4));
-            // font-family: "DM Serif Display", serif;
-            // text-align: center;
-            // color: white;
-            // font-size: $font-size-large;
-            // // .nama-wrapper-biru{
-            // //   background-color: $gandara-color;
-            // //   border-radius: 100px;
-            // // }
-            .divisi-wrapper{
-              // background-color: white;
-              // border-radius: 100px;
-              // font-size: $font-size-small;
-              // padding: 2px 10px 2px 10px;
-              .text-divisi-merah{
-                // color:$balwana-color;
-              }
-              .text-divisi-biru{
-                // // color:$gandara-color;
-              }
-              .text-divisi-pink{
-                // // color:$sakha-color;
-              }
-              .text-divisi-abu{
-                // // color:$caksana-color;
-              }
-              .text-divisi-toska{
-                // // color:$lavanya-color;
-              }
-              .text-divisi-kuning{
-                // // color:$nayanika-color;
-              }
-              .text-divisi-oranye{
-                // // color:$baskara-color;
-              }
-              .text-divisi-hitam{
-                // // color:$bimasena-color;
-              }
-              .text-divisi-ungu{
-                // // color:$gajendra-color;
-              }
-              .text-divisi-cokelat{
-                // // color:$sarkara-color;
-              }
-              .text-divisi-hijau{
-                // // color:$saraya-color;
-              }
-            }
-          }
-        }
-      }
-      .swiper-slide-next{
-        .image-wrapper-{
-          // position: relative;
-          // width: 400px;
-          // height: 300px;
-          // margin-bottom: 20px;
-          .left-frame-container,
-          .middle-frame-container,
-          .right-frame-container{
-            // position: absolute;
-            // top: 0;
-            // left: 0;
-            // width: 40%;
-            // display: flex;
-            // align-items: center;
-            // justify-content: center;      
-            .left,
-            .middle,
-            .right {
-              // position: absolute;
-              // width: 96%;
-              // object-fit: cover;
-              // aspect-ratio: 1/1;
-            }
-            .left-frame,
-            .middle-frame,
-            .right-frame {
-              // position: absolute;
-              // left: 0;
-              // width: 100%;
-              // object-fit: cover;
-              // aspect-ratio: 1/1;
-            }  
-            .left-frame,.left{
-              // z-index: 1;
-              // top: 140px;
-              // left: 80px;
-              // transform: rotate(-2deg);
-            }
-      
-            .middle-frame,.middle {
-              // z-index: 2;
-              // top: 80px;
-              // left: 100px;
-              // transform: rotate(2deg);
-              // width:120%;
-            }
-      
-            .right-frame,.right {
-              // z-index: -1;
-              // top: 120px;
-              // left: 150px;
-              // transform: rotate(1deg);
-            }
-          }
-        }
-      }
-      .swiper-slide-prev{
-        .image-wrapper-{
-          // position: relative;
-          // width: 400px;
-          // height: 300px;
-          // margin-bottom: 20px;
-          .left-frame-container,
-          .middle-frame-container,
-          .right-frame-container{
-            // position: absolute;
-            // top: 0;
-            // left: 0;
-            // width: 40%;
-            // display: flex;
-            // align-items: center;
-            // justify-content: center;      
-            .left,
-            .middle,
-            .right {
-              // position: absolute;
-              // width: 96%;
-              // object-fit: cover;
-              // aspect-ratio: 1/1;
-            }
-            .left-frame,
-            .middle-frame,
-            .right-frame {
-              // position: absolute;
-              // left: 0;
-              // width: 100%;
-              // object-fit: cover;
-              // aspect-ratio: 1/1;
-            }  
-            .left-frame,.left{
-              // z-index: 1;
-              // top: 140px;
-              // left: 80px;
-              // transform: rotate(-2deg);
-            }
-      
-            .middle-frame,.middle {
-              // z-index: 2;
-              // top: 80px;
-              // left: 100px;
-              // transform: rotate(2deg);
-              // width:120%;
-            }
-      
-            .right-frame,.right {
-              // z-index: -1;
-              // top: 120px;
-              // left: 150px;
-              // transform: rotate(1deg);
-            }
-          }
-        }
-      }
-     .swiper-button-next,
-     .swiper-button-prev{
-      // color: black;
-      // padding: 10px;
-      // width: 20px;
-      // height: 20px;
-      // transition: background-color 200ms ease-in-out;
-      // border-radius: 100px;
-     }
-     .swiper-button-next{
-      // content: url("../../../public/Assets/images/icons/right1.svg");
-     }
-     .swiper-button-prev{
-      // content: url("../../../public/Assets/images/icons/left1.svg");
-     }
-     .swiper-button-next:hover,
-     .swiper-button-prev:hover{
-      // background-color: rgba($color: #999999, $alpha: 0.1);
-      // transition: background-color 200ms ease-in-out;
-     }
     }
   }
 }

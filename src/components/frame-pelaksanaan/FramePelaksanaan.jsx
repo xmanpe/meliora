@@ -4,7 +4,7 @@ import './FramePelaksanaan.scss';
 
 // import images
 import coverSIO1 from "../../images/homepage/cover_sio.jpg";
-import coverSIO2 from "../../images/homepage/cover_sio.jpg";
+import coverSIO2 from "../../images/gif/sesi-informasi-gif.gif";
 import coverHariPemupukan from "../../images/homepage/cover_hari_pemupukan.jpg";
 import coverHariPemupukan2 from "../../images/gif/pemupukan-gif.gif";
 import coverPerkembanganHari1 from "../../images/homepage/cover_perkembangan_hari_1.jpg";

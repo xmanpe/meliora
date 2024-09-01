@@ -1,0 +1,31 @@
+.back-button {
+    display: flex;
+    width: -webkit-fill-available;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+    max-width: 1400px;
+    padding-top: 40px;
+    margin: 0 auto;
+
+    button {
+        display: flex;
+        align-items: center;
+        padding: 8px 20px;
+        border-radius: 100px;
+        color: white;
+        border: 1px solid white;
+        background: transparent;
+        font-size: 16px;
+        font-family: "DM Sans", sans-serif;
+        transition: all 0.3s ease;
+
+        &:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .chevron-icon {
+            margin-right: 8px;
+        }
+    }
+}

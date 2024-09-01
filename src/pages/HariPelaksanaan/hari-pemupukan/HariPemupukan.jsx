@@ -7,6 +7,8 @@ import FloatingParticle from "../../../components/particles/FloatingParticle";
 
 import MelioraYellow from '../../../images/logo/meliora yellow.svg'
 
+import BackButton from "../../../components/backButton/BackButton";
+
 const HariPemupukanPage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -14,6 +16,7 @@ const HariPemupukanPage = () => {
 
   return (
     <div className="hari-pemupukan">
+      <BackButton />
       <Header 
         image={MelioraYellow}
         top="Hari Pemupukan"

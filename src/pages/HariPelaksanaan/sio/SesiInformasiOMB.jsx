@@ -6,9 +6,12 @@ import Header from "../../../components/header/Header";
 import FloatingParticle from "../../../components/particles/FloatingParticle";
 import MelioraYellow from '../../../images/logo/meliora yellow.svg'
 
+import BackButton from "../../../components/backButton/BackButton";
+
 const SesiInformasiOMB = () => {
   return (
     <div className="sio">
+      <BackButton />
       <Header 
         image={MelioraYellow}
         top="Sesi Informasi OMB"

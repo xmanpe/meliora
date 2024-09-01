@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import "./SidangTerbukaSenat.scss";
 
+import BackButton from "../../../components/backButton/BackButton";
+
 import SidangTerbukaSenat from "../../../components/gallery/GallerySTS";
 import Header from "../../../components/header/Header";
 import FloatingParticle from "../../../components/particles/FloatingParticle";
@@ -14,6 +16,7 @@ const HariSTS = () => {
 
   return (
     <div className="hari-sts">
+      <BackButton />
       <Header 
         image={MelioraYellow}
         top="Sidang Terbuka Senat"
