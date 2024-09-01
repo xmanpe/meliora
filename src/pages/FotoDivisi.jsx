@@ -16,8 +16,11 @@ import MelioraYellow from '../images/logo/meliora yellow.svg'
 export const DivisiContext = createContext();
 
 export const FotoDivisi = ({ children }) => {
-    const [activeIndex, setActiveIndex] = useState(0);
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
 
+    const [activeIndex, setActiveIndex] = useState(0);
     const photocardIndex = [5, 8];
     
     return (
@@ -31,7 +34,7 @@ export const FotoDivisi = ({ children }) => {
                 <CarouselDivisi />
                 {photocardIndex.includes(activeIndex) && <PhotocardDivisi />}
                 <DokumentasiDivisi />
-                {/* <SectionFoto /> */}
+                <SectionFoto />
             </div>
         </DivisiContext.Provider>
     );

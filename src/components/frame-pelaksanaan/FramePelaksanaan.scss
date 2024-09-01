@@ -133,3 +133,106 @@
         }
     }
 }
+
+@media screen and (max-width: 810px) {
+    .pelaksanaan_section {
+        gap: 16px;
+    
+        .card-wrapper {
+            .each-card {        
+                .image-wrapper {
+                    grid-template-columns: 1fr 1fr;
+
+                    .card-image {
+                        img {
+                        }
+                    }
+                }
+    
+                .card-info {
+                    .card-text {
+                        h1 {
+                        }
+        
+                        p {
+                        }
+                    }
+    
+                    .card-button {
+                        &:hover {
+                            background: transparent;
+                        }
+
+                        &:active {
+                            background: rgba(0, 0, 0, 0.05) !important;
+                        }
+                    }
+                }
+            }
+    
+            .each-card:hover {
+                transform: translateY(0px);
+                box-shadow: 1px 2px 8px 2px rgba(0, 0, 0, 0.1);
+    
+                &::before {
+                    opacity: 0;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .pelaksanaan_section {
+        gap: 16px;
+    
+        .card-wrapper {
+            .each-card {        
+                .image-wrapper {
+                    .card-image {
+                        height: 240px;
+
+                        img {
+                        }
+                    }
+                }
+    
+                .card-info {
+                    flex-direction: column;
+    
+                    .card-text {
+                        width: -webkit-fill-available;
+        
+                        h1 {
+                            font-size: 22px;
+                        }
+        
+                        p {
+                        }
+                    }
+    
+                    .card-button {
+                        width: -webkit-fill-available;
+                        justify-content: center;
+                        padding: 12px 20px;
+
+                        img {
+                        }
+    
+                        p {
+                            text-align: center;
+                        }
+    
+                        &:hover {
+                        }
+                    }
+                }
+            }
+    
+            .each-card:hover {
+                &::before {
+                }
+            }
+        }
+    }
+}

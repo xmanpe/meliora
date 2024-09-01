@@ -24,11 +24,11 @@ const tabsConfig = [
         icon: diBalikKepanitiaan,
         text: 'Di Balik Kepanitiaan'
     },
-    {
-        path: '/sayembara-visual',
-        icon: sayembaraVisual,
-        text: 'Sayembara Visual'
-    },
+    // {
+    //     path: '/sayembara-visual',
+    //     icon: sayembaraVisual,
+    //     text: 'Sayembara Visual'
+    // },
 ];
 
 const NavigationBar = () => {

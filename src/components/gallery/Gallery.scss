@@ -27,3 +27,32 @@
     }
   }
 }
+
+@media screen and (max-width: 810px) {
+  .galeri-main {
+    grid-template-columns: 1fr 1fr 1fr;
+  
+    .each-photo {
+      img {
+        &:hover {
+          transform: scale(1);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .galeri-main {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  
+    .each-photo {
+      img {
+        &:hover {
+          transform: scale(1);
+        }
+      }
+    }
+  }
+}

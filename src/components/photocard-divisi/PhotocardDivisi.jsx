@@ -2,16 +2,7 @@ import React, { useState, useEffect, useRef, useContext } from "react";
 import { DivisiContext } from '../../pages/FotoDivisi';
 import "./PhotocardDivisi.scss";
 
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
-
-import { Autoplay, Pagination, Navigation } from 'swiper/modules';
-
 import photocardData from "./DataPhotocardDivisi";
-
-import Frame1 from '../../images/frame/FRAME MELIORA 1;1.svg';
 
 const PhotocardDivisi = () => {
     const {activeIndex, setActiveIndex} = useContext(DivisiContext);

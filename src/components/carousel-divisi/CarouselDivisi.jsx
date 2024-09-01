@@ -16,13 +16,10 @@ import { Navigation, Keyboard, Pagination, Mousewheel, Autoplay, A11y } from 'sw
 
 import carouselData from "./DataCarouselDivisi";
 import { DivisiContext } from '../../pages/FotoDivisi';
-import Frame1 from '../../images/frame/FRAME MELIORA 1;1.svg';
-import bg1 from '../../images/background/BG-02.png';
 
 const CarouselDivisi = () => {
     const {activeIndex, setActiveIndex} = useContext(DivisiContext);
     const [hideImages, setHideImages] = useState(false);
-    const [scrollY, setScrollY] = useState(0);
 
     return(
         <>
@@ -58,12 +55,11 @@ const CarouselDivisi = () => {
                             slidesPerView:1,
                         }
                       }}
-                    // allowTouchMove={false}
                     resistanceRatio={0.01}
                     navigation={true}
                     pagination={{ clickable: true }}
                     scrollbar={{ draggable: true }}
-                    modules={[Navigation, Pagination, Autoplay, A11y, Mousewheel]}
+                    modules={[Navigation, Pagination, A11y, Mousewheel]}
                     onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
                     onSwiper={(swiper) => setActiveIndex(swiper.realIndex)}
                     className="mySwiper"

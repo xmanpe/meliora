@@ -10,3 +10,9 @@
     gap: 32px;
     padding: 60px 0px 100px 0px;
 }
+
+@media screen and (max-width: 810px) {
+    .hari-pelaksanaan {
+        padding: 60px 16px 100px 16px;
+    }
+}
