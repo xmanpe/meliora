@@ -3,21 +3,17 @@
 @keyframes slideIn {
   from {
       transform: scale(0.6);
-      // opacity: 0;
   }
   to {
       transform: scale(1);
-      // opacity: 1;
   }
 }
 @keyframes slideIn2 {
   from {
       transform: scale(0.6);
-      // opacity: 0;
   }
   to {
       transform: scale(0.84);
-      // opacity: 1;
   }
 }
 
@@ -46,7 +42,6 @@
     align-items: center;
     padding: 40px 0px 0px 0px;
     gap: 32px;
-    // min-height: fit-content;
 
     .swiper-button-prev, .swiper-button-next {
       display: none;
@@ -292,8 +287,6 @@
     }
 
     .swiper-pagination {
-      display: none;
-      
       .swiper-pagination-bullet {
         background: #FFF;
         opacity: 0.3;
@@ -306,9 +299,274 @@
       .swiper-pagination-bullet-active {
         background: #FFF;
         opacity: 0.8;
-        width: 32px;
+        width: 20px;
         height: 8px;
         border-radius: 100px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 810px) {
+  .divisi-swiper{
+    .swiper {
+      padding: 32px 0px 0px 0px;
+  
+      .swiper-wrapper {
+        .swiper-slide {
+          .swiper-content {
+            .image-wrapper- {
+              .left-frame-container,
+              .middle-frame-container,
+              .right-frame-container{  
+                width: 200px;
+                height: 240px;
+
+                .left,
+                .middle,
+                .right {
+                }
+              }
+  
+              .left-frame-container {
+              }
+  
+              .middle-frame-container {
+              }
+  
+              .right-frame-container {
+              }
+            }
+  
+            .keterangan-divisi {
+              gap: 16px;
+  
+              .logo-divisi {
+                width: 100px;
+              }
+  
+              .text-wrapper {
+                h1 {
+                  font-size: 32px;
+                }
+  
+                .text-divisi-wrapper {
+                  font-size: 14px;
+                }
+              }
+            }
+          }
+        }
+  
+        .swiper-slide-active {
+          .swiper-content {
+            .image-wrapper- {
+  
+              .left-frame-container,
+              .middle-frame-container,
+              .right-frame-container{   
+                width: 200px;
+                height: 240px;
+  
+                .left,
+                .middle,
+                .right {
+                }
+              }
+  
+              .left-frame-container {
+                margin-right: -100px;
+                margin-top: 10px;
+              }
+  
+              .middle-frame-container {
+              }
+  
+              .right-frame-container {
+                margin-left: -100px;
+                margin-top: 10px;
+              }
+            }
+  
+            .keterangan-divisi {
+              .logo-divisi {
+              }
+  
+              .text-wrapper {
+                h1 {
+                }
+  
+                .text-divisi-wrapper {
+                  display: flex;
+  
+                  .text-divisi-merah{
+                    color:$balwana-color;
+                  }
+                  .text-divisi-biru{
+                    color:$gandara-color;
+                  }
+                  .text-divisi-pink{
+                    color:$sakha-color;
+                  }
+                  .text-divisi-abu{
+                    color:$caksana-color;
+                  }
+                  .text-divisi-toska{
+                    color:$lavanya-color;
+                  }
+                  .text-divisi-kuning{
+                    color:$nayanika-color;
+                  }
+                  .text-divisi-oranye{
+                    color:$baskara-color;
+                  }
+                  .text-divisi-hitam{
+                    color:$bimasena-color;
+                  }
+                  .text-divisi-ungu{
+                    color:$gajendra-color;
+                  }
+                  .text-divisi-cokelat{
+                    color:$sarkara-color;
+                  }
+                  .text-divisi-hijau{
+                    color:$saraya-color;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .divisi-swiper{
+    .swiper {
+      padding: 32px 0px 0px 0px;
+  
+      .swiper-wrapper {
+        .swiper-slide {
+          .swiper-content {
+            .image-wrapper- {
+              .left-frame-container,
+              .middle-frame-container,
+              .right-frame-container{  
+                .left,
+                .middle,
+                .right {
+                }
+              }
+  
+              .left-frame-container {
+              }
+  
+              .middle-frame-container {
+              }
+  
+              .right-frame-container {
+              }
+            }
+  
+            .keterangan-divisi {
+              gap: 16px;
+  
+              .logo-divisi {
+                width: 100px;
+              }
+  
+              .text-wrapper {
+                h1 {
+                  font-size: 32px;
+                }
+  
+                .text-divisi-wrapper {
+                  font-size: 14px;
+                }
+              }
+            }
+          }
+        }
+  
+        .swiper-slide-active {
+          .swiper-content {
+            .image-wrapper- {
+  
+              .left-frame-container,
+              .middle-frame-container,
+              .right-frame-container{              
+  
+                .left,
+                .middle,
+                .right {
+                }
+              }
+  
+              .left-frame-container {
+                margin-right: -100px;
+                margin-top: 10px;
+              }
+  
+              .middle-frame-container {
+              }
+  
+              .right-frame-container {
+                margin-left: -100px;
+                margin-top: 10px;
+              }
+            }
+  
+            .keterangan-divisi {
+              .logo-divisi {
+              }
+  
+              .text-wrapper {
+                h1 {
+                }
+  
+                .text-divisi-wrapper {
+                  display: flex;
+  
+                  .text-divisi-merah{
+                    color:$balwana-color;
+                  }
+                  .text-divisi-biru{
+                    color:$gandara-color;
+                  }
+                  .text-divisi-pink{
+                    color:$sakha-color;
+                  }
+                  .text-divisi-abu{
+                    color:$caksana-color;
+                  }
+                  .text-divisi-toska{
+                    color:$lavanya-color;
+                  }
+                  .text-divisi-kuning{
+                    color:$nayanika-color;
+                  }
+                  .text-divisi-oranye{
+                    color:$baskara-color;
+                  }
+                  .text-divisi-hitam{
+                    color:$bimasena-color;
+                  }
+                  .text-divisi-ungu{
+                    color:$gajendra-color;
+                  }
+                  .text-divisi-cokelat{
+                    color:$sarkara-color;
+                  }
+                  .text-divisi-hijau{
+                    color:$saraya-color;
+                  }
+                }
+              }
+            }
+          }
+        }
       }
     }
   }

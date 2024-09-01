@@ -43,16 +43,16 @@ const CarouselDivisi = () => {
                           slidesPerView: 3,
                         },
                         810: {
-                          slidesPerView:3,
+                          slidesPerView: 3,
                         },
                         560:{
-                            slidesPerView:1,
+                            slidesPerView: 3,
                         },
                         432:{
-                            slidesPerView:1,
+                            slidesPerView: 1,
                         },
                         0:{
-                            slidesPerView:1,
+                            slidesPerView: 1,
                         }
                       }}
                     resistanceRatio={0.01}

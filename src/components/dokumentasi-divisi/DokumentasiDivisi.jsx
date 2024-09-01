@@ -94,9 +94,6 @@ const DokumentasiDivisi = () => {
           if (index === activeIndex && index === 0) {
             return (
               <>
-                {/* <div className='koordinator-head Gandara'>
-                  <h1>BPH</h1>
-                </div> */}
                 <div className='koordinator-wrapper bph-wrapper'>
                   {item.bph.map((bph, bphIndex)=>(
                       <div className='koordinator-person'>
