@@ -41,7 +41,7 @@ const dataPhotocard = {
             "foto2": "./Assets/PhotocardDivisi/nayanika/Photocard1B.png",
         },
         {
-            "name": "Jose Andreas Lie",
+            "name": "Jose Andreas",
             "jabatan": "Koordinator",
             "bgcolor": "#FDDD48",
             "bgtext": "./Assets/PhotocardDivisi/element/bg_fe.png",

@@ -31,7 +31,7 @@ export const FotoDivisi = ({ children }) => {
                 <CarouselDivisi />
                 {photocardIndex.includes(activeIndex) && <PhotocardDivisi />}
                 <DokumentasiDivisi />
-                <SectionFoto />
+                {/* <SectionFoto /> */}
             </div>
         </DivisiContext.Provider>
     );

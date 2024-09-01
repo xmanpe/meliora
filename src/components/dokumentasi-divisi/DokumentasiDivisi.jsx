@@ -24,13 +24,6 @@ const DokumentasiDivisi = () => {
     swiperRef.current.swiper.slideTo(0);
   },[activeIndex])
 
-  // useEffect(() => {
-  //   const swiperInstance = swiperRef.current.swiper;
-  //   swiperInstance.on('slideChangeTransitionEnd', () => {
-  //       swiperInstance.update();
-  //   });
-  // }, []);
-
   return (
     <div className='foto-section'>
       {dataDokumentasi["FOTO"].map((dataDokumentasi,index)=>{
@@ -44,7 +37,7 @@ const DokumentasiDivisi = () => {
                   className={`tab-button ${activeTab === kelompokIndex ? 'active' : ''}`}
                   onClick={() => setActiveTab(kelompokIndex)}
                 >
-                  {/* {kelompokIndex + 1} */}
+                  Kelompok {kelompokIndex + 1}
                 </button>
             </>
             ))}
@@ -54,9 +47,7 @@ const DokumentasiDivisi = () => {
       })}
       <Swiper
         ref={swiperRef}
-        pagination={{
-          type: 'fraction',
-        }}
+        pagination={{ clickable: true }}
         navigation={true}
         slidesPerView={1}
         spaceBetween={0}
@@ -75,9 +66,6 @@ const DokumentasiDivisi = () => {
                         alt="Foto 1"
                       />
                     </div>
-                    {/* <div className='vbg-wrapper'>
-                      <img className="vbg" src={`./Assets/images/foto-divisi/divisi/${dataDokumentasi.divisi}/vbg.jpg`}/>
-                    </div> */}
                   </SwiperSlide>
                   <SwiperSlide key={`slide2-${index}-${activeTab}`}>
                     <div className='image-wrapper'>
@@ -86,9 +74,6 @@ const DokumentasiDivisi = () => {
                         alt="Foto 2"
                       />
                     </div>
-                    {/* <div className='vbg-wrapper'>
-                      <img className="vbg" src={`./Assets/images/foto-divisi/divisi/${dataDokumentasi.divisi}/vbg.jpg`}/>
-                    </div> */}
                   </SwiperSlide>
                   <SwiperSlide key={`slide3-${index}-${activeTab}`}>
                     <div className='image-wrapper'>
@@ -97,9 +82,6 @@ const DokumentasiDivisi = () => {
                         alt="Foto 3"
                       />
                     </div>
-                    {/* <div className='vbg-wrapper'>
-                      <img className="vbg" src={`./Assets/images/foto-divisi/divisi/${dataDokumentasi.divisi}/vbg.jpg`}/>
-                    </div> */}
                   </SwiperSlide>
                 </>
               );
@@ -112,17 +94,19 @@ const DokumentasiDivisi = () => {
           if (index === activeIndex && index === 0) {
             return (
               <>
-                <div className='koordinator-wrapper'>
-                {item.bph.map((bph, bphIndex)=>(
-                  <>
-                  <h1 className={`koordinator-head-${item.divisi}`}>BPH</h1>
-                    <div className='koordinator-img'>
-                      <h2>{bph.jabatan}</h2>
-                      {/* <img className={item.divisi} src={`./Assets/images/foto-divisi/divisi/${item.divisi}/${bph.nama}.jpg`} /> */}
-                      <p>{bph.nama}</p>
-                    </div>
-                  </>
-                ))}
+                {/* <div className='koordinator-head Gandara'>
+                  <h1>BPH</h1>
+                </div> */}
+                <div className='koordinator-wrapper bph-wrapper'>
+                  {item.bph.map((bph, bphIndex)=>(
+                      <div className='koordinator-person'>
+                        <div className='koordinator-img'>
+                          <img className={item.divisi} src={`./Assets/images/foto-divisi/divisi/${item.divisi}/${bph.nama}.jpg`} />
+                        </div>
+                        <h1>{bph.nama}</h1>
+                        <p>{bph.jabatan}</p>
+                      </div>
+                  ))}
                 </div>
               </>
             )
@@ -136,20 +120,21 @@ const DokumentasiDivisi = () => {
               if(index===activeIndex){
                 return(
                   <>
-                  <h1 className={`koordinator-head-${item.divisi}`}>Koordinator</h1>
+                  <div className={`koordinator-head ${item.divisi}`}>
+                    <h1>Koordinator</h1>
+                  </div>
                   <div className="koordinator-wrapper">
                       {item.koordinator.map((koor, koorIndex) =>(
                         <div className="koordinator-person">
-                            {/* <div className='koordinator-img'>
+                            <div className='koordinator-img'>
                               <img className={item.divisi} src={`./Assets/images/foto-divisi/divisi/${item.divisi}/${koor}.jpg`} />
-                            </div> */}
-                            <p>{koor}</p>
+                            </div>
+                            <h1>{koor}</h1>
                         </div>
                       ))}
                     </div>
                     <div className='anggota-wrapper'>
                       <h1>Anggota</h1>
-                      
                       {item.kelompok.map((kel, kelIndex) =>{
                         const formattedNames = kel.anggota.join(', ').replace(/, ([^,]*)$/, ', dan $1');
                         if (kelIndex===activeTab)   
@@ -167,8 +152,6 @@ const DokumentasiDivisi = () => {
           }
         })}
       </div>
-      {/* <img src={test}/> */}
-      {/* <img src={`./Assets/images/foto-divisi/divisi/Balwana/kelompok1/foto1.jpg`} alt='' /> */}
     </div>
   )
 }

@@ -50,7 +50,7 @@ const PhotocardDivisi = () => {
     return (
         <div className="photocard-divisi">
             {activeIndex == 5 ? (
-                <div className="photocard-wrapper koor single">
+                <div className="photocard-koor-wrapper single">
                     <div className="photocard" style={{'backgroundColor': photocardData[activeIndex][0].bgcolor}}>
                         <img className="photo" src={swiperAnggota ? photocardData[activeIndex][0].foto1 : photocardData[activeIndex][0].foto2} alt="" />
                         <div className="konten">
@@ -60,7 +60,7 @@ const PhotocardDivisi = () => {
                     </div>
                 </div>
             ) : (
-                <div className="photocard-wrapper koor">
+                <div className="photocard-koor-wrapper">
                     <div className="photocard" style={{'backgroundColor': photocardData[activeIndex][0].bgcolor}}>
                         <img className="bg-text" src={photocardData[activeIndex][0].bgtext} alt="" />
                         <img className="bg-atas" src="./Assets/PhotocardDivisi/element/bg_atas.png" alt="" />
@@ -84,27 +84,53 @@ const PhotocardDivisi = () => {
                 </div>
             )}
 
-            <div className="photocard-wrapper anggota">  
-                {photocardData[activeIndex].map((item, index) => {
-                    if(item.jabatan == "Anggota") {
-                        return (
-                            <div className="photocard" style={{'backgroundColor': item.bgcolor}}>
-                                {activeIndex == 8 && (
-                                    <>
-                                        <img className="bg-text" src={item.bgtext} alt="" />
-                                        <img className="bg-atas" src="./Assets/PhotocardDivisi/element/bg_atas.png" alt="" />
-                                        <img className="bg-bawah" src="./Assets/PhotocardDivisi/element/bg_bawah.png" alt="" />
-                                    </>
-                                )}
-                                <img className="photo" src={swiperAnggota ? item.foto1 : item.foto2} alt="" />
-                                <div className="konten">
-                                    <p className="nama">{item.name}</p>
-                                    <p className="jabatan">{item.jabatan}</p>
-                                </div>
-                            </div>
-                        )
-                    }
-                })}
+            <div className="photocard-swiper">  
+                <Swiper
+                    slidesPerView={3}
+                    centeredSlides={false}
+                    slidesPerGroupSkip={1}
+                    breakpoints={{
+                        560: {
+                            slidesPerView: 3,
+                            slidesPerGroup: 1,
+                            spaceBetween: 16,
+                        },
+                        200: {
+                            slidesPerView: 2,
+                            slidesPerGroup: 1,
+                            spaceBetween: 48,
+                        },
+                    }}
+                    grabCursor={true}
+                    autoplay={{
+                        delay: 5000
+                    }}
+                    spaceBetween={16}
+                    loop={true}
+                    modules={[Autoplay]}
+                    className="mySwiper"
+                >
+                    {photocardData[activeIndex].map((item, index) => {
+                        if(item.jabatan == "Anggota") {
+                            return (
+                                <SwiperSlide style={{'backgroundColor': item.bgcolor}}>
+                                    {activeIndex == 8 && (
+                                        <>
+                                            <img className="bg-text" src={item.bgtext} alt="" />
+                                            <img className="bg-atas" src="./Assets/PhotocardDivisi/element/bg_atas.png" alt="" />
+                                            <img className="bg-bawah" src="./Assets/PhotocardDivisi/element/bg_bawah.png" alt="" />
+                                        </>
+                                    )}
+                                    <img className="photo" src={swiperAnggota ? item.foto1 : item.foto2} alt="" />
+                                    <div className="konten">
+                                        <p className="nama">{item.name}</p>
+                                        <p className="jabatan">{item.jabatan}</p>
+                                    </div>
+                                </SwiperSlide>
+                            )
+                        }
+                    })}
+                </Swiper>
             </div>
         </div>
     )
