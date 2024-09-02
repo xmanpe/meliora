@@ -49,9 +49,16 @@
                 z-index: 2;
             }
 
+            .bg-baskara {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                width: 100%;
+            }
+
             .photo {
                 margin: 0 auto;
-                margin-bottom: -80px;
+                margin-bottom: -82px;
                 width: 300px;
                 height: auto;
                 z-index: 1;
