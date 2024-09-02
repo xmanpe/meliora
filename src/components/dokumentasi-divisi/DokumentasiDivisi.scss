@@ -11,9 +11,9 @@
     box-sizing: border-box;
     overflow: visible;
 
-    .slider {
+    .tab-container {
         position: sticky;
-        top: 12px;
+        top: 20px;
         display: flex;
         gap: 0px;
         border: 1.5px solid rgba(0, 0, 0, 0.056);
@@ -28,7 +28,7 @@
         box-shadow: 0px 7px 17.7px 0px rgba(0, 0, 0, 0.1);
         z-index: 998;
 
-        .slider-button {
+        .tab-button {
             border: none;
             border-radius: 100px;
             padding: 12px 16px;
@@ -48,99 +48,21 @@
         }
     }
 
-    .slider:hover {
+    .tab-container:hover {
         box-shadow: 0px 7px 17.7px 0px rgba(0, 0, 0, 0.2);
     }
 
-    .slider-wrapper-mobile {
-        z-index: 100;
-        display: none;
-        margin: 4px;
-        justify-content: center;
+    .dropdown-toggle {
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(14px);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
         align-items: center;
-        width: -webkit-fill-available;
-
-        .slider-mobile {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            gap: 24px;
-            width: 100%;
-            width: -webkit-fill-available;
-
-            .slider-button-mobile-active {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                padding: 10px 16px;
-                gap: 16px;
-                color: black;
-                font-size: 18px;
-                font-style: normal;
-                font-weight: 500;
-                line-height: normal;
-                background-color: #fff;
-                border-radius: 32px;
-                border: 1.6px solid #f0f0f0;
-                box-shadow: 0px 2px 6px rgba(9, 9, 9, 0.2);
-
-                .arrow.up {
-                    margin-top: 2px;
-                    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
-                    transition-duration: 500ms;
-                    scale: 124%;
-                }
-
-                .arrow.down {
-                    transform: rotate(-180deg);
-                    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
-                    transition-duration: 500ms;
-                    scale: 124%;
-                }
-            }
-
-            .dropdown-wrapper {
-                position: absolute;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                flex-direction: column;
-                background-color: #fff;
-                border: solid 1.6px #f0f0f0;
-                border-radius: 20px;
-                gap: 2px;
-                padding: 2px;
-                margin-bottom: -200px;
-                box-shadow: 0px 2px 6px rgba(9, 9, 9, 0.2);
-                z-index: 100;
-
-                .slider-button-mobile {
-                    cursor: pointer;
-                    padding: 10px 16px;
-                    gap: 16px;
-                    border: none;
-                    border-radius: 18px;
-                    width: 100%;
-                    color: black;
-                    background-color: #fff;
-                    font-size: 18px;
-                    font-style: normal;
-                    font-weight: 500;
-                    line-height: normal;
-                }
-
-                button:active {
-                    background-color: rgba(244, 173, 86, 0.5);
-                    color: black;
-                }
-                
-                .slider-button-mobile:hover {
-                    color: #fff;
-                    background-color: rgba(244, 173, 86, 0.5);
-                }
-            }
-        }
+        padding: 10px 14px;
+        width: fit-content;
+        max-width: 810px;
+        margin: 0 16px;
     }
 
     .swiper {
