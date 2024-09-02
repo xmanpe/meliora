@@ -13,6 +13,16 @@ const DokumentasiDivisi = () => {
   const [activeTab, setActiveTab] = useState(0);
   const swiperRef = useRef(null);
 
+  const getTextForDivisi = (divisi) => {
+    if (divisi === 'Sakha') {
+      return 'Row';
+    }
+    if (divisi === 'Saraya' || divisi === 'Bimasena') {
+      return 'Sesi';
+    }
+    return '';
+  };
+
   useEffect(() => {
     if (swiperRef.current && swiperRef.current.swiper) {
       swiperRef.current.swiper.slideTo(0);
@@ -22,8 +32,10 @@ const DokumentasiDivisi = () => {
 
   return (
     <div className='foto-section'>
-      {dataDokumentasi["FOTO"].map((item, index) => {
+      {dataDokumentasi.FOTO.map((item, index) => {
         if (index === activeIndex && item.kelompok.length > 1) {
+          const text = getTextForDivisi(item.divisi);
+
           return (
             <div className='foto-tabs' key={index}>
               {item.kelompok.map((kelompok, kelompokIndex) => (
@@ -32,7 +44,7 @@ const DokumentasiDivisi = () => {
                   className={`tab-button ${activeTab === kelompokIndex ? 'active' : ''}`}
                   onClick={() => setActiveTab(kelompokIndex)}
                 >
-                  Sesi {kelompokIndex + 1}
+                  {text} {kelompokIndex + 1}
                 </button>
               ))}
             </div>
@@ -46,7 +58,7 @@ const DokumentasiDivisi = () => {
         pagination={{ clickable: true }}
         navigation={true}
         slidesPerView={1}
-        spaceBetween={0}
+        spaceBetween={-20}
         loop={false}
         modules={[Pagination, Navigation]}
         className="mySwiper"
