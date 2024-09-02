@@ -13,6 +13,7 @@ import { Pagination, Navigation } from 'swiper/modules';
 import { DivisiContext } from "../../pages/FotoDivisi";
 import dataDokumentasi from "./DataDokumentasiDivisi";
 
+
 const DokumentasiDivisi = () => {
   const { activeIndex } = useContext(DivisiContext);
   const [activeTab,setActiveTab] = useState(0);
@@ -37,7 +38,7 @@ const DokumentasiDivisi = () => {
                   className={`tab-button ${activeTab === kelompokIndex ? 'active' : ''}`}
                   onClick={() => setActiveTab(kelompokIndex)}
                 >
-                  Kelompok {kelompokIndex + 1}
+                  Sesi {kelompokIndex + 1}
                 </button>
             </>
             ))}
