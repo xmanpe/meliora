@@ -21,7 +21,7 @@ export const FotoDivisi = ({ children }) => {
       }, []);
 
     const [activeIndex, setActiveIndex] = useState(0);
-    const photocardIndex = [5, 8];
+    const photocardIndex = [0, 5, 8];
     
     return (
         <DivisiContext.Provider value={{ activeIndex, setActiveIndex }}>

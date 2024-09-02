@@ -18,9 +18,11 @@ import TopInfo from "./components/top-info/TopInfo";
 // import BottomNavbar from "./components/bottomnav/BottomNav";
 import NavigationBar from "./components/navbar/NavigationBar";
 
+import bottomScreen from './images/particles/bottom-screen.svg';
+
 function App() {
   return (
-    <div className="omb">
+    <div className="omb" style={{position: 'relative'}}>
       <Router>
         <TopInfo />
         <Routes>
@@ -37,6 +39,17 @@ function App() {
         </Routes>
         <BottomNavbarWithPathCheck />
       </Router>
+      <img 
+        src={bottomScreen} 
+        style={{
+          position: "fixed",
+          bottom: "0",
+          left: "0",
+          width: "100%",
+          pointerEvents: "none",
+          zIndex: "100"
+        }}
+        alt="" />
     </div>
   );
 }

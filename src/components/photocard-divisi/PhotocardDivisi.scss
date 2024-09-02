@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    max-width: 1400px;
+    max-width: 800px;
     width: -webkit-fill-available;
     margin: 0 auto;
     box-sizing: border-box;
@@ -11,11 +11,10 @@
     .photocard-wrapper, .koor {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 20px;
+        gap: 16px;
         align-items: center;
 
         .photocard {
-            padding: 20px;
             max-width: 360px;
             height: 100%;
             width: -webkit-fill-available;
@@ -58,8 +57,8 @@
 
             .photo {
                 margin: 0 auto;
-                margin-bottom: -82px;
-                width: 300px;
+                margin-top: 20px;
+                width: 100%;
                 height: auto;
                 z-index: 1;
                 filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -70,18 +69,28 @@
                 flex-direction: column;
                 gap: 0px;
                 width: 100%;
+                position: relative;
 
                 .nama {
+                    position: absolute;
+                    bottom: 44px;
+                    left: 16px;
+                    right: 16px;
                     color: white;
                     text-shadow: 0px 0px 12px #00000097;
-                    font-size: 28px;
+                    font-size: 24px;
                     font-weight: 600;
                     margin: 0;
                     z-index: 3;
+                    line-height: 100%; /* 19.2px */
                 }
 
                 .jabatan {
-                    color: white;
+                    position: absolute;
+                    bottom: 16px;
+                    left: 16px;
+                    right: 16px;
+                    color: rgba(255, 255, 255, 0.8);
                     text-shadow: 0px 0px 12px #00000097;
                     font-size: 16px;
                     z-index: 3;
@@ -89,6 +98,10 @@
                 }
             }
         }
+    }
+
+    .gandara {
+        grid-template-columns: 1fr 1fr 1fr;
     }
 
     .single {
@@ -100,7 +113,6 @@
 
         .photocard {
             .photo {
-                width: 300px;
             }
 
             .konten {

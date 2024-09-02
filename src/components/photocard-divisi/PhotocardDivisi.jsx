@@ -1,49 +1,70 @@
-import React, { useState, useEffect, useRef, useContext } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { DivisiContext } from '../../pages/FotoDivisi';
 import "./PhotocardDivisi.scss";
-
 import photocardData from "./DataPhotocardDivisi";
 
 const PhotocardDivisi = () => {
-    const {activeIndex, setActiveIndex} = useContext(DivisiContext);
-
+    const { activeIndex, setActiveIndex } = useContext(DivisiContext);
     const [swiperAnggota, setSwiperAnggota] = useState(false);
 
-    // GANTI CARD WISKIRA ATAU PRABANGKARA
     useEffect(() => {
         const intervalSwiperAnggota = setInterval(() => {
-            setSwiperAnggota(!swiperAnggota);
+            setSwiperAnggota(prev => !prev);
         }, 2500);
 
-        return () => {
-            clearInterval(intervalSwiperAnggota);
-        };
-    }, [swiperAnggota]);
-    
-    // gandara: atas 3 bawah 3
-    // nayanika: atas koor, bawah 3 anggota (swiper)
-    // lavanya: atas koor, bawah 3 anggota (swiper)
-    // caksana: atas koor, bawah 3 anggota (swiper)
-    // baskara atas koor, bawah 3/4 anggota (swiper)
+        return () => clearInterval(intervalSwiperAnggota);
+    }, []);
 
-    // 0 gandara
-    // 1 balwana
-    // 2 caksana
-    // 3 lavanya
-    // 4 bimasena
-    // 5 baskara
-    // 6 gajendra
-    // 7 sakha
-    // 8 nayanika 
-    // 9 sarkara
-    // 10 saraya
+    const renderPhotocard = (index) => {
+        const data = photocardData[activeIndex][index];
+        return (
+            <div className="photocard" style={{ background: data.bgcolor }} key={index}>
+                <img className="photo" src={swiperAnggota ? data.foto1 : data.foto2} alt="" />
+                <div className="konten">
+                    <p className="nama">{data.name}</p>
+                    <p className="jabatan">{data.jabatan}</p>
+                </div>
+            </div>
+        );
+    };
+
+    const renderAnggota = () => {
+        return photocardData[activeIndex].map((item, index) => {
+            if (item.jabatan === "Anggota") {
+                return (
+                    <div className="photocard" style={{ background: item.bgcolor }} key={index}>
+                        {activeIndex === 8 && (
+                            <>
+                                <img className="bg-text" src={item.bgtext} alt="" />
+                                <img className="bg-atas" src="./Assets/PhotocardDivisi/element/bg_atas.png" alt="" />
+                                <img className="bg-bawah" src="./Assets/PhotocardDivisi/element/bg_bawah.png" alt="" />
+                            </>
+                        )}
+                        <img className="bg-baskara" src={item.bgbaskara} alt="" />
+                        <img className="photo" src={swiperAnggota ? item.foto1 : item.foto2} alt="" />
+                        <div className="konten">
+                            <p className="nama">{item.name}</p>
+                            <p className="jabatan">{item.jabatan}</p>
+                        </div>
+                    </div>
+                );
+            }
+            return null;
+        });
+    };
 
     return (
         <div className="photocard-divisi">
-            {activeIndex == 5 ? (
+            {activeIndex === 0 && (
+                <div className="photocard-wrapper gandara">
+                    {Array.from({ length: 6 }).map((_, index) => renderPhotocard(index))}
+                </div>
+            )}
+
+            {activeIndex === 5 && (
                 <div className="photocard-wrapper koor single">
-                    <div className="photocard" style={{'background': photocardData[activeIndex][0].bgcolor}}>
-                    <img className="bg-baskara" src="./Assets/PhotocardDivisi/element/camera.png" alt="" />
+                    <div className="photocard" style={{ background: photocardData[activeIndex][0].bgcolor }}>
+                        <img className="bg-baskara" src="./Assets/PhotocardDivisi/element/camera.png" alt="" />
                         <img className="photo" src={swiperAnggota ? photocardData[activeIndex][0].foto1 : photocardData[activeIndex][0].foto2} alt="" />
                         <div className="konten">
                             <p className="nama">{photocardData[activeIndex][0].name}</p>
@@ -51,9 +72,11 @@ const PhotocardDivisi = () => {
                         </div>
                     </div>
                 </div>
-            ) : (
+            )}
+
+            {activeIndex === 8 && (
                 <div className="photocard-wrapper koor">
-                    <div className="photocard" style={{'background': photocardData[activeIndex][0].bgcolor}}>
+                    <div className="photocard" style={{ background: photocardData[activeIndex][0].bgcolor }}>
                         <img className="bg-text" src={photocardData[activeIndex][0].bgtext} alt="" />
                         <img className="bg-atas" src="./Assets/PhotocardDivisi/element/bg_atas.png" alt="" />
                         <img className="bg-bawah" src="./Assets/PhotocardDivisi/element/bg_bawah.png" alt="" />
@@ -63,7 +86,7 @@ const PhotocardDivisi = () => {
                             <p className="jabatan">{photocardData[activeIndex][0].jabatan}</p>
                         </div>
                     </div>
-                    <div className="photocard" style={{'background': photocardData[activeIndex][0].bgcolor}}>
+                    <div className="photocard" style={{ background: photocardData[activeIndex][0].bgcolor }}>
                         <img className="bg-text" src={photocardData[activeIndex][1].bgtext} alt="" />
                         <img className="bg-atas" src="./Assets/PhotocardDivisi/element/bg_atas.png" alt="" />
                         <img className="bg-bawah" src="./Assets/PhotocardDivisi/element/bg_bawah.png" alt="" />
@@ -76,31 +99,18 @@ const PhotocardDivisi = () => {
                 </div>
             )}
 
-            <div className="photocard-wrapper anggota">  
-                {photocardData[activeIndex].map((item, index) => {
-                    if(item.jabatan == "Anggota") {
-                        return (
-                            <div className="photocard" style={{'background': item.bgcolor}}>
-                                {activeIndex == 8 && (
-                                    <>
-                                        <img className="bg-text" src={item.bgtext} alt="" />
-                                        <img className="bg-atas" src="./Assets/PhotocardDivisi/element/bg_atas.png" alt="" />
-                                        <img className="bg-bawah" src="./Assets/PhotocardDivisi/element/bg_bawah.png" alt="" />
-                                    </>
-                                )}
-                                <img className="bg-baskara" src={item.bgbaskara} alt="" />
-                                <img className="photo" src={swiperAnggota ? item.foto1 : item.foto2} alt="" />
-                                <div className="konten">
-                                    <p className="nama">{item.name}</p>
-                                    <p className="jabatan">{item.jabatan}</p>
-                                </div>
-                            </div>
-                        )
-                    }
-                })}
+            {(activeIndex !== 0 && activeIndex !== 5 && activeIndex !== 8) && (
+                <div className="photocard-wrapper koor">
+                    {renderPhotocard(0)}
+                    {renderPhotocard(1)}
+                </div>
+            )}
+
+            <div className="photocard-wrapper anggota">
+                {renderAnggota()}
             </div>
         </div>
-    )
+    );
 }
 
 export default PhotocardDivisi;

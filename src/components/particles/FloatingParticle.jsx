@@ -3,10 +3,12 @@ import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 import "./FloatingParticle.scss";
 
-const FloatingParticle= () => {
+import melioraLogo from '../../images/meliora/meliora.svg';
+
+const FloatingParticle = () => {
     const [init, setInit] = useState(false);
 
-    // this should be run only once per application lifetime
+    // This should be run only once per application lifetime
     useEffect(() => {
         initParticlesEngine(async (engine) => {
             // Load only the slim version of tsParticles
@@ -27,18 +29,9 @@ const FloatingParticle= () => {
                     id="tsparticles"
                     particlesLoaded={particlesLoaded}
                     options={{
-                        // background: {
-                        //     color: {
-                        //         value: "#0d47a1",
-                        //     },
-                        // },
                         fpsLimit: 120,
                         interactivity: {
                             events: {
-                                // onClick: {
-                                //     enable: true,
-                                //     mode: "push",
-                                // },
                                 onHover: {
                                     enable: true,
                                     mode: "repulse",
@@ -59,13 +52,6 @@ const FloatingParticle= () => {
                             color: {
                                 value: "#F4AC56",
                             },
-                            // links: {
-                            //     color: "#F4AC56",
-                            //     distance: 150,
-                            //     enable: true,
-                            //     opacity: 0.5,
-                            //     width: 1,
-                            // },
                             move: {
                                 direction: "none",
                                 enable: true,
@@ -79,22 +65,38 @@ const FloatingParticle= () => {
                             number: {
                                 density: {
                                     enable: true,
-                                    area: 800,
+                                    area: 200,
                                 },
                                 value: 30,
                             },
                             opacity: {
                                 value: 0.5,
+                                animation: {
+                                    enable: true,
+                                    speed: 1, // Adjust the speed of the glow animation
+                                    minimumValue: 0.2, // Minimum opacity value
+                                    sync: false, // Make the animation sync for each particle
+                                },
                             },
                             shape: {
-                              type: "star",
-                              star: {
-                                  sides: 5 // Number of sides for the star
-                              }
-                          },
-                          
+                                type: "star",
+                                star: {
+                                    sides: 5,
+                                },
+                            },
                             size: {
                                 value: { min: 1, max: 5 },
+                            },
+                            shadow: {
+                                enable: true,
+                                color: {
+                                    value: "#F4AC56",
+                                },
+                                offset: {
+                                    x: 0,
+                                    y: 0,
+                                },
+                                blur: 15, // Increase blur for a more pronounced glow effect
                             },
                         },
                         detectRetina: true,
