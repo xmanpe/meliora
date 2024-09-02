@@ -47,7 +47,7 @@ function App() {
           left: "0",
           width: "100%",
           pointerEvents: "none",
-          zIndex: "100"
+          zIndex: "999"
         }}
         alt="" />
     </div>

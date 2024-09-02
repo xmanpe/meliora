@@ -26,7 +26,7 @@
         background: rgba(255, 255, 255, 0.8);
         backdrop-filter: blur(14px);
         box-shadow: 0px 7px 17.7px 0px rgba(0, 0, 0, 0.1);
-        z-index: 998;
+        z-index: 999;
 
         .tab-button {
             border: none;
@@ -53,16 +53,47 @@
     }
 
     .dropdown-toggle {
+        position: sticky;
+        top: 20px;
         background: rgba(255, 255, 255, 0.8);
+        box-shadow: 0px 7px 17.7px 0px rgba(0, 0, 0, 0.1);
+        border-radius: 100px;
         backdrop-filter: blur(14px);
-        display: flex;
+        display: none;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        padding: 10px 14px;
-        width: fit-content;
-        max-width: 810px;
-        margin: 0 16px;
+        padding: 14px 20px;
+        max-width: 400px;
+        width: -webkit-fill-available;
+        box-sizing: border-box;
+        z-index: 999;
+        font-size: 16px;
+    }
+
+    .dropdown-menu {
+        position: sticky;
+        top: 84px;
+        border-radius: 20px;
+        margin-top: -20px;
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 400px;
+        width: -webkit-fill-available;
+        background: rgba(255, 255, 255, 0.8);
+        box-shadow: 0px 7px 17.7px 0px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(14px);
+        z-index: 999;
+        overflow: hidden;
+
+        .dropdown-item {
+            display: flex;
+            padding: 14px 20px;
+            width: -webkit-fill-available;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
     }
 
     .swiper {
@@ -71,7 +102,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 0px 180px 32px 180px;
+        padding: 0px 180px 80px 180px;
 
         .swiper-button-prev, .swiper-button-next {
             display: none;
@@ -119,12 +150,16 @@
         }
 
         .swiper-pagination {
-            display: none;
-            background: rgba(255, 255, 255, 0.2);
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 32px;
+            height: fit-content;
+            background: rgba(255, 255, 255, 0.1);
             width: fit-content;
             margin: 0 auto;
             border-radius: 100px;
-            padding: 4px 8px;
+            padding: 2px 12px;
 
             .swiper-pagination-bullet {
               background: #FFF;
@@ -209,7 +244,7 @@
                 padding: 4px;
                 background: white;
                 border-radius: 12px;
-                width: 160px;
+                width: 120px;
                 box-shadow: 1px 2px 8px 2px rgba(0, 0, 0, 0.1);
 
                 .koordinator-img {
@@ -345,62 +380,118 @@
 
 @media screen and (max-width: 810px) {
     .foto-section{   
-        .slider {
+        .tab-container {
             display: none;
         }
 
-        .slider-wrapper-mobile {
+        .dropdown-toggle {
             display: flex;
-            position: sticky;
-            top: 12px;
-      
-            .slider-mobile {
-                .slider-button-mobile-active {
-                    width: 100%;
-                    justify-content: space-between;
-                    padding: 10px 20px;
-                    border: 1.5px solid rgba(0, 0, 0, 0.056);
-                    box-shadow: 0px 7px 17.7px 0px rgba(0, 0, 0, 0.1);
-      
-                    .arrow.up {
-                    }
-                    .arrow.down {
+            top: 60px;
+        }
+
+        .dropdown-menu {
+            display: flex;
+            top: 120px;
+        }
+
+        .swiper {
+            padding: 0px 40px 80px 40px;
+    
+            .swiper-wrapper {
+                .swiper-slide {
+                    .image-wrapper {
+                        img {
+                        }
                     }
                 }
-      
-                .dropdown-wrapper {
-                    width: 100%;
-                    justify-content: left;
-                    align-items: start;
-                    border: 1.5px solid rgba(0, 0, 0, 0.056);
-                    border-radius: 20px;
-                    gap: 0px;
-                    padding: 2px;
-                    margin-bottom: -200px;
-                    box-shadow: 0px 7px 17.7px 0px rgba(0, 0, 0, 0.1);
-                    overflow: hidden;
-      
-                    .slider-button-mobile {
-                        padding: 8px 16px;
-                        gap: 0px;
-                        border-radius: 0px;
+    
+                .swiper-slide-active{
+                }
+            }
+    
+            .swiper-pagination {
+                .swiper-pagination-bullet {
+                }
+            
+                .swiper-pagination-bullet-active {
+                }
+            }
+        }
+    
+        .name-wrapper {
+            padding: 40px 16px;
+    
+            .koordinator-head{
+                padding: 0;
+                margin-bottom: 32px;
+
+                h1{
+                }
+    
+                &::before {
+                }
+                
+                &::after {
+                }
+            }
+    
+            .koordinator-wrapper {    
+                gap: 8px;
+
+                .koordinator-person {
+                    flex-direction: row;
+                    width: 140px;
+                    gap: 10px;
+    
+                    .koordinator-img {
+                        width: 100px;
+
+                        img {
+                        }
+                    }
+    
+                    h1 {
                         text-align: left;
-                        width: 100%;
+                    }
+    
+                    p {
+                    }
+                }
+            }
+    
+            .anggota-wrapper{   
+                margin-top: -40px; 
+                padding-top: 60px;
+                
+                h1 {
+                }
+    
+                .anggota {
+                    p {
                         font-size: 18px;
-                        border-bottom: 1px solid rgba(0, 0, 0, 0.046);
-                    }
-      
-                    button:active {
-                    }
-        
-                    .slider-button-mobile:hover {
                     }
                 }
             }
         }
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .foto-section{   
+        .tab-container {
+            display: none;
+        }
+
+        .dropdown-toggle {
+            top: 60px;
+        }
+
+        .dropdown-menu {
+            top: 120px;
+        }
 
         .swiper {
-            padding: 0px 40px 20px 40px;
+            padding: 0px 16px 80px 16px;
     
             .swiper-wrapper {
                 .swiper-slide {
@@ -466,4 +557,3 @@
         }
     }
 }
-  

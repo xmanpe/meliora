@@ -8,6 +8,8 @@ import { Pagination, Navigation } from 'swiper/modules';
 import { DivisiContext } from "../../pages/FotoDivisi";
 import dataDokumentasi from "./DataDokumentasiDivisi";
 
+import arrowDown from '../../images/icons/arrow-down.svg';
+
 const DokumentasiDivisi = () => {
   const { activeIndex } = useContext(DivisiContext);
   const [activeTab, setActiveTab] = useState(0);
@@ -54,7 +56,8 @@ const DokumentasiDivisi = () => {
 
           {/* Mobile Dropdown */}
           <button className='dropdown-toggle' onClick={handleDropdownClick}>
-            {`Session ${activeTab + 1}`}
+            {getTextForDivisi(dataDokumentasi.FOTO[activeIndex].divisi)} {activeTab + 1}
+            <img src={arrowDown} alt="arrow" />
           </button>
           {showMobileDropdown && (
             <div className='dropdown-menu'>
@@ -80,7 +83,29 @@ const DokumentasiDivisi = () => {
         pagination={{ clickable: true }}
         navigation={true}
         slidesPerView={1}
-        spaceBetween={-20}
+        breakpoints={{
+          1920: {
+              spaceBetween: -20,
+            },
+          1440: {
+            spaceBetween: -20,
+          },
+          1200: {
+            spaceBetween: -20,
+          },
+          810: {
+            spaceBetween: -20,
+          },
+          560:{
+            spaceBetween: -10,
+          },
+          432:{
+            spaceBetween: 0,
+          },
+          0:{
+            spaceBetween: 0,
+          }
+      }}
         loop={false}
         modules={[Pagination, Navigation]}
         className="mySwiper"
@@ -108,6 +133,9 @@ const DokumentasiDivisi = () => {
 
       <div className='name-wrapper'>
         {dataDokumentasi.FOTO.map((item, index) => {
+          if (index === activeIndex && (index === 0 || index === 5 || index === 8)) {
+            return null;
+          }
           if (index === activeIndex) {
             return (
               <>

@@ -30,7 +30,7 @@ const dataPhotocard = {
         },
         {
             "name": "Ida Ayu Tretami",
-            "jabatan": "Sekretaris 1",
+            "jabatan": "Sekretaris 2",
             "bgcolor": `linear-gradient(180deg, #4774CA 0%, #033488 100%)`,
             "foto1": "./Assets/PhotocardDivisi/gandara/Photocard5A.png",
             "foto2": "./Assets/PhotocardDivisi/gandara/Photocard5B.png",

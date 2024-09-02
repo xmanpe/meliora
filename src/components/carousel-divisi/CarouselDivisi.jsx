@@ -54,7 +54,7 @@ const CarouselDivisi = () => {
                         0:{
                             slidesPerView: 1,
                         }
-                      }}
+                    }}
                     resistanceRatio={0.01}
                     navigation={true}
                     pagination={{ clickable: true }}
