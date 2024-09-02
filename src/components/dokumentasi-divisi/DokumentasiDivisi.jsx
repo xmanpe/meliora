@@ -12,6 +12,8 @@ const DokumentasiDivisi = () => {
   const { activeIndex } = useContext(DivisiContext);
   const [activeTab, setActiveTab] = useState(0);
   const swiperRef = useRef(null);
+  const [showMobileDropdown, setShowMobileDropdown] = useState(false);
+  const [sliderState, setSliderState] = useState(null);
 
   const getTextForDivisi = (divisi) => {
     if (divisi === 'Sakha') {
@@ -30,6 +32,14 @@ const DokumentasiDivisi = () => {
     setActiveTab(0);
   }, [activeIndex]);
 
+  const handleDropdownClick = () => {
+    setShowMobileDropdown(prev => !prev);
+  };
+
+  const handleUserClick = (index) => {
+    setSliderState(index);
+  };
+
   return (
     <div className='foto-section'>
       {dataDokumentasi.FOTO.map((item, index) => {
@@ -37,16 +47,55 @@ const DokumentasiDivisi = () => {
           const text = getTextForDivisi(item.divisi);
 
           return (
-            <div className='foto-tabs' key={index}>
-              {item.kelompok.map((kelompok, kelompokIndex) => (
-                <button
-                  key={kelompokIndex}
-                  className={`tab-button ${activeTab === kelompokIndex ? 'active' : ''}`}
-                  onClick={() => setActiveTab(kelompokIndex)}
-                >
-                  {text} {kelompokIndex + 1}
-                </button>
-              ))}
+            <div key={index}>
+              <div className='slider'>
+                {item.kelompok.map((kelompok, kelompokIndex) => (
+                  <button
+                    key={kelompokIndex}
+                    className={`slider-button ${activeTab === kelompokIndex ? 'active' : ''}`}
+                    onClick={() => setActiveTab(kelompokIndex)}
+                  >
+                    {text} {kelompokIndex + 1}
+                  </button>
+                ))}
+              </div>
+              <div className="slider-wrapper-mobile">
+                <div className="slider-mobile">
+                  {dataDokumentasi.FOTO[activeIndex].kelompok.map((kelompok, kelompokIndex) => (
+                    <button
+                      key={kelompokIndex}
+                      className={`slider-button-mobile-active ${showMobileDropdown && kelompokIndex === activeTab ? 'active' : ''}`}
+                      onClick={() => {
+                        setActiveTab(kelompokIndex);
+                        setShowMobileDropdown(!showMobileDropdown);
+                      }}
+                    >
+                      {getTextForDivisi(dataDokumentasi.FOTO[activeIndex].divisi)} {kelompokIndex + 1}
+                      <img
+                        className={`arrow ${showMobileDropdown && kelompokIndex === activeTab ? 'down' : 'up'}`}
+                        src="./path/to/ArrowDropdown"
+                        alt="drop"
+                      />
+                    </button>
+                  ))}
+                  {showMobileDropdown && (
+                    <div className="dropdown-wrapper">
+                      {dataDokumentasi.FOTO[activeIndex].kelompok.map((kelompok, kelompokIndex) => (
+                        <button
+                          key={kelompokIndex}
+                          className={`slider-button-mobile ${activeTab === kelompokIndex ? 'active' : ''}`}
+                          onClick={() => {
+                            setActiveTab(kelompokIndex);
+                            setShowMobileDropdown(false);
+                          }}
+                        >
+                          {getTextForDivisi(dataDokumentasi.FOTO[activeIndex].divisi)} {kelompokIndex + 1}
+                        </button>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              </div>
             </div>
           );
         }
