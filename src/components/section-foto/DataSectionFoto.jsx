@@ -7,7 +7,7 @@ import gandara6 from '../../images/foto-divisi/dokumentasi-divisi/Gandara/foto6.
 import gandara7 from '../../images/foto-divisi/dokumentasi-divisi/Gandara/foto7.jpeg';
 import gandara8 from '../../images/foto-divisi/dokumentasi-divisi/Gandara/foto8.jpeg';
 import balwana1 from '../../images/foto-divisi/dokumentasi-divisi/Balwana/foto1.jpeg';
-import balwana2 from '../../images/foto-divisi/divisi/Balwana/QHEDY_FOTO TERBAIK_SIMUILASI 2 (10).jpg'
+import balwana2 from '../../images/foto-divisi/divisi/Balwana/QHEDY_FOTO TERBAIK_SIMUILASI 2.JPG'
 import balwana3 from '../../images/foto-divisi/dokumentasi-divisi/Balwana/foto3.jpeg';
 import balwana4 from '../../images/foto-divisi/dokumentasi-divisi/Balwana/foto4.jpeg';
 import balwana5 from '../../images/foto-divisi/dokumentasi-divisi/Balwana/foto5.jpeg';
@@ -67,12 +67,16 @@ import nayanika2 from '../../images/foto-divisi/dokumentasi-divisi/Nayanika/foto
 import nayanika3 from '../../images/foto-divisi/dokumentasi-divisi/Nayanika/foto3.jpeg';
 import nayanika4 from '../../images/foto-divisi/dokumentasi-divisi/Nayanika/foto4.jpeg';
 import nayanika5 from '../../images/foto-divisi/dokumentasi-divisi/Nayanika/foto5.jpeg';
-import nayanika6 from '../../images/foto-divisi/divisi/Nayanika/Simulasi 2_Allison_Foto Terbaik_11.jpg';
+import nayanika6 from '../../images/foto-divisi/divisi/Nayanika/Simulasi 2_Allison_Foto Terbaik_11.JPG';
 import nayanika7 from '../../images/foto-divisi/dokumentasi-divisi/Nayanika/foto7.jpeg';
 import nayanika8 from '../../images/foto-divisi/dokumentasi-divisi/Nayanika/foto8.jpeg';
 import sarkara1 from '../../images/foto-divisi/dokumentasi-divisi/Sarkara/foto1.jpeg';
 import sarkara2 from '../../images/foto-divisi/dokumentasi-divisi/Sarkara/foto2.jpeg';
+<<<<<<< Updated upstream
 import sarkara3 from '../../images/foto-divisi/divisi/Sarkara/Simulasi 2_BASKARA_Maria Cahaya_PERS-3.jpg';
+=======
+import sarkara3 from '../../images/foto-divisi/divisi/Sarkara/Simulasi 2_BASKARA_Maria Cahaya_PERS-3.jpg'
+>>>>>>> Stashed changes
 import sarkara4 from '../../images/foto-divisi/dokumentasi-divisi/Sarkara/foto4.jpeg';
 import sarkara5 from '../../images/foto-divisi/dokumentasi-divisi/Sarkara/foto5.jpeg';
 import sarkara6 from '../../images/foto-divisi/dokumentasi-divisi/Sarkara/foto6.jpeg';
