@@ -74,7 +74,7 @@ const carouselData = {
         },
         {
             nama: "Caksana",
-            divisi: "Public Relations",
+            divisi: `<i>Public Relations</i>`,
             logo: caksana,
             foto: [
                 caksana1,

@@ -59,7 +59,7 @@ const CarouselDivisi = () => {
                                     <div className="text-wrapper">
                                         <h1 className="text-nama">{carouselData.nama}</h1>
                                         <div className="text-divisi-wrapper">
-                                            <p className={`text-divisi-${carouselData.warna}`}>{carouselData.divisi}</p>
+                                            <p className={`text-divisi-${carouselData.warna}`} dangerouslySetInnerHTML={{ __html: carouselData.divisi }}></p>
                                         </div>
                                     </div>
                                 </div>

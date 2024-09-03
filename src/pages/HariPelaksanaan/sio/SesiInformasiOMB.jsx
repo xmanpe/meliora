@@ -9,6 +9,8 @@ import MelioraYellow from '../../../images/logo/meliora yellow.svg'
 
 import BackButton from "../../../components/backButton/BackButton";
 
+import AksesDrive from "../../../components/aksesDrive/aksesDrive";
+
 const containerVariants = {
   hidden: { opacity: 1 },
   visible: {
@@ -49,6 +51,9 @@ const SesiInformasiOMB = () => {
           top="Sesi Informasi OMB"
           bottom="Sesi Informasi Orientasi Mahasiswa Baru yang dilaksanakan oleh divisi Caksana atau <i>Public Relations </i> bertujuan untuk memberikan seluruh informasi agar peserta dapat mempersiapkan kebutuhan rangkaian OMB UMN 2024."
         />
+      </motion.div>
+      <motion.div style={{width: '100%'}} variants={itemVariants}>
+        <AksesDrive href={'https://drive.google.com/drive/folders/1YJ4mkwku5bDtaXM3s6BPgEYfRjf9kjGK'} />
       </motion.div>
       <motion.div variants={itemVariants}>
         <SIO />

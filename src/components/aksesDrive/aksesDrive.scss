@@ -1,306 +1,44 @@
+.akses-drive-container {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    border-radius: 14px;
+    margin: 0 auto;
+    max-width: 1400px;
+    width: -webkit-fill-available;
 
-.akses_drive_container {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 36px;
-  .hariHariOMB__aksesBox {
-      margin-top: 36px;
-      border-radius: 20px;
-      position: -webkit-sticky;
-      position: sticky;
-      top: 8px; 
-      z-index: 99;
-      background: linear-gradient(144deg, rgba(146, 70, 59, 0.60) 0%, rgba(50, 29, 25, 0.60) 100%);
-      box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.40);
-      backdrop-filter: blur(50px);
-      > div {
-          display: flex;
-          justify-content: space-between;
-          padding: 8px 8px 8px 20px;
-          p {
-              color: #FFF;
-              leading-trim: both;
-              text-edge: cap;
-              font-family: DM Sans;
-              font-size: 20px;
-              font-style: normal;
-              font-weight: 500;
-              line-height: 160%; 
-              margin: auto 0px;
-          }
-          .aksesDriveDiv {
-              display: flex;
-              justify-content: center;
-              height: 52px;
-              width:196px;
-              align-items: center;
-              gap: 10px;
-              flex-shrink: 0;
-              border-radius: 13px;
-              background: var(--white, linear-gradient(180deg, #F7F7F7 0%, #DBDBDB 100%));
-              box-shadow: 0px -6px 8px 0px rgba(0, 0, 0, 0.25) inset, 0px 6px 6px 0px rgba(0, 0, 0, 0.20);
-              span {  
-                  text-align: center;
-                  leading-trim: both;
-                  text-edge: cap;
-                  font-family: DM Sans;
-                  font-size: 20px;
-                  font-style: normal;
-                  font-weight: 500;
-                  line-height: 160%;      
-                  background: linear-gradient(180deg, #7D7D7D 0%, #000 100%);
-                  background-clip: text;
-                  -webkit-background-clip: text;
-                  -webkit-text-fill-color: transparent;
-              }
-              img {
-                  width: 20px;
-                  height: 20px;
-                  
-              }
-          }
-          .aksesDriveDiv:hover{
-              background: var(--white, linear-gradient(180deg, #f7f7f7 0%, #bcbcbc 100%));
-          }
-      }
-      p {
-          color:#FFFFFF;
-          font-family:DM Sans;
-      }
-  }
-}
+    p {
+        font-size: 16px;
+        color: rgba(0, 0, 0, 0.8);
+    }
 
-@media screen and (max-width: 1440px) {
-  .akses_drive_container {
-    .hariHariOMB__aksesBox {
-        margin-top: 36px;
-        border-radius: 20px;
-        > div {
-            p {
-                font-size: 18px;
-            }
-            .aksesDriveDiv {
-                display: flex;
-                justify-content: center;
-                height: 44px;
-                width: 196px;
-                align-items: center;
-                gap: 10px;
-                flex-shrink: 0;
-                border-radius: 13px;
-                background: var(--white, linear-gradient(180deg, #F7F7F7 0%, #DBDBDB 100%));
-                box-shadow: 0px -6px 8px 0px rgba(0, 0, 0, 0.25) inset, 0px 6px 6px 0px rgba(0, 0, 0, 0.20);
-                span {  
-                    text-align: center;
-                    leading-trim: both;
-                    text-edge: cap;
-                    font-family: DM Sans;
-                    font-size: 16px;
-                    font-style: normal;
-                    font-weight: 500;
-                    line-height: 160%;      
-                    background: linear-gradient(180deg, #7D7D7D 0%, #000 100%);
-                    background-clip: text;
-                    -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent;
-                }
-                img {
-                    width: 16px;
-                    height: 16px;
-                }
-            }
+    .card-button {
+        display: flex;
+        padding: 8px 16px;
+        align-items: center;
+        gap: 8px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 100px;
+        background: transparent;
+        transition: background-color 0.3s ease;
+        cursor: pointer;
+
+        img {
+            width: 20px;
+            height: 20px;
         }
+
         p {
-            color:#FFFFFF;
-            font-family:DM Sans;
+            font-size: 14px;
+            color: black;
+        }
+
+        &:hover {
+            background: rgba(0, 0, 0, 0.05) !important;
         }
     }
-  }
-}
-
-@media screen and ( max-width: 1200px ){
-  .akses_drive_container {
-      .hariHariOMB__aksesBox {
-          margin-top: 36px;
-          border-radius: 20px;
-          background: linear-gradient(144deg, rgba(146, 70, 59, 0.60) 0%, rgba(50, 29, 25, 0.60) 100%);
-          box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.40);
-          backdrop-filter: blur(50px);
-          > div {
-              display: flex;
-              justify-content: space-between;
-              padding: 8px 8px 8px 20px;
-              p {
-                  color: #FFF;
-                  leading-trim: both;
-                  text-edge: cap;
-                  font-family: DM Sans;
-                  font-size: 18px;
-                  font-style: normal;
-                  font-weight: 500;
-                  line-height: 160%; 
-                  margin: auto 0px;
-              }
-              .aksesDriveDiv {
-                  display: flex;
-                  justify-content: center;
-                  height: 44px;
-                  width: 196px;
-                  align-items: center;
-                  gap: 10px;
-                  flex-shrink: 0;
-                  border-radius: 13px;
-                  background: var(--white, linear-gradient(180deg, #F7F7F7 0%, #DBDBDB 100%));
-                  box-shadow: 0px -6px 8px 0px rgba(0, 0, 0, 0.25) inset, 0px 6px 6px 0px rgba(0, 0, 0, 0.20);
-                  span {  
-                      text-align: center;
-                      leading-trim: both;
-                      text-edge: cap;
-                      font-family: DM Sans;
-                      font-size: 16px;
-                      font-style: normal;
-                      font-weight: 500;
-                      line-height: 160%;      
-                      background: linear-gradient(180deg, #7D7D7D 0%, #000 100%);
-                      background-clip: text;
-                      -webkit-background-clip: text;
-                      -webkit-text-fill-color: transparent;
-                  }
-                  img {
-                      width: 16px;
-                      height: 16px;
-                  }
-              }
-          }
-          p {
-              color:#FFFFFF;
-              font-family:DM Sans;
-          }
-      }
-  }
-}
-
-@media screen and (max-width: 810px){
-  .akses_drive_container {
-      margin-bottom: 24px;
-      .hariHariOMB__aksesBox {
-          margin-top: 24px;
-          border-radius: 12px;
-          > div {
-              display: flex;
-              justify-content: space-between;
-              padding: 4px 4px 4px 16px;
-              p {
-                  color: #FFF;
-                  leading-trim: both;
-                  text-edge: cap;
-                  font-family: DM Sans;
-                  font-size: 12px;
-                  font-style: normal;
-                  font-weight: 500;
-                  line-height: 160%; 
-                  margin: auto 0px;
-              }
-              .aksesDriveDiv {
-                  display: flex;
-                  justify-content: center;
-                  height: 34px;
-                  width: 125px;
-                  align-items: center;
-                  gap: 10px;
-                  flex-shrink: 0;
-                  border-radius: 8px;
-                  background: var(--white, linear-gradient(180deg, #F7F7F7 0%, #DBDBDB 100%));
-                  box-shadow: 0px -6px 8px 0px rgba(0, 0, 0, 0.25) inset, 0px 6px 6px 0px rgba(0, 0, 0, 0.20);
-                  a {  
-                      text-align: center;
-                      leading-trim: both;
-                      text-edge: cap;
-                      font-family: DM Sans;
-                      font-size: 14px;
-                      font-style: normal;
-                      font-weight: 500;
-                      line-height: 160%;      
-                      background: linear-gradient(180deg, #7D7D7D 0%, #000 100%);
-                      background-clip: text;
-                      -webkit-background-clip: text;
-                      -webkit-text-fill-color: transparent;
-                  }
-                  img {
-                      width: 16px;
-                      height: 16px;
-                  }
-              }
-          }
-          p {
-              color:#FFFFFF;
-              font-family:DM Sans;
-          }
-      }
-  }
-}
-
-
-@media screen and (max-width: 432px){
-  .akses_drive_container {
-    margin-bottom: 16px;
-      .hariHariOMB__aksesBox {
-          margin-top: 16px;
-          border-radius: 12px;
-          background: var(--warning, linear-gradient(144deg, rgba(146, 70, 59, 0.60) 0%, rgba(50, 29, 25, 0.60) 100%));
-          box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.40);
-          backdrop-filter: blur(50px);
-          > div {
-              display: flex;
-              justify-content: space-between;
-              padding: 4px 4px 4px 16px;
-              border-radius: 12px;
-              p {
-                  color: #FFF;
-                  leading-trim: both;
-                  text-edge: cap;
-                  font-family: DM Sans;
-                  font-size: 12px;
-                  font-style: normal;
-                  font-weight: 500;
-                  line-height: 160%; 
-                  margin: auto 0px;
-              }
-              .aksesDriveDiv {
-                  display: flex;
-                  justify-content: center;
-                  height: 34px;
-                  width: 125px;
-                  align-items: center;
-                  gap: 10px;
-                  flex-shrink: 0;
-                  border-radius: 8px;
-                  background: var(--white, linear-gradient(180deg, #F7F7F7 0%, #DBDBDB 100%));
-                  box-shadow: 0px -6px 8px 0px rgba(0, 0, 0, 0.25) inset, 0px 6px 6px 0px rgba(0, 0, 0, 0.20);
-                  span {  
-                      text-align: center;
-                      leading-trim: both;
-                      text-edge: cap;
-                      font-family: DM Sans;
-                      font-size: 14px;
-                      font-style: normal;
-                      font-weight: 500;
-                      line-height: 160%;      
-                      background: linear-gradient(180deg, #7D7D7D 0%, #000 100%);
-                      background-clip: text;
-                      -webkit-background-clip: text;
-                      -webkit-text-fill-color: transparent;
-                  }
-                  img {
-                      width: 16px;
-                      height: 16px;
-                  }
-              }
-          }
-          p {
-              color:#FFFFFF;
-              font-family:DM Sans;
-          }
-      }
-  }
 }

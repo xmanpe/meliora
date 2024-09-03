@@ -9,7 +9,7 @@ const TopInfo = () => {
                 <img className="logo" src={melioraLogo} alt="" />
                 <p className="nama">Meliora</p>
             </div>
-            <p className="copyright">© Baskara, Lavanya, dan Nayanika OMB UMN 2024</p>
+            <p className="copyright">© Caksana, Baskara, Lavanya, dan Nayanika OMB UMN 2024</p>
         </div>
     );
 }

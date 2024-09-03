@@ -1,19 +1,21 @@
 import React from 'react';
 import './aksesDrive.scss';
 
-import DriveIcon from "../../images/meliora/icon/download-drive-icon.png";
+import drive from '../../images/icons/folder-drive.svg';
 
 function AksesDrive({ background, href }) {
+
+  const handleDriveClick = (event) => {
+    event.stopPropagation();
+    window.open(href, '_blank');
+  };
+
   return (
-    <div className='akses_drive_container'>
-      <div className="hariHariOMB__aksesBox" style={{ background }}>
-        <div>
-          <p>Mau lihat semua dokumentasi?</p>
-          <a href={href} target='_blank' rel="noopener noreferrer" className="aksesDriveDiv">
-            <img src={DriveIcon} alt="Drive Icon" />
-            <span>Akses <i>Drive</i></span>
-          </a>
-        </div>
+    <div className='akses-drive-container'>
+      <p>Mau lihat selengkapnya?</p>
+      <div className='card-button' onClick={handleDriveClick}>
+        <img src={drive} alt="drive" />
+        <p>Akses Drive</p>
       </div>
     </div>
   );

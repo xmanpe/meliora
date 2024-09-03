@@ -9,6 +9,8 @@ import FloatingParticle from "../../../components/particles/FloatingParticle";
 
 import MelioraYellow from '../../../images/logo/meliora yellow.svg';
 
+import AksesDrive from "../../../components/aksesDrive/aksesDrive";
+
 const containerVariants = {
     hidden: { opacity: 1 },
     visible: {
@@ -53,6 +55,9 @@ const HariSTS = () => {
                 top="Sidang Terbuka Senat"
                 bottom="Sidang Terbuka Senat menandai langkah awal bagi mahasiswa baru Universitas Multimedia Nusantara angkatan 2024. Rektor UMN, Dr. Ninok Leksono, secara resmi meresmikan status para Pejuang Lotus Biru sebagai mahasiswa."
             />
+        </motion.div>
+        <motion.div style={{width: '100%'}} variants={itemVariants}>
+            <AksesDrive href={'https://drive.google.com/drive/folders/1y0X-nFNalermzOkh1E5AhMyRogK6_rdb'} />
         </motion.div>
         <motion.div variants={itemVariants}>
             <SidangTerbukaSenat />

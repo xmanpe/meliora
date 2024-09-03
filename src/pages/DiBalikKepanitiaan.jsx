@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import './HariPelaksanaan/perkembangan-hari-1/PerkembanganHariSatu.scss';
 
+import AksesDrive from "../components/aksesDrive/aksesDrive";
 import GalleryDK from "../components/gallery/GalleryDK";
 import Header from "../components/header/Header";
 import FloatingParticle from "../components/particles/FloatingParticle";
@@ -47,6 +48,9 @@ const DiBalikKepanitiaan = () => {
             <Header 
                 top="Dibalik Kepanitiaan"
             />
+        </motion.div>
+        <motion.div style={{width: '100%'}} variants={itemVariants}>
+            <AksesDrive href={'https://drive.google.com/drive/folders/1dxIAU_Mdypncx8nd5UNzuE-bGF15pi_z'} />
         </motion.div>
         <motion.div variants={itemVariants}>
             <GalleryDK />

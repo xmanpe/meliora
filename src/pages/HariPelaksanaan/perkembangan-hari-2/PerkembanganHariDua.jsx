@@ -10,6 +10,8 @@ import FloatingParticle from "../../../components/particles/FloatingParticle";
 
 import MelioraYellow from '../../../images/logo/meliora yellow.svg'
 
+import AksesDrive from "../../../components/aksesDrive/aksesDrive";
+
 const containerVariants = {
   hidden: { opacity: 1 },
   visible: {
@@ -54,6 +56,9 @@ const PerkembanganHariDua = () => {
           top="Perkembangan Hari 2"
           bottom="Bibit yang telah disemai kini kokoh, siap mewujudkan impian. Setiap tahapan memastikan peserta menjadi individu percaya diri yang berbekal semangat sesuai dengan konsep ‘Tidak Ada Tentang Kita, Tanpa Kita’."
         />
+      </motion.div>
+      <motion.div style={{width: '100%'}} variants={itemVariants}>
+        <AksesDrive href={'https://drive.google.com/drive/folders/1F_LCTP0hCfIgdDuY095Am9iYvKEGUqe5'} />
       </motion.div>
       <motion.div variants={itemVariants}>
         <PerkembanganHari2 />
