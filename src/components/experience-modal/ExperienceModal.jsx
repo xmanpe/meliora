@@ -26,7 +26,7 @@ const ExperienceModal = ({ isOpen, onClose }) => {
                     animate="visible"
                     variants={modalVariants}
                 >
-                    <p>Guna mendapatkan pengalaman yang terbaik, kami menyarankan penggunaan perangkat PC/Laptop untuk mengakses laman ini.</p>
+                    <p>Guna mendapatkan pengalaman yang terbaik, kami menyarankan penggunaan perangkat PC/Laptop untuk mengakses laman ini dan menggunakan laman selain jenis <b>Safari</b>.</p>
                     <button onClick={onClose}>Siap!</button>
                 </motion.div>
             </div>
