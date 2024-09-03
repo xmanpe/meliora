@@ -60,11 +60,14 @@ const Home = () => {
                     />
                 </video>
                 <div className="box-button" onClick={handlePlayVideo}>
-                    <div className="buttonMulai">
-                        {!isPlaying && <div>
-                            Tekan Logo Meliora untuk lanjut!
-                        </div>}
-                    </div>
+                    
+                    {!isPlaying && 
+                        <div className="buttonMulai">
+                            <div className="button-mulai">
+                                Ketuk layar untuk lanjut!
+                            </div>
+                        </div>
+                    }
                 </div>
             </div>
             <ExperienceModal isOpen={showModal} onClose={handleCloseModal} />
