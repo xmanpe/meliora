@@ -72,12 +72,12 @@ import nayanika7 from '../../images/foto-divisi/dokumentasi-divisi/Nayanika/foto
 import nayanika8 from '../../images/foto-divisi/dokumentasi-divisi/Nayanika/foto8.jpeg';
 import sarkara1 from '../../images/foto-divisi/dokumentasi-divisi/Sarkara/foto1.jpeg';
 import sarkara2 from '../../images/foto-divisi/dokumentasi-divisi/Sarkara/foto2.jpeg';
-import sarkara3 from '../../images/foto-divisi/divisi/sarkara/Simulasi 2_BASKARA_Maria Cahaya_PERS-3.jpg';
+import sarkara3 from '../../images/foto-divisi/divisi/Sarkara/Simulasi 2_BASKARA_Maria Cahaya_PERS-3.jpg';
 import sarkara4 from '../../images/foto-divisi/dokumentasi-divisi/Sarkara/foto4.jpeg';
 import sarkara5 from '../../images/foto-divisi/dokumentasi-divisi/Sarkara/foto5.jpeg';
 import sarkara6 from '../../images/foto-divisi/dokumentasi-divisi/Sarkara/foto6.jpeg';
 import sarkara7 from '../../images/foto-divisi/dokumentasi-divisi/Sarkara/foto7.jpeg';
-import sarkara8 from '../../images/foto-divisi/divisi/sarkara/Perkembangan Hari 2_Rether_41.jpg';
+import sarkara8 from '../../images/foto-divisi/divisi/Sarkara/Perkembangan Hari 2_Rether_41.jpg';
 import saraya1 from '../../images/foto-divisi/divisi/Saraya/Perkembangan Hari 1_Andrew Su-40.jpg';
 import saraya2 from '../../images/foto-divisi/dokumentasi-divisi/Saraya/foto2.jpeg';
 import saraya3 from '../../images/foto-divisi/dokumentasi-divisi/Saraya/foto3.jpeg';
