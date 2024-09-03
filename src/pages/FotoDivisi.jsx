@@ -48,19 +48,17 @@ export const FotoDivisi = ({ children }) => {
     const photocardIndex = [0, 5, 8];
     const activeDivisi = carouselData["DIVISI"][activeIndex];
     const gradientColor = gradients[activeDivisi?.warna] || 'none';
+    const backgroundImage = `url(${activeDivisi?.image || ''})`;
 
     return (
         <DivisiContext.Provider value={{ activeIndex, setActiveIndex }}>
-            <div
-                className="foto-divisi_section"
-                style={{
-                    backgroundImage: `${gradientColor}, url(${activeDivisi?.image || ''})`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    backgroundRepeat: 'no-repeat',
-                    backgroundAttachment: 'fixed',
-                }}
-            >
+            <div className="foto-divisi_section">
+                <div
+                    className="foto-divisi_background"
+                    style={{
+                        backgroundImage: `${gradientColor}, ${backgroundImage}`,
+                    }}
+                ></div>
                 <Header
                     image={MelioraYellow}
                     top='Foto Divisi'

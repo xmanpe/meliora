@@ -1,9 +1,6 @@
 .sio {
-    background: url('../../../images/background/sio.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    position: relative;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -11,8 +8,14 @@
     padding: 60px 16px 140px 16px;
 }
 
-@media screen and (max-width: 1400px) {
-    .sio {
-        padding: 60px 16px 140px 16px;
-    }
+.sio::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../../../images/background/sio.jpg') no-repeat center center;
+    background-size: cover;
+    z-index: -1;
 }

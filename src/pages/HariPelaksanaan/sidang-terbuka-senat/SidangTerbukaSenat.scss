@@ -1,9 +1,6 @@
 .hari-sts {
-    background: url('../../../images/background/sidang-terbuka-senat.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    position: relative;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -11,8 +8,14 @@
     padding: 60px 16px 140px 16px;
 }
 
-@media screen and (max-width: 1400px) {
-    .hari-sts {
-        padding: 60px 16px 140px 16px;
-    }
+.hari-sts::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../../../images/background/sidang-terbuka-senat.jpg') no-repeat center center;
+    background-size: cover;
+    z-index: -1;
 }
