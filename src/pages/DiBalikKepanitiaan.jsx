@@ -46,7 +46,8 @@ const DiBalikKepanitiaan = () => {
     >
         <motion.div variants={itemVariants}>
             <Header 
-                top="Dibalik Kepanitiaan"
+                top="Di Balik Kepanitiaan"
+                bottom={'Apresiasi bagi para panitia yang telah mendedikasikan diri dan bekerja tanpa lelah, mencetak sejarah baru dengan ketulusan yang menghidupkan OMB UMN 2024.'}
             />
         </motion.div>
         <motion.div style={{width: '100%'}} variants={itemVariants}>

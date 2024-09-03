@@ -13,6 +13,8 @@ import coverPerkembanganHari2 from "../../images/homepage/cover_perkembangan_har
 import coverPerkembanganHari2_2 from "../../images/meliora/foto/hari2/Perkembangan Hari 2_Steven Hans_280.jpg";
 import coverSidangTerbukaSenat from "../../images/homepage/cover_sidang_terbuka_senat.jpg";
 import coverSidangTerbukaSenat2 from "../../images/meliora/foto/sts/Sidang Terbuka Senat_Diana Angyulia-18.jpg";
+import coverForumOMB from '../../images/meliora/foto/forum/tambah53.jpeg';
+import coverForumOMB2 from "../../images/meliora/foto/forum/tambah17.jpeg";
 
 // import icons
 import drive from '../../images/icons/folder-drive.svg';
@@ -52,6 +54,13 @@ const cardData = [
     images: [coverSidangTerbukaSenat, coverSidangTerbukaSenat2],
     path: "/hari-pelaksanaan/sidang-terbuka-senat",
     drive: "https://drive.google.com/drive/folders/1y0X-nFNalermzOkh1E5AhMyRogK6_rdb"
+  },
+  {
+    title: "Forum OMB",
+    date: "Sabtu, 31 Agustus 2024",
+    images:[coverForumOMB, coverForumOMB2],
+    path: "/hari-pelaksanaan/forum-omb",
+    drive: 'https://drive.google.com/drive/folders/1bQZG5DcILoEuE_SrApVoX2yS3S4rmTzV'
   }
 ];
 
@@ -84,7 +93,7 @@ const Card = ({ data, index }) => {
                 </div>
                 <div className="card-button" onClick={handleDriveClick}>
                     <img src={drive} alt="Drive" />
-                    <p>Akses Drive</p>
+                    <p>Akses <i>Drive</i></p>
                 </div>
             </div>
         </div>

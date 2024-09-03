@@ -15,7 +15,7 @@ function AksesDrive({ background, href }) {
       <p>Mau lihat selengkapnya?</p>
       <div className='card-button' onClick={handleDriveClick}>
         <img src={drive} alt="drive" />
-        <p>Akses Drive</p>
+        <p>Akses <i>Drive</i></p>
       </div>
     </div>
   );
