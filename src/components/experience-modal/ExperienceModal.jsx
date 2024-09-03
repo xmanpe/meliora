@@ -19,7 +19,7 @@ const ExperienceModal = ({ isOpen, onClose }) => {
 
     return (
         isOpen && (
-            <div className="modal-overlay-experience">
+             <div className="modal-overlay-experience">
                 <motion.div
                     className="modal-content-experience"
                     initial="hidden"
