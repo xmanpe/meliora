@@ -104,8 +104,40 @@
         align-items: center;
         padding: 0px 180px 80px 180px;
 
-        .swiper-button-prev, .swiper-button-next {
-            display: none;
+        .swiper-button-next,
+        .swiper-button-prev {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5); // Adjust background color
+            color: white; // Adjust text color
+            border: none;
+            border-radius: 50%;
+            width: 32px; // Adjust size
+            height: 32px; // Adjust size
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3px; // Adjust icon size
+            cursor: pointer;
+            z-index: 20;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+                background-color: rgba(0, 0, 0, 0.8); // Hover effect
+            }
+        }
+
+        .swiper-button-next {
+            right: 32px; // Adjust position
+        }
+
+        .swiper-button-prev {
+            left: 32px; // Adjust position
+        }
+
+        .swiper-button-prev:after, .swiper-button-next:after {
+            font-size: 16px;
         }
 
         .swiper-wrapper {
