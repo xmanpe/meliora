@@ -12,8 +12,7 @@
     overflow: visible;
 
     .tab-container {
-        position: sticky;
-        top: 20px;
+        top: 0px;
         display: flex;
         gap: 0px;
         border: 1.5px solid rgba(0, 0, 0, 0.056);
@@ -26,7 +25,6 @@
         background: rgba(255, 255, 255, 0.8);
         backdrop-filter: blur(14px);
         box-shadow: 0px 7px 17.7px 0px rgba(0, 0, 0, 0.1);
-        z-index: 999;
 
         .tab-button {
             border: none;
@@ -129,11 +127,11 @@
         }
 
         .swiper-button-next {
-            right: 32px; // Adjust position
+            right: 60px; // Adjust position
         }
 
         .swiper-button-prev {
-            left: 32px; // Adjust position
+            left: 60px; // Adjust position
         }
 
         .swiper-button-prev:after, .swiper-button-next:after {
