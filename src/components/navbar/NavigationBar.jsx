@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import './NavigationBar.scss';
 
 // Import icons
@@ -8,6 +9,7 @@ import diBalikKepanitiaan from '../../images/navbar-icon/di balik kepanitiaan.sv
 import fotoDivisi from '../../images/navbar-icon/foto divisi.svg';
 import sayembaraVisual from '../../images/navbar-icon/sayembara visual.svg';
 
+// Configuration for tabs
 const tabsConfig = [
     {
         path: '/hari-pelaksanaan',
@@ -24,6 +26,7 @@ const tabsConfig = [
         icon: diBalikKepanitiaan,
         text: 'Di Balik Kepanitiaan'
     },
+    // Uncomment if you want to use this tab
     // {
     //     path: '/sayembara-visual',
     //     icon: sayembaraVisual,
@@ -39,26 +42,61 @@ const NavigationBar = () => {
         setActiveTab(location.pathname);
     }, [location.pathname]);
 
-    const getActiveTabInfo = (path) => {
-        return tabsConfig.find(tab => tab.path === path) || null;
+    // Variants for tab animations
+    const tabVariants = {
+        hidden: { opacity: 0, scale: 0.8 },
+        visible: index => ({
+            opacity: 1,
+            scale: 1,
+            transition: {
+                duration: 0.4,
+                delay: index * 0.2,
+                type: "spring",
+                stiffness: 100
+            }
+        })
     };
 
-    const activeTabInfo = getActiveTabInfo(activeTab);
+    // Variants for navbar animation
+    const navbarVariants = {
+        hidden: { opacity: 0, y: 20 },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                duration: 0.6,
+                type: "spring",
+                stiffness: 100
+            }
+        }
+    };
 
     return (
-        <nav className='navbar'>
+        <motion.nav
+            className='navbar'
+            initial="hidden"
+            animate="visible"
+            variants={navbarVariants}
+        >
             {tabsConfig.map((tab, index) => (
-                <Link
+                <motion.div
                     key={index}
+                    initial="hidden"
+                    animate="visible"
+                    variants={tabVariants}
+                    custom={index}
                     className={`each-tab ${tab.path === activeTab ? 'active' : ''} ${index === 0 ? 'first-tab' : ''}`}
-                    to={tab.path}
-                    style={{ textDecoration: "none" }}
                 >
-                    <img src={tab.icon} alt={tab.text} />
-                    <p>{tab.text}</p>
-                </Link>
+                    <Link
+                        to={tab.path}
+                        style={{ textDecoration: "none", color: 'inherit' }}
+                    >
+                        <img src={tab.icon} alt={tab.text} />
+                        <p>{tab.text}</p>
+                    </Link>
+                </motion.div>
             ))}
-        </nav>
+        </motion.nav>
     );
 };
 

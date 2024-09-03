@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 import "./Gallery.scss";
 
 import ImageModal from "../imageModal/ImageModal";
@@ -87,19 +88,34 @@ function GalleryDK() {
     setCurrentImage(image);
   };
 
+  const photoVariants = {
+    hidden: { opacity: 0, scale: 0.8 },
+    visible: (index) => ({
+      opacity: 1,
+      scale: 1,
+      transition: {
+        duration: 0.6,
+        delay: index * 0.2,
+        type: "spring",
+        stiffness: 100
+      }
+    })
+  };
+
   return (
     <div className='galeri-main'>
       {dk.map((image, index) => (
-        <div 
-          className="each-photo"
+        <motion.div
           key={index}
+          className="each-photo"
           onClick={() => openModal(image)}
-          >
-          <img
-            src={image}
-            alt={`Thumbnail ${index + 1}`}
-          />
-        </div>
+          initial="hidden"
+          animate="visible"
+          variants={photoVariants}
+          custom={index}
+        >
+          <img src={image} alt="" />
+        </motion.div>
       ))}
       <ImageModal
         isOpen={modalOpen}

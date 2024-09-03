@@ -10,11 +10,11 @@ const Home = () => {
 
     const togglePlay = () => {
         if (!isPlaying) {
-          setIsPlaying(!isPlaying);
-          videoRef.current.play();
-          setTimeout(() => {
-            navigate("/hari-pelaksanaan");
-          }, 5000); 
+            setIsPlaying(!isPlaying);
+            videoRef.current.play();
+            setTimeout(() => {
+                navigate("/hari-pelaksanaan");
+            }, 5000); 
         }
     };
 
@@ -22,7 +22,9 @@ const Home = () => {
         <div className="home">
             <div className="box-video">
                 <video
-                    ref={videoRef}>
+                    ref={videoRef}
+                    playsInline
+                >
                     <source
                         src="./Assets/videos/FINAL INTRO MELIORA.mp4"
                         type="video/mp4"
@@ -37,7 +39,7 @@ const Home = () => {
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
 export default Home;

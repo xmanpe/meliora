@@ -29,7 +29,6 @@ export const FotoDivisi = ({ children }) => {
                 <Header
                     image={MelioraYellow}
                     top='Foto Divisi'
-                    bottom='<span style="color: #FFFFFF;">wordingan disiniiiii lroem is jiap doalro sit apme dajenj loeomai pirnfi, akiwmdimaw jrun bbkslla lalwmd fanm awodmoad gjskgm apodma djeje akmkadmk, sefef koeamfaom  kemak kmmkfn.</span>'
                 />
                 <CarouselDivisi />
                 {photocardIndex.includes(activeIndex) && <PhotocardDivisi />}

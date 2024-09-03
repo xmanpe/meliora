@@ -6,7 +6,7 @@ const BackButton = () => {
     const navigate = useNavigate();
 
     const handleClick = () => {
-        navigate(-1);
+        navigate('/hari-pelaksanaan');
     };
 
     return (

@@ -130,15 +130,13 @@ const DokumentasiDivisi = () => {
           return null;
         })}
       </Swiper>
-
-      <div className='name-wrapper'>
         {dataDokumentasi.FOTO.map((item, index) => {
           if (index === activeIndex && (index === 0 || index === 5 || index === 8)) {
             return null;
           }
           if (index === activeIndex) {
             return (
-              <>
+              <div className='name-wrapper'>
                 <div className={`koordinator-head ${item.divisi}`} key={`${item.divisi}-head`}>
                   <h1>Koordinator</h1>
                 </div>
@@ -166,12 +164,11 @@ const DokumentasiDivisi = () => {
                     return null;
                   })}
                 </div>
-              </>
+              </div>
             );
           }
           return null;
         })}
-      </div>
     </div>
   );
 };
