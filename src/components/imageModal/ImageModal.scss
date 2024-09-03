@@ -9,7 +9,6 @@
 
   .modal-content {
     width: -webkit-fill-available;
-    height: fit-content;
     max-width: 1200px;
     max-height: 800px;
     background: rgba(255, 255, 255, 0.8);
@@ -81,16 +80,18 @@
     }
 
     .thumbnails-container {
+      height: 100%;
+      align-items: center;
       display: flex;
       justify-content: center;
       padding: 16px;
       gap: 4px;
-      background-color: white;
       overflow-x: auto;
 
       .thumbnail {
         width: 4rem;
         height: 4rem;
+        aspect-ratio: 1/1;
         cursor: pointer;
         overflow: hidden;
         border-radius: 6px;
@@ -164,6 +165,8 @@
 @media screen and (max-width: 810px) {
   .modal-overlay {      
     .modal-content {  
+      height: initial;
+
       .close-button {
   
         &:hover {
@@ -173,7 +176,6 @@
       .image-container {  
         .main-image {
           aspect-ratio: 16/9;
-          height: 240px;
         }
   
         .nav-button {
@@ -193,6 +195,7 @@
   
       .thumbnails-container {
         display: none;
+
         .thumbnail {
           img {
           }

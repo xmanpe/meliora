@@ -30,7 +30,43 @@ import h23 from "../../images/meliora/foto/HARI1/Qhedyzya Ricaridiane_Perkembang
 import h24 from "../../images/meliora/foto/HARI1/Perkembangan Hari 1_Allison-65.jpg";
 import h26 from "../../images/meliora/foto/HARI1/tall/Perkembangan Hari 1_Delon_19.jpg";
 
-const hari1 = [h1, h2, h3, h4, h5, h6, h7, h8, h9, h10, h11, h12, h13, h14, h15, h16, h17, h18, h19, h20, h21, h22, h25, h23, h24, h26];
+import h27 from '../../images/meliora/foto/HARI1/adds/tambah1.jpeg';
+import h28 from '../../images/meliora/foto/HARI1/adds/tambah2.jpeg';
+import h29 from '../../images/meliora/foto/HARI1/adds/tambah3.jpeg';
+import h30 from '../../images/meliora/foto/HARI1/adds/tambah4.jpeg';
+import h31 from '../../images/meliora/foto/HARI1/adds/tambah5.jpeg';
+import h32 from '../../images/meliora/foto/HARI1/adds/tambah6.jpeg';
+import h33 from '../../images/meliora/foto/HARI1/adds/tambah7.jpeg';
+import h34 from '../../images/meliora/foto/HARI1/adds/tambah8.jpeg';
+import h35 from '../../images/meliora/foto/HARI1/adds/tambah9.jpeg';
+import h36 from '../../images/meliora/foto/HARI1/adds/tambah10.jpeg';
+import h37 from '../../images/meliora/foto/HARI1/adds/tambah11.jpeg';
+import h38 from '../../images/meliora/foto/HARI1/adds/tambah12.jpeg';
+import h39 from '../../images/meliora/foto/HARI1/adds/tambah13.jpeg';
+import h40 from '../../images/meliora/foto/HARI1/adds/tambah14.jpeg';
+import h41 from '../../images/meliora/foto/HARI1/adds/tambah15.jpeg';
+import h42 from '../../images/meliora/foto/HARI1/adds/tambah16.jpeg';
+import h43 from '../../images/meliora/foto/HARI1/adds/tambah17.jpeg';
+import h44 from '../../images/meliora/foto/HARI1/adds/tambah18.jpeg';
+import h45 from '../../images/meliora/foto/HARI1/adds/tambah19.jpeg';
+import h46 from '../../images/meliora/foto/HARI1/adds/tambah20.jpeg';
+import h47 from '../../images/meliora/foto/HARI1/adds/tambah21.jpeg';
+import h48 from '../../images/meliora/foto/HARI1/adds/tambah22.jpeg';
+import h49 from '../../images/meliora/foto/HARI1/adds/tambah23.jpeg';
+import h50 from '../../images/meliora/foto/HARI1/adds/tambah24.jpeg';
+import h51 from '../../images/meliora/foto/HARI1/adds/tambah25.jpeg';
+import h52 from '../../images/meliora/foto/HARI1/adds/tambah26.jpeg';
+import h53 from '../../images/meliora/foto/HARI1/adds/tambah27.jpeg';
+import h54 from '../../images/meliora/foto/HARI1/adds/tambah28.jpeg';
+import h55 from '../../images/meliora/foto/HARI1/adds/tambah29.jpeg';
+import h56 from '../../images/meliora/foto/HARI1/adds/tambah30.jpeg';
+
+
+const hari1 = [
+  h1, h2, h3, h4, h5, h6, h7, h8, h9, h10, h11, h12, h13, h14, h15, h16, h17, h18, h19, h20,
+  h21, h22, h23, h24, h25, h26, h27, h28, h29, h30, h31, h32, h33, h34, h35, h36, h37, h38,
+  h39, h40, h41, h42, h43, h44, h45, h46, h47, h48, h49, h50, h51, h52, h53, h54, h55, h56
+];
 
 function GalleryHari1() {
   const [modalOpen, setModalOpen] = useState(false);

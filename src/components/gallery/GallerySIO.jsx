@@ -31,7 +31,16 @@ import sio24 from "../../images/meliora/foto/SIO/SIO_Valentino Kriswahyudi_8.jpg
 import sio25 from "../../images/meliora/foto/SIO/SIO_Ravalen Virginia_10.jpg"
 import sio26 from "../../images/meliora/foto/SIO/SIO_Steven Hans_1.jpg"
 
-const sioImages = [sio1, sio2, sio3, sio4, sio5, sio6, sio7, sio8, sio9, sio10, sio11, sio12, sio13, sio14, sio15, sio16, sio17, sio18, sio19, sio20, sio21, sio22, sio23, sio24, sio25, sio26];
+import sio27 from '../../images/meliora/foto/SIO/adds/tambah1.jpeg';
+import sio28 from '../../images/meliora/foto/SIO/adds/tambah2.jpeg';
+import sio29 from '../../images/meliora/foto/SIO/adds/tambah3.jpeg';
+import sio31 from '../../images/meliora/foto/SIO/adds/tambah5.jpeg';
+import sio32 from '../../images/meliora/foto/SIO/adds/tambah6.jpeg';
+import sio33 from '../../images/meliora/foto/SIO/adds/tambah7.jpeg';
+import sio34 from '../../images/meliora/foto/SIO/adds/tambah8.jpeg';
+import sio35 from '../../images/meliora/foto/SIO/adds/tambah9.jpeg';
+
+const sioImages = [sio1, sio2, sio3, sio4, sio5, sio6, sio7, sio8, sio9, sio10, sio11, sio12, sio13, sio14, sio15, sio16, sio17, sio18, sio19, sio20, sio21, sio22, sio23, sio24, sio25, sio26, sio27, sio28, sio29, sio31, sio32, sio33, sio34, sio35];
 
 function GallerySIO() {
   const [modalOpen, setModalOpen] = useState(false);

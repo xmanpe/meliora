@@ -4,15 +4,15 @@ import './FramePelaksanaan.scss';
 
 // import images
 import coverSIO1 from "../../images/homepage/cover_sio.jpg";
-import coverSIO2 from "../../images/gif/sesi-informasi-gif.gif";
+import coverSIO2 from "../../images/meliora/foto/SIO/SIO_Baskara_Rether_5.jpg";
 import coverHariPemupukan from "../../images/homepage/cover_hari_pemupukan.jpg";
-import coverHariPemupukan2 from "../../images/gif/pemupukan-gif.gif";
+import coverHariPemupukan2 from "../../images/meliora/foto/pemupukan/Hari Pemupukan_Cahaya_4.jpg";
 import coverPerkembanganHari1 from "../../images/homepage/cover_perkembangan_hari_1.jpg";
-import coverPerkembanganHari1_2 from "../../images/gif/perkembangan-satu-gif.gif";
+import coverPerkembanganHari1_2 from "../../images/meliora/foto/HARI1/Qhedyzya Ricardiane_Perkembangan Hari 1  (32 of 77).jpg";
 import coverPerkembanganHari2 from "../../images/homepage/cover_perkembangan_hari_2.jpg";
-import coverPerkembanganHari2_2 from "../../images/gif/perkembangan-hari-dua-gif.gif";
+import coverPerkembanganHari2_2 from "../../images/meliora/foto/hari2/Perkembangan Hari 2_Steven Hans_280.jpg";
 import coverSidangTerbukaSenat from "../../images/homepage/cover_sidang_terbuka_senat.jpg";
-import coverSidangTerbukaSenat2 from "../../images/gif/sidang-terbuka-senat-gif.gif";
+import coverSidangTerbukaSenat2 from "../../images/meliora/foto/sts/Sidang Terbuka Senat_Diana Angyulia-18.jpg";
 
 // import icons
 import drive from '../../images/icons/folder-drive.svg';

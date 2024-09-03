@@ -30,7 +30,26 @@ import h23 from "../../images/meliora/foto/sts/Sidang Terbuka Senat_Salman_Foto 
 import h24 from "../../images/meliora/foto/sts/Sidang Terbuka Senat_Salman_Foto Terbaik_10-min.jpg";
 import h26 from "../../images/meliora/foto/sts/Sidang Terbuka Senat_Steven Hans_41.jpg";
 
-const Sts = [h1, h2, h3, h4, h5, h6, h7, h8, h9, h10, h11, h12, h13, h14, h15, h16, h17, h18, h19, h20, h21, h22, h23, h24, h25, h26];
+import h27 from '../../images/meliora/foto/sts/adds/tambah1.jpeg';
+import h28 from '../../images/meliora/foto/sts/adds/tambah2.jpeg';
+import h29 from '../../images/meliora/foto/sts/adds/tambah3.jpeg';
+import h30 from '../../images/meliora/foto/sts/adds/tambah4.jpeg';
+import h31 from '../../images/meliora/foto/sts/adds/tambah5.jpeg';
+import h32 from '../../images/meliora/foto/sts/adds/tambah6.jpeg';
+import h33 from '../../images/meliora/foto/sts/adds/tambah7.jpeg';
+import h34 from '../../images/meliora/foto/sts/adds/tambah8.jpeg';
+import h35 from '../../images/meliora/foto/sts/adds/tambah9.jpeg';
+import h36 from '../../images/meliora/foto/sts/adds/tambah10.jpeg';
+import h37 from '../../images/meliora/foto/sts/adds/tambah11.jpeg';
+import h38 from '../../images/meliora/foto/sts/adds/tambah12.jpeg';
+import h39 from '../../images/meliora/foto/sts/adds/tambah13.jpeg';
+import h40 from '../../images/meliora/foto/sts/adds/tambah14.jpeg';
+import h41 from '../../images/meliora/foto/sts/adds/tambah15.jpeg';
+import h42 from '../../images/meliora/foto/sts/adds/tambah16.jpeg';
+import h43 from '../../images/meliora/foto/sts/adds/tambah17.jpeg';
+import h44 from '../../images/meliora/foto/sts/adds/tambah18.jpeg';
+
+const Sts = [h1, h2, h3, h4, h5, h6, h7, h8, h9, h10, h11, h12, h13, h14, h15, h16, h17, h18, h19, h20, h21, h22, h23, h24, h25, h2, h26, h27, h28, h29, h30, h31, h32, h33, h34, h35, h36, h37, h38, h39, h40, h41, h42, h43, h44];
 
 const GallerySTS = () => {
   const [modalOpen, setModalOpen] = useState(false);

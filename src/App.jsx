@@ -10,6 +10,7 @@ import HariPemupukan from "./pages/HariPelaksanaan/hari-pemupukan/HariPemupukan"
 import PerkembanganHari1 from "./pages/HariPelaksanaan/perkembangan-hari-1/PerkembanganHariSatu";
 import PerkembanganHari2 from "./pages/HariPelaksanaan/perkembangan-hari-2/PerkembanganHariDua";
 import SidangTerbukaSenat from "./pages/HariPelaksanaan/sidang-terbuka-senat/SidangTerbukaSenat";
+import DiBalikKepanitiaan from "./pages/DiBalikKepanitiaan";
 import Error from "./pages/error/Error";
 
 // import components
@@ -34,6 +35,7 @@ function App() {
           <Route path="/hari-pelaksanaan/perkembangan-hari-2" element={<PerkembanganHari2 />} />
           <Route path="/hari-pelaksanaan/sidang-terbuka-senat" element={<SidangTerbukaSenat />} />
           <Route path="/foto-divisi" element={<FotoDivisi />} />
+          <Route path="/di-balik-kepanitiaan" element={<DiBalikKepanitiaan />} />
           <Route path="/sayembara-visual" element={<SayembaraVisual />} />
           <Route path="*" element={<Error />} />
         </Routes>
