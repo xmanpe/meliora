@@ -53,18 +53,32 @@
         &:last-child {
         }
 
-        p {
-            font-size: $font-size-small;
-            cursor: pointer;
-        }
+        a {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 8px;
 
-        img {
-            width: 24px;
-            height: 24px;
-            display: none;
+            p {
+                font-size: $font-size-small;
+                cursor: pointer;
+                transition: all 0.3s ease;
+            }
+    
+            img {
+                width: 22px;
+                height: 22px;
+                opacity: 0.3;
+                transition: all 0.3s ease;
+                // display: none;
+            }
         }
 
         &:hover {
+            img {
+                opacity: 1;
+            }
+
             p {
                 color: $paragraph-color;
             }
@@ -73,6 +87,10 @@
         &.active {
             p {
                 color: $black-color;
+            }
+
+            img {
+                opacity: 1;
             }
 
             &::after {
@@ -105,8 +123,8 @@
         backdrop-filter: blur(14px);
     
         .each-tab {
-            padding-left: 20px;
-            padding-right: 20px;
+            padding-left: 30px;
+            padding-right: 30px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -121,17 +139,19 @@
             &:last-child {
             }
     
-            p {
-                display: none;
-                font-size: $font-size-small;
-                cursor: pointer;
-            }
-    
-            img {
-                width: 28px;
-                height: 28px;
-                opacity: 0.3;
-                display: initial;
+            a {
+                p {
+                    display: none;
+                    font-size: $font-size-small;
+                    cursor: pointer;
+                }
+        
+                img {
+                    width: 28px;
+                    height: 28px;
+                    opacity: 0.3;
+                    display: initial;
+                }
             }
     
             &.active {

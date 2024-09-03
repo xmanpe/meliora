@@ -25,8 +25,7 @@ const CarouselDivisi = () => {
         <>
             <div className='divisi-swiper'>
                 <Swiper
-                    slidesPerView={3}  
-                    spaceBetween={-100}  
+                    slidesPerView={3}   
                     centeredSlides={true}
                     loop={true}         
                     keyboard={{
@@ -34,24 +33,31 @@ const CarouselDivisi = () => {
                     }}
                     breakpoints={{
                         1920: {
+                            spaceBetween: -100,
                             slidesPerView: 5,
-                          },
+                        },
                         1440: {
-                          slidesPerView: 4,
+                            spaceBetween: -100,
+                            slidesPerView: 4,
                         },
                         1200: {
-                          slidesPerView: 3,
+                            spaceBetween: -100,
+                            slidesPerView: 3,
                         },
                         810: {
-                          slidesPerView: 3,
+                            spaceBetween: -100,
+                            slidesPerView: 3,
                         },
                         560:{
+                            spaceBetween: 16,
                             slidesPerView: 3,
                         },
                         432:{
+                            spaceBetween: 16,
                             slidesPerView: 1,
                         },
                         0:{
+                            spaceBetween: 0,
                             slidesPerView: 1,
                         }
                     }}

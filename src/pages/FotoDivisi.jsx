@@ -29,6 +29,7 @@ export const FotoDivisi = ({ children }) => {
                 <Header
                     image={MelioraYellow}
                     top='Foto Divisi'
+                    bottom='Yuk, kenali tiap divisi di OMB UMN 2024!'
                 />
                 <CarouselDivisi />
                 {photocardIndex.includes(activeIndex) && <PhotocardDivisi />}
