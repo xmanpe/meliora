@@ -107,7 +107,7 @@ const FramePelaksanaan = () => {
   return (
         <section className="pelaksanaan_section">
             <div className="card-wrapper">
-                <AfterMovie />
+                {/* <AfterMovie /> */}
                 {cardData.map((card, index) => (
                     <Card key={index} data={card} index={index} />
                 ))}
