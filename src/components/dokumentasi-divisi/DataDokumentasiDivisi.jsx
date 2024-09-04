@@ -1,45 +1,49 @@
 const dataDokumentasi = {
-    "FOTO":[
+    FOTO: [
         {
-            divisi:"Gandara",
-            koordinator:[],
-            bph:[
-                {nama :"Ralph Theodoric", jabatan: "Supervisi"},
-                {nama :"Wilcoustine Pniel", jabatan: "Ketua"}, 
-                {nama :"Jehezkiel Immanuel", jabatan: "Wakil Ketua"}, 
-                {nama :"Cecillia Abbygail", jabatan: "Sekretaris 1"},
-                {nama :"Idayu Ringandani", jabatan: "Sekretaris 2"},
-                {nama :"Assyifa Salsabila", jabatan: "Bendahara"}],
-            kelompok:[
+            divisi: "Gandara",
+            koordinator: [],
+            bph: [
+                { nama: "Ralph Theodoric", jabatan: "Supervisi" },
+                { nama: "Wilcoustine Pniel", jabatan: "Ketua" },
+                { nama: "Jehezkiel Immanuel", jabatan: "Wakil Ketua" },
+                { nama: "Cecillia Abbygail", jabatan: "Sekretaris 1" },
+                { nama: "Idayu Ringandani", jabatan: "Sekretaris 2" },
+                { nama: "Assyifa Salsabila", jabatan: "Bendahara" },
+            ],
+            kelompok: [
                 {
-                    indexkelompok:"kelompok1",
-                    anggota:[],
+                    indexkelompok: "kelompok1",
+                    anggota: [],
                 },
-            ]
+            ],
         },
         {
-            divisi:"Balwana",
-            koordinator:["Lavia Jovelin","Gloria Wijaya","Kenny Adam"],
-            kelompok:[
+            divisi: "Balwana",
+            koordinator: ["Lavia Jovelin", "Gloria Wijaya", "Kenny Adam"],
+            kelompok: [
                 {
-                    indexkelompok:"kelompok1",
-                    anggota:["Derren Pranata",
+                    indexkelompok: "kelompok1",
+                    anggota: [
+                        "Derren Pranata",
                         "Fransisca Lee",
                         "Jennifer Arcelia",
                         "Joselino Frederick",
                         "Livianny Allycia",
                         "Louissa Sofia",
-                        "Shareefa Aisyah"],
+                        "Shareefa Aisyah",
+                    ],
                 },
-            ]
-        },        
+            ],
+        },
         {
-            divisi:"Caksana",
-            koordinator:["Afiq Walid","Divi Afrilia"],
-            kelompok:[
+            divisi: "Caksana",
+            koordinator: ["Afiq Walid", "Divi Afrilia"],
+            kelompok: [
                 {
-                    indexkelompok:"kelompok1",
-                    anggota:["Cherish Dominick",
+                    indexkelompok: "kelompok1",
+                    anggota: [
+                        "Cherish Dominick",
                         "Rachel Natallie",
                         "Ferdinand Julius",
                         "Stefani Margaretha",
@@ -47,31 +51,35 @@ const dataDokumentasi = {
                         "Silvia Andriyani",
                         "Beatrice Ellena",
                         "Lawrencia",
-                        "Gabriella Salim"],
+                        "Gabriela Salim",
+                    ],
                 },
-            ]
+            ],
         },
         {
-            divisi:"Lavanya",
-            koordinator:["Gabrielle Wibowo","Jessica Marella"],
-            kelompok:[
+            divisi: "Lavanya",
+            koordinator: ["Gabrielle Wibowo", "Jessica Marella"],
+            kelompok: [
                 {
-                    indexkelompok:"kelompok1",
-                    anggota:["Rara Anggreni",
+                    indexkelompok: "kelompok1",
+                    anggota: [
+                        "Rara Anggreni",
                         "David Wang",
                         "Ruus, Auliana",
                         "Qonita Azalia",
-                        "Stacyana Susanto"],
+                        "Stacyana Susanto",
+                    ],
                 },
-            ]
+            ],
         },
         {
-            divisi:"Bimasena",
-            koordinator:["Marcellino","Fathan Nasution","Auralia Dwi"],
-            kelompok:[
+            divisi: "Bimasena",
+            koordinator: ["Marcellino", "Fathan Nasution", "Auralia Dwi"],
+            kelompok: [
                 {
-                    indexkelompok:"kelompok1",
-                    anggota:["Adriano Bimo",	
+                    indexkelompok: "kelompok1",
+                    anggota: [
+                        "Adriano Bimo",
                         "Dindaniz",
                         "Keane Subrata Halim",
                         "Nadine Ayu Putri Ramadhani",
@@ -88,11 +96,13 @@ const dataDokumentasi = {
                         "Glend Yesaya Pulu",
                         "Naila Asylah Rivitri Lubis",
                         "Jeanette Aprilia Ongah",
-                        "Philipe Edwardo"],
+                        "Philipe Edwardo",
+                    ],
                 },
                 {
-                    indexkelompok:"kelompok2",
-                    anggota:["Samuel Matthew Irawan",
+                    indexkelompok: "kelompok2",
+                    anggota: [
+                        "Samuel Matthew Irawan",
                         "Muhammad Rizky Ardana",
                         "Beneisha Bat",
                         "Geofrey Mercyo",
@@ -105,13 +115,15 @@ const dataDokumentasi = {
                         "Raffael Valentino Gunawan",
                         "Wilson Hermawan",
                         "Fransiskus Bagas",
-                        "Angelica Victoria Cassandr",	
+                        "Angelica Victoria Cassandr",
                         "Olivier Rakha",
-                        "Kheisha Twyla Noellisd"],
+                        "Kheisha Twyla Noellisd",
+                    ],
                 },
                 {
-                    indexkelompok:"kelompok3",
-                    anggota:["Andriana Cipta Wijaya",
+                    indexkelompok: "kelompok3",
+                    anggota: [
+                        "Andriana Cipta Wijaya",
                         "Marchel Halim",
                         "Felisiana",
                         "Darryl Cornelius Setiawan",
@@ -128,17 +140,19 @@ const dataDokumentasi = {
                         "Mohamad Vidie Afriyano",
                         "Ryane Kalyana El Deeri",
                         "Alexa Putri Wiharto",
-                        "Meldean Jonathan"]
-                }
-            ]
+                        "Meldean Jonathan",
+                    ],
+                },
+            ],
         },
         {
-            divisi:"Baskara",
-            koordinator:["Ravalen Virginia"],
-            kelompok:[
+            divisi: "Baskara",
+            koordinator: ["Ravalen Virginia"],
+            kelompok: [
                 {
-                    indexkelompok:"kelompok1",
-                    anggota:["Andrew Su",
+                    indexkelompok: "kelompok1",
+                    anggota: [
+                        "Andrew Su",
                         "Margareth Ritonga",
                         "Maria Oxa Surysia",
                         "Diana Angyulia",
@@ -156,17 +170,23 @@ const dataDokumentasi = {
                         "Darren",
                         "Elizabeth Larasati",
                         "Made rama Yoga Wibawa",
-                        "Rava Parisya"],
+                        "Rava Parisya",
+                    ],
                 },
-            ]
+            ],
         },
         {
-            divisi:"Gajendra",
-            koordinator:["Hellen Herlina","Michael Lucius","Agym Dimas Tian"],
-            kelompok:[
+            divisi: "Gajendra",
+            koordinator: [
+                "Hellen Herlina",
+                "Michael Lucius",
+                "Agym Dimas Tian",
+            ],
+            kelompok: [
                 {
-                    indexkelompok:"kelompok1",
-                    anggota:["Alfonsus Aryaveda",
+                    indexkelompok: "kelompok1",
+                    anggota: [
+                        "Alfonsus Aryaveda",
                         "Audy Hendry",
                         "Exan Putra",
                         "Fransiskus Asisi",
@@ -180,17 +200,24 @@ const dataDokumentasi = {
                         "Muhammad Salman ",
                         "Ananda Refi",
                         "Nicholas Nelson",
-                        "Muhammad Irfan"],
+                        "Muhammad Irfan",
+                    ],
                 },
-            ]
-        },        
+            ],
+        },
         {
-            divisi:"Sakha",
-            koordinator:["Farion Tekkry","Steven Feliciano Wiggins","Clarissa Elvira Darmawan","Charlotte Yeung"],
-            kelompok:[
+            divisi: "Sakha",
+            koordinator: [
+                "Farion Tekkry",
+                "Steven Feliciano Wiggins",
+                "Clarissa Elvira Darmawan",
+                "Charlotte Yeung",
+            ],
+            kelompok: [
                 {
-                    indexkelompok:"kelompok1",
-                    anggota:["Jessie Yenca",
+                    indexkelompok: "kelompok1",
+                    anggota: [
+                        "Jessie Yenca",
                         "Hawari Putra",
                         "Christalin Barbietta",
                         "Indah Safitri",
@@ -209,11 +236,13 @@ const dataDokumentasi = {
                         "Sean Rizkiardy",
                         "Cassia Wulandari",
                         "Dennis Aaron",
-                        "Jeremy Dominic"],
+                        "Jeremy Dominic",
+                    ],
                 },
                 {
-                    indexkelompok:"kelompok2",
-                    anggota:["Angelica Meideline",
+                    indexkelompok: "kelompok2",
+                    anggota: [
+                        "Angelica Meideline",
                         "Umi Salamah",
                         "Dhaniel Chang",
                         "Livia Hadi",
@@ -231,11 +260,13 @@ const dataDokumentasi = {
                         "Aurelia Keianne",
                         "Glen Andrian",
                         "Gabriel Felicia",
-                        "Velisya Angi"]
+                        "Velisya Angi",
+                    ],
                 },
                 {
-                    indexkelompok:"kelompok3",
-                    anggota:["Jose Antonio",
+                    indexkelompok: "kelompok3",
+                    anggota: [
+                        "Jose Antonio",
                         "Kayla Abbiegail",
                         "Audrey Naoko",
                         "Cindy Fidelia",
@@ -253,11 +284,13 @@ const dataDokumentasi = {
                         "Elsa Shaqia",
                         "Enrico Felix",
                         "Carin Indra",
-                        "Nashaffa Novadhan"]
+                        "Nashaffa Novadhan",
+                    ],
                 },
                 {
-                    indexkelompok:"kelompok4",
-                    anggota:["Daniel Gouwardi",
+                    indexkelompok: "kelompok4",
+                    anggota: [
+                        "Daniel Gouwardi",
                         "Shanne Nichole",
                         "Benedictus Agsel",
                         "Putri Aurelia",
@@ -274,11 +307,13 @@ const dataDokumentasi = {
                         "Florence Callista",
                         "Alya Geraldine",
                         "Bryan Emmanuel",
-                        "Angeline Lie"]
+                        "Angeline Lie",
+                    ],
                 },
                 {
-                    indexkelompok:"kelompok5",
-                    anggota:["Chairin Thamrin",
+                    indexkelompok: "kelompok5",
+                    anggota: [
+                        "Chairin Thamrin",
                         "Charmaine Astrella",
                         "Varrel Noas",
                         "Marvella Charissa",
@@ -297,11 +332,13 @@ const dataDokumentasi = {
                         "Vincentius Rafael",
                         "Patricia Huang",
                         "William Kwok",
-                        "Evelyn Vania"]
+                        "Evelyn Vania",
+                    ],
                 },
                 {
-                    indexkelompok:"kelompok6",
-                    anggota:["Nadine Starleen",
+                    indexkelompok: "kelompok6",
+                    anggota: [
+                        "Nadine Starleen",
                         "Ronald Ramlian",
                         "Fikri Ekandra",
                         "Yudith Rahmadiah",
@@ -319,11 +356,13 @@ const dataDokumentasi = {
                         "Michelle Fernanda",
                         "Jonathan Suryajaya",
                         "Valencia Fiorentina",
-                        "Keira Nicole"]
+                        "Keira Nicole",
+                    ],
                 },
                 {
-                    indexkelompok:"kelompok7",
-                    anggota:["Feodrian Calvin",
+                    indexkelompok: "kelompok7",
+                    anggota: [
+                        "Feodrian Calvin",
                         "Airin Frantrishia",
                         "Feinisia Andani",
                         "Benedict William",
@@ -340,11 +379,13 @@ const dataDokumentasi = {
                         "Anna Hanafi",
                         "Kayla Nugroho",
                         "Adeline Gracia",
-                        "Melvie Ho"]
+                        "Melvie Ho",
+                    ],
                 },
                 {
-                    indexkelompok:"kelompok8",
-                    anggota:["Luviola Hanum",
+                    indexkelompok: "kelompok8",
+                    anggota: [
+                        "Luviola Hanum",
                         "Betrand Cornelius",
                         "Chiara Andini",
                         "Kevin Thenggano",
@@ -362,27 +403,36 @@ const dataDokumentasi = {
                         "Gavrila Liona",
                         "Brandon Sachio",
                         "Evelyn Valencia",
-                        "Abel Oktavian"]
+                        "Abel Oktavian",
+                    ],
                 },
-            ]
+            ],
         },
         {
-            divisi:"Nayanika",
-            koordinator:["Daffa Akbari","Jose Andreas Lie"],
-            kelompok:[
+            divisi: "Nayanika",
+            koordinator: ["Daffa Akbari", "Jose Andreas Lie"],
+            kelompok: [
                 {
-                    indexkelompok:"kelompok1",
-                    anggota:["Axel Ferdinand","Kafijaya","Caleb Stebe Dinoto","Deswandy Wong","Kevin Ken","Valentino Fernando"],
+                    indexkelompok: "kelompok1",
+                    anggota: [
+                        "Axel Ferdinand",
+                        "Kafijaya",
+                        "Caleb Stebe Dinoto",
+                        "Deswandy Wong",
+                        "Kevin Ken",
+                        "Valentino Fernando",
+                    ],
                 },
-            ]
+            ],
         },
         {
-            divisi:"Sarkara",
-            koordinator:["Evan Yo","Nasya Karina"],
-            kelompok:[
+            divisi: "Sarkara",
+            koordinator: ["Evan Yo", "Nasya Karina"],
+            kelompok: [
                 {
-                    indexkelompok:"kelompok1",
-                    anggota:["Jennifer Amanda",
+                    indexkelompok: "kelompok1",
+                    anggota: [
+                        "Jennifer Amanda",
                         "Kathleen Aurelia Chandra",
                         "Nayla Shakila Azzahra",
                         "Joy Rockniel Abadi",
@@ -402,50 +452,51 @@ const dataDokumentasi = {
                         "Tiffany Titania Sunarga",
                         "Frissa Budiansyah",
                         "Shu Evangeline Christiani Saputro",
-                        "Yasmine Aghnia Pramono"],
+                        "Yasmine Aghnia Pramono",
+                    ],
                 },
-            ]
+            ],
         },
         {
-            divisi:"Saraya",
-            koordinator:["Andrew Susilo","Jessica Sihasale"],
-            kelompok:[
+            divisi: "Saraya",
+            koordinator: ["Andrew Susilo", "Jessica Sihasale"],
+            kelompok: [
                 {
-                    indexkelompok:"kelompok1",
-                    anggota:[
-                            "Made Elsya Wardani",
-                            "Puteri Novariqa",
-                            "Venesia Alexandra",
-                            "Rinny Marcela",
-                            "Angel Tri Ivanka",
-                            "Devina Hartamty",
-                            "Euginia Felicia",
-                            "Irene Berliana",
-                            "Dhivie Chandra",
-                            "Celestine",
-                            "Vianca Vanesia",
-                            "Amanda Charista",
-                            "Marcella Gladys",
-                            "Nazla Shafiradhianti",
-                            "Made Amelia",
-                            "Najwa Khairunisa",
-                            "Angellica Kristie",
-                            "Michael Elbert",
-                            "Winson Sovian",
-                            "Edbert Rendrahadi ",
-                            "Parwin Singh",
-                            "Fredlie Irwanto",
-                            "Chandra Wijaya",
-                            "Richard Bona",
-                            "Ryu Ivan",
-                            "Hieronimus Daniel",
-                            "Savero Madajaya",
-                            "Jeferson",
+                    indexkelompok: "kelompok1",
+                    anggota: [
+                        "Made Elsya Wardani",
+                        "Puteri Novariqa",
+                        "Venesia Alexandra",
+                        "Rinny Marcela",
+                        "Angel Tri Ivanka",
+                        "Devina Hartamty",
+                        "Euginia Felicia",
+                        "Irene Berliana",
+                        "Dhivie Chandra",
+                        "Celestine",
+                        "Vianca Vanesia",
+                        "Amanda Charista",
+                        "Marcella Gladys",
+                        "Nazla Shafiradhianti",
+                        "Made Amelia",
+                        "Najwa Khairunisa",
+                        "Angellica Kristie",
+                        "Michael Elbert",
+                        "Winson Sovian",
+                        "Edbert Rendrahadi ",
+                        "Parwin Singh",
+                        "Fredlie Irwanto",
+                        "Chandra Wijaya",
+                        "Richard Bona",
+                        "Ryu Ivan",
+                        "Hieronimus Daniel",
+                        "Savero Madajaya",
+                        "Jeferson",
                     ],
                 },
                 {
-                    indexkelompok:"kelompok2",
-                    anggota:[
+                    indexkelompok: "kelompok2",
+                    anggota: [
                         "Felicia Austin",
                         "Sara Emmanuella",
                         "Jacinda Amoret",
@@ -478,12 +529,12 @@ const dataDokumentasi = {
                         "Aurel Dhiya",
                         "Jonathan Prasetyo",
                         "Yurcell Young",
-                        "Ivan Nayottama"
+                        "Ivan Nayottama",
                     ],
                 },
-            ]
-        }        
-    ]
-}
+            ],
+        },
+    ],
+};
 
-export default dataDokumentasi
+export default dataDokumentasi;
