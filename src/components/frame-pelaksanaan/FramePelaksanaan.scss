@@ -131,6 +131,34 @@
                 transform: rotate(30deg) translate(10%, 10%);
             }
         }
+
+        .youtube {
+            cursor: initial;
+            background-color: #fac88a95;
+
+            .info {
+                display: flex;
+                gap: 4px;
+                align-items: center;
+                justify-content: space-between;
+                padding: 4px 12px 0px 12px;
+                
+                p {
+                    font-size: 14px;
+                }
+            }
+            .card-image {
+                aspect-ratio: 16 / 9;
+                border-radius: 16px;
+                overflow: hidden;
+
+                iframe {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
     }
 }
 

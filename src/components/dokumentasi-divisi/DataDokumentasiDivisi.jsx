@@ -47,7 +47,7 @@ const dataDokumentasi = {
                         "Silvia Andriyani",
                         "Beatrice Ellena",
                         "Lawrencia",
-                        "Gabriella Salim"],
+                        "Gabriela Salim"],
                 },
             ]
         },

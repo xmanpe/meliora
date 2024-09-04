@@ -2,6 +2,9 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import './FramePelaksanaan.scss';
 
+// import components
+import AfterMovie from "../afterMovie/AfterMovie";
+
 // import images
 import coverSIO1 from "../../images/homepage/cover_sio.jpg";
 import coverSIO2 from "../../images/meliora/foto/SIO/SIO_Baskara_Rether_5.jpg";
@@ -104,6 +107,7 @@ const FramePelaksanaan = () => {
   return (
         <section className="pelaksanaan_section">
             <div className="card-wrapper">
+                <AfterMovie />
                 {cardData.map((card, index) => (
                     <Card key={index} data={card} index={index} />
                 ))}
