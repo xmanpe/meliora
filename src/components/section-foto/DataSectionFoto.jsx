@@ -67,7 +67,7 @@ import nayanika2 from '../../images/foto-divisi/dokumentasi-divisi/Nayanika/foto
 import nayanika3 from '../../images/foto-divisi/dokumentasi-divisi/Nayanika/foto3.jpeg';
 import nayanika4 from '../../images/foto-divisi/dokumentasi-divisi/Nayanika/foto4.jpeg';
 import nayanika5 from '../../images/foto-divisi/dokumentasi-divisi/Nayanika/foto5.jpeg';
-import nayanika6 from '../../images/foto-divisi/divisi/Nayanika/Simulasi 2_Allison_Foto Terbaik_11.jpg';
+import nayanika6 from '../../images/foto-divisi/divisi/Nayanika/Simulasi 2_Allison_Foto Terbaik_11.JPG';
 import nayanika7 from '../../images/foto-divisi/dokumentasi-divisi/Nayanika/foto7.jpeg';
 import nayanika8 from '../../images/foto-divisi/dokumentasi-divisi/Nayanika/foto8.jpeg';
 import sarkara1 from '../../images/foto-divisi/dokumentasi-divisi/Sarkara/foto1.jpeg';
