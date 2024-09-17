@@ -18,7 +18,7 @@ const AfterMovie = () => {
                 <img src={info} alt="info" />
             </div>
             <div className="card-image">
-                <iframe src="https://www.youtube.com/embed/XG3whlcTs9U?si=GvlBBMI8QdMaTmyO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/Ikpd5soVx7A?si=DKfNsBiI7dX6O88J" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
             <div className="card-info">
                 <div className="card-text">
